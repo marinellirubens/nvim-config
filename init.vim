@@ -5,6 +5,23 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'ellisonleao/gruvbox.nvim'
+
+" obrigatorio pra o telecope funcionar
+Plug 'nvim-lua/plenary.nvim'
+Plug 'wbthomason/packer.nvim'
+
+" obrigatorio pro live_grep e grepstring funcionar
+"Plug 'BurntSushi/ripgrep'
+"Plug 'sharkdp/fd'
+" tive que instalar usando o homebrew
+" brew install fd
+" brew install ripgre
+Plug 'easymotion/vim-easymotion'
+Plug 'nvim-telescope/telescope-fzf-native.nvim'
+
+" O telescope em si (excencial)
+Plug 'nvim-telescope/telescope.nvim'
+
 call plug#end()
 
 set hidden
@@ -37,3 +54,15 @@ colorscheme gruvbox
 
 " :CocInstall coc-python coc-go coc-pairs
 
+let mapleader = " "
+nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.fn.input("Grep for >")})<CR>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+if exists('g:vscode')
+    " VSCode extension
+else
+    " ordinary neovim
+endif
