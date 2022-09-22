@@ -19,6 +19,9 @@ set autoindent
 set backspace=indent,eol,start
 set scrolloff=7
 
+
+let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
+
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 
@@ -29,7 +32,6 @@ let g:coc_disable_startup_warning = 1
 
 inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
-let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 set background=dark " or light if you want light mode
 colorscheme gruvbox
 
