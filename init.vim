@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 " obrigatorio pra o telecope funcionar
 Plug 'nvim-lua/plenary.nvim'
@@ -40,6 +41,8 @@ set scrolloff=7
 set splitbelow
 set splitright
 set list
+lua require("toggleterm").setup()
+
 
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
@@ -71,6 +74,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>t <cmd>ToggleTerm<cr>
+
+nnoremap <leader>nn :next<CR>
+nnoremap <leader>NN :Next<CR>
 
 if exists('g:vscode')
     " VSCode extension
