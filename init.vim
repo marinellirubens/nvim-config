@@ -5,6 +5,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " obrigatorio pra o telecope funcionar
 Plug 'nvim-lua/plenary.nvim'
@@ -36,6 +37,9 @@ set autoindent
 set backspace=indent,eol,start
 set scrolloff=7
 
+set splitbelow
+set splitright
+set list
 
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
@@ -48,6 +52,8 @@ nnoremap <C-b> :Next<CR>
 let NERDTreeQuitOnOpen=0
 nmap <F2> :NERDTreeToggle<CR>
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 
 inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
