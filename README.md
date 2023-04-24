@@ -43,8 +43,8 @@ cp ./nvim-config/init.vim ~/.config/nvim/init.vim
 
 after that you can install all the plugins using the following command
 ```bash
-nvim +PlugInstall
-nvim +'CocInstall coc-python coc-go'
+nvim +PlugInstall +qall
+nvim +'CocInstall coc-python coc-go' +qall
 ```
 
 
