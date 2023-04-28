@@ -55,6 +55,14 @@ nnoremap <C-b> :Next<CR>
 let NERDTreeQuitOnOpen=0
 nmap <F2> :NERDTreeToggle<CR>
 
+inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+inoremap <silent><expr> <TAB>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+
+
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
