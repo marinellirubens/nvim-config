@@ -59,8 +59,6 @@ let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-
 let g:netrw_browse_split=2
 
 " set background=dark " or light if you want light mode
