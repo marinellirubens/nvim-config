@@ -32,12 +32,15 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'easymotion/vim-easymotion'
 
 " debug
-Plug 'mfussenegger/nvim-dap'
+"Plug 'mfussenegger/nvim-dap'
 Plug 'leoluz/nvim-dap-go'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'nvim-telescope/telescope-dap.nvim'
+Plug 'puremourning/vimspector'
+
+
 call plug#end()
 
 set hidden
