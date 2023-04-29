@@ -40,6 +40,8 @@ Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'nvim-telescope/telescope-dap.nvim'
 "Plug 'puremourning/vimspector'
 
+" toggleterm
+Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 call plug#end()
 
@@ -64,12 +66,17 @@ set list
 " nerdtree configuration
 nmap <C-_> <Plug>NERDCommenterToggle
 vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
-let NERDTreeQuitOnopen=0
-nmap <f2> :nerdtreeToggle<CR>
+let NERDTreeQuitOnopen=1
+nmap <f2> :NERDTreeToggle<CR>
 
 
+nnoremap <C-j> <C-d>
+nnoremap <C-k> <C-u>
 nnoremap <C-n> :next<CR>
 nnoremap <C-b> :Next<CR>
+
+" toggleterm configuration
+lua require("toggleterm").setup()
 
 " ==============================================================================
 " Coc configuration
@@ -112,6 +119,9 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader>gf <cmd>Telescope git_files<cr>
+nnoremap <leader>vs <cmd>vertical split<cr>
+nnoremap <leader>t <cmd>ToggleTerm<cr>
 
 " vimspector
 "let g:vimspector_enable_mappings = 'HUMAN'
