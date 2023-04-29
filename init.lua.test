@@ -1,0 +1,4 @@
+
+
+vim.opt.incsearch = true
+vim.opt.hlsearch = false

@@ -1,3 +1,8 @@
+" Including other configuration files in lua
+lua require("rbs")
+
+
+" Plugins 
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
 
@@ -132,3 +137,5 @@ if exists('g:vscode')
 else
     " ordinary neovim
 endif
+
+
