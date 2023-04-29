@@ -32,13 +32,13 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'easymotion/vim-easymotion'
 
 " debug
-"Plug 'mfussenegger/nvim-dap'
+Plug 'mfussenegger/nvim-dap'
 Plug 'leoluz/nvim-dap-go'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'nvim-telescope/telescope-dap.nvim'
-Plug 'puremourning/vimspector'
+"Plug 'puremourning/vimspector'
 
 
 call plug#end()
@@ -112,6 +112,10 @@ nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+
+" vimspector
+"let g:vimspector_enable_mappings = 'HUMAN'
+
 
 if exists('g:vscode')
     " VSCode extension
