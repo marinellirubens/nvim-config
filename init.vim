@@ -57,6 +57,7 @@ set mouse=a
 syntax enable
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
 set expandtab
 set autoindent
 set backspace=indent,eol,start
@@ -66,6 +67,7 @@ set splitbelow
 set splitright
 set list
 
+" node configuration for windows machine
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
 " nerdtree configuration
