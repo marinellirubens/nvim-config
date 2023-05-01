@@ -50,11 +50,11 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 call plug#end()
 
+syntax enable
 set hidden
 set number
 set relativenumber
 set mouse=a
-syntax enable
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -62,6 +62,8 @@ set expandtab
 set autoindent
 set backspace=indent,eol,start
 set scrolloff=7
+
+set smartindent
 
 set splitbelow
 set splitright
