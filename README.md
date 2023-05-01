@@ -45,6 +45,9 @@ after that you can install all the plugins using the following command
 ```bash
 nvim +PlugInstall +qall
 nvim +'CocInstall coc-python coc-go' +qall
+nvim +'CocInstall coc-python coc-go' +qall
+nvim +'VimspectorInstall debugpy'
+nvim +'VimspectorInstall vscode-go'
 ```
 
 
