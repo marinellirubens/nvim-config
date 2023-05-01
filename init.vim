@@ -150,7 +150,10 @@ nnoremap <leader>vs <cmd>vertical split<cr>
 nnoremap <leader>tt <cmd>ToggleTerm<cr>
 nnoremap <S-Tab> <cmd>tabnext<cr>
 nnoremap <leader>mm <cmd>make<cr>
-
+nnoremap <C-w><C-h> <cmd>vertical resize +5<cr>
+nnoremap <C-w><C-l> <cmd>vertical resize -5<cr>
+nnoremap <C-w><C-j> <cmd>horizontal resize +5<cr>
+nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
 
 " vimspector
 let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
