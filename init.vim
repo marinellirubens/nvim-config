@@ -84,7 +84,7 @@ set backspace=indent,eol,start
 set scrolloff=7
 
 set smartindent
-
+set autowrite
 set splitbelow
 set splitright
 set list
