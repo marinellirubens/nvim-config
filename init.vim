@@ -1,6 +1,10 @@
 " Including other configuration files in lua
 lua require("rbs")
 
+" command to run file automatically when using :make
+autocmd Filetype python setlocal makeprg=/bin/python3\ %
+autocmd Filetype go setlocal makeprg=go\ run\ .
+autocmd Filetype sh setlocal makeprg=sh\ %
 
 " Plugins 
 call plug#begin()
@@ -145,6 +149,7 @@ nnoremap <leader>gf <cmd>Telescope git_files<cr>
 nnoremap <leader>vs <cmd>vertical split<cr>
 nnoremap <leader>tt <cmd>ToggleTerm<cr>
 nnoremap <S-Tab> <cmd>tabnext<cr>
+nnoremap <leader>mm <cmd>make<cr>
 
 
 " vimspector
