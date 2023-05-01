@@ -99,8 +99,8 @@ let NERDTreeQuitOnopen=1
 nmap <f2> :NERDTreeToggle<CR>
 
 " easyer motion on page up and down
-nnoremap <C-j> <C-d>
-nnoremap <C-k> <C-u>
+nnoremap <C-j> <C-d>zz
+nnoremap <C-k> <C-u>zz
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
 
