@@ -9,7 +9,7 @@ sudo npm install -g yarn
 also you need to install this python3 package for python autocompletion
 
 ```bash
-pip3 install jedi
+pip3 install --upgrade pynvim jedi
 ```
 
 to work with go you will also need to install golang

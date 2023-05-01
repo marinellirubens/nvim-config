@@ -43,7 +43,7 @@ Plug 'mfussenegger/nvim-dap-python'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'nvim-telescope/telescope-dap.nvim'
-"Plug 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 
 " toggleterm
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
@@ -79,8 +79,8 @@ nmap <f2> :NERDTreeToggle<CR>
 
 nnoremap <C-j> <C-d>
 nnoremap <C-k> <C-u>
-nnoremap <C-n> :next<CR>
-nnoremap <C-b> :Next<CR>
+"nnoremap <C-n> :next<CR>
+"nnoremap <C-b> :Next<CR>
 
 " toggleterm configuration
 lua require("toggleterm").setup()
@@ -128,10 +128,12 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>gf <cmd>Telescope git_files<cr>
 nnoremap <leader>vs <cmd>vertical split<cr>
-nnoremap <leader>t <cmd>ToggleTerm<cr>
+nnoremap <leader>tt <cmd>ToggleTerm<cr>
+nnoremap <S-Tab> <cmd>tabnext<cr>
+
 
 " vimspector
-"let g:vimspector_enable_mappings = 'HUMAN'
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 
 if exists('g:vscode')
