@@ -15,7 +15,10 @@ Plug 'preservim/nerdcommenter'
 " STYLE
 " Nicer bar at the bottom
 Plug 'vim-airline/vim-airline'
+
+" colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'folke/tokyonight.nvim'
 
 " Autocompletion 
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
@@ -23,7 +26,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lock
 " Language specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" start - Telescope ===========================================================
 " Telescope requirements
 Plug 'nvim-lua/plenary.nvim'
 Plug 'wbthomason/packer.nvim'
@@ -31,7 +33,6 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim'
 
 " Telescope
 Plug 'nvim-telescope/telescope.nvim'
-" end - Telescope ===========================================================
 
 " easyer motions 
 Plug 'easymotion/vim-easymotion'
@@ -50,6 +51,21 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 call plug#end()
 
+"-----------------------------------------------------
+" sets colorscheme
+"-----------------------------------------------------
+set background=dark " or light if you want light mode
+colorscheme gruvbox
+
+
+"colorscheme tokyonight
+" There are also colorschemes for the different styles
+"colorscheme tokyonight-night
+"colorscheme tokyonight-storm
+"colorscheme tokyonight-day
+"colorscheme tokyonight-moon
+
+"-----------------------------------------------------
 syntax enable
 set hidden
 set number
@@ -78,7 +94,7 @@ vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 let NERDTreeQuitOnopen=1
 nmap <f2> :NERDTreeToggle<CR>
 
-
+" easyer motion on page up and down
 nnoremap <C-j> <C-d>
 nnoremap <C-k> <C-u>
 "nnoremap <C-n> :next<CR>
@@ -116,9 +132,6 @@ let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 let g:netrw_browse_split=2
-
-" set background=dark " or light if you want light mode
-" colorscheme gruvbox
 
 " :CocInstall coc-python coc-go coc-pairs
 
