@@ -15,3 +15,9 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50
+
+require("lsp_config")
+
+-- toggleterm configuration
+require("toggleterm").setup()
+

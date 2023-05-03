@@ -1,6 +1,3 @@
-" Including other configuration files in lua
-lua require("rbs")
-
 " command to run file automatically when using :make
 autocmd Filetype python setlocal makeprg=/bin/python3\ %
 autocmd Filetype go setlocal makeprg=go\ run\ .
@@ -24,8 +21,17 @@ Plug 'vim-airline/vim-airline'
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'folke/tokyonight.nvim'
 
-" Autocompletion 
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+" Autocompletion / lsp configuration
+"Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
 
 " Language specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -104,32 +110,29 @@ nnoremap <C-k> <C-u>zz
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
 
-" toggleterm configuration
-lua require("toggleterm").setup()
-
 " ==============================================================================
 " Coc configuration
 " ==============================================================================
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-inoremap <silent><expr> <TAB>
-      \ coc#pum#visible() ? coc#pum#next(1) :
-      \ CheckBackspace() ? "\<Tab>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+"inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+"inoremap <silent><expr> <TAB>
+      "\ coc#pum#visible() ? coc#pum#next(1) :
+      "\ CheckBackspace() ? "\<Tab>" :
+      "\ coc#refresh()
+"inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"function! CheckBackspace() abort
+  "let col = col('.') - 1
+  "return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
 
-" Use <c-space> to trigger completion
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-" ==============================================================================
+"" Use <c-space> to trigger completion
+"if has('nvim')
+  "inoremap <silent><expr> <c-space> coc#refresh()
+"else
+  "inoremap <silent><expr> <c-@> coc#refresh()
+"endif
+"inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
+"" ==============================================================================
 
 " Language specific
 let g:go_def_mode='gopls'
@@ -164,5 +167,8 @@ if exists('g:vscode')
 else
     " ordinary neovim
 endif
+
+" Including other configuration files in lua
+lua require("rbs")
 
 
