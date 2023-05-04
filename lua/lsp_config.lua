@@ -7,12 +7,6 @@ require'cmp'.setup {
     { name = 'nvim_lsp' }
   }
 }
-
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require("cmp_nvim_lsp").default_capabilities(capabilities)
-
-
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -80,6 +74,7 @@ local servers = {
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = false
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Ensure the servers above are installed
@@ -99,20 +94,17 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
---require("lspconfig").pyright.setup({
-    --on
-    --capabilities = capabilities
---})
-
---require("lspconfig").lua_ls.setup({
-    --capabilities = capabilities
---})
-
-
 -- nvim-cmp setup
 local cmp = require 'cmp'
+local luasnip = require 'luasnip'
 
+luasnip.config.setup {}
 cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
   mapping = cmp.mapping.preset.insert {
     ['<C-n>'] = cmp.mapping.select_next_item(),
     ['<C-p>'] = cmp.mapping.select_prev_item(),
@@ -140,6 +132,7 @@ cmp.setup {
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = 'luasnip' },
   },
 }
 
