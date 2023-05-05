@@ -70,16 +70,21 @@ call plug#end()
 "-----------------------------------------------------
 " sets colorscheme
 "-----------------------------------------------------
-set background=dark " or light if you want light mode
-colorscheme gruvbox
+" set background=dark " or light if you want light mode
 
 
-"colorscheme tokyonight
+" colorscheme tokyonight
 " There are also colorschemes for the different styles
 "colorscheme tokyonight-night
 "colorscheme tokyonight-storm
 "colorscheme tokyonight-day
 "colorscheme tokyonight-moon
+
+lua require("mason").setup()
+if $TERM_PROGRAM != "Apple_Terminal"
+   colorscheme gruvbox
+   set termguicolors
+endif
 
 "-----------------------------------------------------
 syntax enable
