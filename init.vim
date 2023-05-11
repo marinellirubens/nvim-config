@@ -104,6 +104,7 @@ set smartindent
 set autowrite
 set splitbelow
 set splitright
+set listchars=tab:>\ ,trail:~,extends:>,precedes:<
 set list
 
 " node configuration for windows machine
