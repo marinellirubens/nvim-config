@@ -3,6 +3,9 @@ autocmd Filetype python setlocal makeprg=/bin/python3\ %
 autocmd Filetype go setlocal makeprg=go\ run\ .
 autocmd Filetype sh setlocal makeprg=sh\ %
 
+set clipboard=unnamedplus
+
+
 " Plugins 
 call plug#begin()
 Plug 'sheerun/vim-polyglot'
