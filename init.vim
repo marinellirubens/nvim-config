@@ -19,6 +19,7 @@ Plug 'preservim/nerdcommenter'
 " STYLE
 " Nicer bar at the bottom
 Plug 'vim-airline/vim-airline'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
@@ -76,17 +77,17 @@ call plug#end()
 " set background=dark " or light if you want light mode
 
 
-" colorscheme tokyonight
-" There are also colorschemes for the different styles
-"colorscheme tokyonight-night
-"colorscheme tokyonight-storm
-"colorscheme tokyonight-day
-"colorscheme tokyonight-moon
-
 lua require("mason").setup()
 if $TERM_PROGRAM != "Apple_Terminal"
-   colorscheme gruvbox
-   set termguicolors
+    " colorscheme tokyonight
+    " There are also colorschemes for the different styles
+    colorscheme tokyonight-night
+    "colorscheme tokyonight-storm
+    "colorscheme tokyonight-day
+    "colorscheme tokyonight-moon
+
+    "colorscheme gruvbox
+    set termguicolors
 endif
 
 "-----------------------------------------------------
@@ -98,7 +99,7 @@ set mouse=a
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-set expandtab
+"set expandtab
 set autoindent
 set backspace=indent,eol,start
 set scrolloff=7
@@ -108,14 +109,15 @@ set autowrite
 set splitbelow
 set splitright
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
+"set listchars=tab:\| ,trail:~,extends:>,precedes:<
 set list
 
 " node configuration for windows machine
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
 " nerdtree configuration
-nmap <C-/> <Plug>NERDCommenterToggle
-vmap <C-/> <Plug>NERDCommenterToggle<CR>gv
+nmap <C-_> <Plug>NERDCommenterToggle
+vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 let NERDTreeQuitOnopen=1
 nmap <f2> :NERDTreeToggle<CR>
 
