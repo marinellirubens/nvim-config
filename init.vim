@@ -4,6 +4,7 @@ autocmd Filetype python setlocal expandtab
 autocmd Filetype go setlocal makeprg=go\ run\ .
 autocmd Filetype sh setlocal makeprg=sh\ %
 
+
 set clipboard=unnamedplus
 
 
@@ -125,6 +126,8 @@ nmap <f2> :NERDTreeToggle<CR>
 " easyer motion on page up and down
 nnoremap <C-j> <C-d>zz
 nnoremap <C-k> <C-u>zz
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
 
