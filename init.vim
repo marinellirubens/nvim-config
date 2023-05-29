@@ -1,5 +1,6 @@
 " command to run file automatically when using :make
 autocmd Filetype python setlocal makeprg=/bin/python3\ %
+autocmd Filetype python setlocal expandtab
 autocmd Filetype go setlocal makeprg=go\ run\ .
 autocmd Filetype sh setlocal makeprg=sh\ %
 
@@ -40,8 +41,8 @@ Plug 'hrsh7th/nvim-cmp'
 "Plug 'hrsh7th/vim-vsnip'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
-
 Plug 'golang/vscode-go'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " Language specific
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
