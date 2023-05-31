@@ -27,6 +27,7 @@ require("indent_blankline").setup {
 }
 
 require("lsp_config")
+require("keymap")
 
 -- toggleterm configuration
 require("toggleterm").setup()

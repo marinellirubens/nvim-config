@@ -120,8 +120,6 @@ set list
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
 " nerdtree configuration
-nmap <C-_> <Plug>NERDCommenterToggle
-vmap <C-_> <Plug>NERDCommenterToggle<CR>gv
 let NERDTreeQuitOnopen=1
 nmap <f2> :NERDTreeToggle<CR>
 
