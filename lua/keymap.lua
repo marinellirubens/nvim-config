@@ -1,4 +1,4 @@
-if vim.fn.has('macunix') then
+if vim.fn.has("mac") > 0 then
     vim.keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
     vim.keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle<CR>gv")
 
