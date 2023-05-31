@@ -26,6 +26,7 @@ require("indent_blankline").setup {
 	show_current_context = true,
 }
 
+require("mason").setup()
 require("lsp_config")
 require("keymap")
 

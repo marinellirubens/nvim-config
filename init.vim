@@ -1,15 +1,5 @@
-" command to run file automatically when using :make
-autocmd Filetype python setlocal makeprg=/bin/python3\ %
-autocmd Filetype python setlocal expandtab
-autocmd Filetype go setlocal makeprg=go\ run\ .
-autocmd Filetype sh setlocal makeprg=sh\ %
-
-
-set clipboard=unnamedplus
-
-
-" Plugins 
 call plug#begin()
+" Plugins 
 Plug 'sheerun/vim-polyglot'
 
 " File browsing with a nice tree
@@ -59,7 +49,7 @@ Plug 'nvim-telescope/telescope-fzf-native.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 
 " easyer motions 
-Plug 'easymotion/vim-easymotion'
+"Plug 'easymotion/vim-easymotion'
 
 " debug
 Plug 'mfussenegger/nvim-dap'
@@ -75,16 +65,13 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 call plug#end()
 
-"-----------------------------------------------------
-" sets colorscheme
-"-----------------------------------------------------
-" set background=dark " or light if you want light mode
 
-
-lua require("mason").setup()
 if $TERM_PROGRAM != "Apple_Terminal"
+    "-----------------------------------------------------
+    " sets colorscheme
+    "-----------------------------------------------------
+
     " colorscheme tokyonight
-    " There are also colorschemes for the different styles
     colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
@@ -94,8 +81,14 @@ if $TERM_PROGRAM != "Apple_Terminal"
     set termguicolors
 endif
 
-"-----------------------------------------------------
+"" command to run file automatically when using :make
+autocmd Filetype python setlocal makeprg=/bin/python3\ %
+autocmd Filetype python setlocal expandtab
+autocmd Filetype go setlocal makeprg=go\ run\ .
+autocmd Filetype sh setlocal makeprg=sh\ %
+
 syntax enable
+set clipboard=unnamedplus
 set hidden
 set number
 set relativenumber
@@ -113,7 +106,6 @@ set autowrite
 set splitbelow
 set splitright
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
-"set listchars=tab:\| ,trail:~,extends:>,precedes:<
 set list
 
 " node configuration for windows machine
@@ -131,37 +123,13 @@ nnoremap <C-u> <C-u>zz
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
 
-" ==============================================================================
-" Coc configuration
-" ==============================================================================
-"inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-"inoremap <silent><expr> <TAB>
-      "\ coc#pum#visible() ? coc#pum#next(1) :
-      "\ CheckBackspace() ? "\<Tab>" :
-      "\ coc#refresh()
-"inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
-
-"function! CheckBackspace() abort
-  "let col = col('.') - 1
-  "return !col || getline('.')[col - 1]  =~# '\s'
-"endfunction
-
-"" Use <c-space> to trigger completion
-"if has('nvim')
-  "inoremap <silent><expr> <c-space> coc#refresh()
-"else
-  "inoremap <silent><expr> <c-@> coc#refresh()
-"endif
-"inoremap <expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-"" ==============================================================================
-
 " Language specific
 let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 let g:netrw_browse_split=2
-
-" :CocInstall coc-python coc-go coc-pairs
+" vimspector
+let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
 
 let mapleader = " "
 nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.fn.input("Grep for >")})<CR>
@@ -179,17 +147,5 @@ nnoremap <C-w><C-l> <cmd>vertical resize -5<cr>
 nnoremap <C-w><C-j> <cmd>horizontal resize +5<cr>
 nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
 
-" vimspector
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-
-
-if exists('g:vscode')
-    " VSCode extension
-else
-    " ordinary neovim
-endif
-
 " Including other configuration files in lua
 lua require("rbs")
-
-
