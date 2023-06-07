@@ -33,7 +33,11 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'golang/vscode-go'
-Plug 'nvim-treesitter/nvim-treesitter'
+
+if has('win32') < 1 
+    Plug 'nvim-treesitter/nvim-treesitter'
+    Plug 'puremourning/vimspector'
+endif
 
 Plug 'tpope/vim-fugitive'
 
@@ -58,7 +62,6 @@ Plug 'mfussenegger/nvim-dap-python'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'nvim-telescope/telescope-dap.nvim'
-Plug 'puremourning/vimspector'
 
 " toggleterm
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
