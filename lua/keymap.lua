@@ -5,6 +5,8 @@ else
     vim.keymap.set("n", "<C-_>", "<Plug>NERDCommenterToggle")
     vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv")
 end
+vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>")
+
 vim.keymap.set("v", "<leader>d'", "di''<ESC>hp")
 vim.keymap.set("v", "<leader>d(", "di()<ESC>hp")
 vim.keymap.set("v", "<leader>d[", "di[]<ESC>hp")
