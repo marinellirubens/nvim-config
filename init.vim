@@ -11,7 +11,7 @@ Plug 'preservim/nerdcommenter'
 " STYLE
 " Nicer bar at the bottom
 Plug 'vim-airline/vim-airline'
-"Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
