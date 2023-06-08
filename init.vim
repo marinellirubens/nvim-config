@@ -11,7 +11,7 @@ Plug 'preservim/nerdcommenter'
 " STYLE
 " Nicer bar at the bottom
 Plug 'vim-airline/vim-airline'
-Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug 'lukas-reineke/indent-blankline.nvim'
 
 " colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
@@ -100,15 +100,18 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set autoindent
 set backspace=indent,eol,start
 set scrolloff=7
+"filetype indent plugin on
+"filetype indent on
+"set smartindent
+set autoindent
 
-set smartindent
 set autowrite
 set splitbelow
 set splitright
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
+
 set list
 
 " node configuration for windows machine
