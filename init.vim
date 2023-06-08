@@ -66,6 +66,7 @@ Plug 'nvim-telescope/telescope-dap.nvim'
 " toggleterm
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
+Plug 'xiyaowong/transparent.nvim'
 call plug#end()
 
 
