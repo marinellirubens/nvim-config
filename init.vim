@@ -157,5 +157,7 @@ nnoremap <C-w><C-l> <cmd>vertical resize -5<cr>
 nnoremap <C-w><C-j> <cmd>horizontal resize +5<cr>
 nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
 
+nnoremap <silent> <leader>gg :LazyGit<CR>
 " Including other configuration files in lua
 lua require("rbs")
+
