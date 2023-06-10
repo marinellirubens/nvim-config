@@ -67,6 +67,9 @@ Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 Plug 'xiyaowong/transparent.nvim'
+
+Plug 'lewis6991/gitsigns.nvim'
+Plug 'kdheepak/lazygit.nvim'
 call plug#end()
 
 
