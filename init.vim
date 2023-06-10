@@ -139,7 +139,9 @@ let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 let g:netrw_browse_split=2
 " vimspector
-let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+if has('win32') < 1 
+    let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+endif
 
 let mapleader = " "
 nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.fn.input("Grep for >")})<CR>
