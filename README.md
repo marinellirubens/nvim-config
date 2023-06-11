@@ -4,7 +4,7 @@ First you need to install some dependencies
 Note: nodejs and yarn will be used on coc
 ```bash
 sudo dnf copr enable atim/lazygit -y
-sudo dnf install lazygitreapyperclip
+sudo dnf install lazygit
 sudo dnf install -y nodejs python3-pip ripgrep
 sudo npm install -g yarn
 ```
