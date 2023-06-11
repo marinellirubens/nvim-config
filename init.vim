@@ -162,6 +162,4 @@ nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
 nnoremap <silent> <leader>gg :LazyGit<CR>
 " Including other configuration files in lua
 lua require("rbs")
-lua require("debug")
-"lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 
