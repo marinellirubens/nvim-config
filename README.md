@@ -52,4 +52,7 @@ nvim +PlugInstall +qall
 <!--nvim +'VimspectorInstall vscode-go'-->
 ```
 
-
+Nerd fonts to correct the icons on the dap
+```bach
+https://www.nerdfonts.com/font-downloads
+```
