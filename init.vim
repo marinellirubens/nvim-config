@@ -36,7 +36,7 @@ Plug 'golang/vscode-go'
 
 if has('win32') < 1 
     Plug 'nvim-treesitter/nvim-treesitter'
-    Plug 'puremourning/vimspector'
+    "Plug 'puremourning/vimspector'
 endif
 
 Plug 'tpope/vim-fugitive'
@@ -139,9 +139,9 @@ let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 let g:netrw_browse_split=2
 " vimspector
-if has('win32') < 1 
-    let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-endif
+"if has('win32') < 1 
+    "let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
+"endif
 
 let mapleader = " "
 nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.fn.input("Grep for >")})<CR>
@@ -162,4 +162,6 @@ nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
 nnoremap <silent> <leader>gg :LazyGit<CR>
 " Including other configuration files in lua
 lua require("rbs")
+lua require("debug")
+"lua require('dap-python').setup('~/.virtualenvs/debugpy/bin/python')
 

@@ -32,6 +32,7 @@ require("indent_blankline").setup {
 require("mason").setup()
 require("lsp_config")
 require("keymap")
+require("debugging")
 
 -- toggleterm configuration
 require("toggleterm").setup()
@@ -49,4 +50,4 @@ require("transparent").setup({
 
 require('gitsigns').setup()
 require('telescope').load_extension('lazygit')
-
+--require('debug')
