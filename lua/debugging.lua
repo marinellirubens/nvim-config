@@ -1,4 +1,5 @@
 vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>")
+vim.keymap.set("n", "<F17>", ":DapTerminate<CR>")
 vim.keymap.set("n", "<F3>", ":lua require'dap'.step_over()<CR>")
 vim.keymap.set("n", "<F2>", ":lua require'dap'.step_into()<CR>")
 vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
@@ -10,25 +11,10 @@ vim.keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")
 
 require("nvim-dap-virtual-text").setup()
 require('dap-go').setup()
+--require('dap-python').setup()
+require("dap-python").setup("python", {})
 require("dapui").setup()
 
---local dap, dapui = require("dap"), require("dapui")
-
---dap.adapters.go = {
-  --type = 'executable';
-  --command = 'node';
-  --args = {os.getenv('HOME') .. '/dev/golang/vscode-go/dist/debugAdapter.js'};
---}
---dap.configurations.go = {
-  --{
-    --type = 'go';
-    --name = 'Debug';
-    --request = 'launch';
-    --showLog = false;
-    --program = "${file}";
-    --dlvToolPath = vim.fn.exepath('dlv')  -- Adjust to where delve is installed
-  --},
---}
 local dap, dapui = require("dap"), require("dapui")
 dap.listeners.after.event_initialized["dapui_config"] = function()
   dapui.open()
@@ -39,3 +25,13 @@ end
 dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
+
+vim.api.nvim_set_hl(0, "blue",   { fg = "#3d59a1" })
+vim.api.nvim_set_hl(0, "green",  { fg = "#9ece6a" })
+vim.api.nvim_set_hl(0, "yellow", { fg = "#FFFF00" })
+vim.api.nvim_set_hl(0, "orange", { fg = "#f09000" })
+vim.api.nvim_set_hl(0, "red",    { fg = "#993939" })
+
+vim.fn.sign_define('DapBreakpoint',          { text='', texthl='red',   linehl='DapBreakpoint', numhl='DapBreakpoint' })
+vim.fn.sign_define('DapBreakpointCondition', { text='', texthl='red',   linehl='DapBreakpoint', numhl='DapBreakpoint' })
+vim.fn.sign_define('DapBreakpointRejected',  { text='', texthl='orange', linehl='DapBreakpoint', numhl='DapBreakpoint' })

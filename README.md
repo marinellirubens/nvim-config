@@ -4,19 +4,19 @@ First you need to install some dependencies
 Note: nodejs and yarn will be used on coc
 ```bash
 sudo dnf copr enable atim/lazygit -y
-sudo dnf install lazygit
+sudo dnf install lazygitreapyperclip
 sudo dnf install -y nodejs python3-pip ripgrep
 sudo npm install -g yarn
 ```
 also you need to install this python3 package for python autocompletion
 
 ```bash
-pip3 install --upgrade pynvim jedi
+pip3 install --upgrade pynvim jedi pyperclip debugpy
 ```
 
 to work with go you will also need to install golang
 ```bash
-sudo dnf install -y golang
+sudo dnf install -y golang delve
 ```
 
 and install libs to help
@@ -46,10 +46,10 @@ cp ./nvim-config/init.vim ~/.config/nvim/init.vim
 after that you can install all the plugins using the following command
 ```bash
 nvim +PlugInstall +qall
-nvim +'CocInstall coc-python coc-go' +qall
-nvim +'CocInstall coc-python coc-go' +qall
-nvim +'VimspectorInstall debugpy'
-nvim +'VimspectorInstall vscode-go'
+<!--nvim +'CocInstall coc-python coc-go' +qall-->
+<!--nvim +'CocInstall coc-python coc-go' +qall-->
+<!--nvim +'VimspectorInstall debugpy'-->
+<!--nvim +'VimspectorInstall vscode-go'-->
 ```
 
 
