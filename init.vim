@@ -33,6 +33,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'saadparwaiz1/cmp_luasnip'
 Plug 'golang/vscode-go'
+Plug 'ThePrimeagen/vim-be-good'
 
 if has('win32') < 1 
     Plug 'nvim-treesitter/nvim-treesitter'
