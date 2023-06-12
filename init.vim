@@ -16,6 +16,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'folke/tokyonight.nvim'
+Plug 'lukas-reineke/virt-column.nvim'
 
 " Autocompletion / lsp configuration
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
@@ -161,6 +162,8 @@ nnoremap <C-w><C-j> <cmd>horizontal resize +5<cr>
 nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
 
 nnoremap <silent> <leader>gg :LazyGit<CR>
+nnoremap <leader>c :set colorcolumn=100<CR>
+nnoremap <leader>nc :set colorcolumn-=100<CR>
 " Including other configuration files in lua
 lua require("rbs")
 
