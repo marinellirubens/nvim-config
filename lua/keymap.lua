@@ -8,6 +8,7 @@ end
 vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>")
 
 vim.keymap.set("v", "<leader>d'", "di''<ESC>hp")
+vim.keymap.set("v", '<leader>d"', 'di""<ESC>hp')
 vim.keymap.set("v", "<leader>d(", "di()<ESC>hp")
 vim.keymap.set("v", "<leader>d[", "di[]<ESC>hp")
 vim.keymap.set("v", "<leader>d{", "di{}<ESC>hp")
