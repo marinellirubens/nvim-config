@@ -166,4 +166,5 @@ nnoremap <leader>c :set colorcolumn=100<CR>
 nnoremap <leader>nc :set colorcolumn-=100<CR>
 " Including other configuration files in lua
 lua require("rbs")
+highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
 
