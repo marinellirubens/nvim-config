@@ -20,4 +20,4 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("i", "<C-H>", "<C-W>")
 
 
-vim.keymap.set("n", "<leader>da", ":DocstringTypes<cr>")
+--vim.keymap.set("n", "<leader>da", ":DocstringTypes<cr>")

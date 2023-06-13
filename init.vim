@@ -93,6 +93,7 @@ endif
 "" command to run file automatically when using :make
 autocmd Filetype python setlocal makeprg=/bin/python3\ %
 autocmd Filetype python setlocal expandtab
+autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>
 autocmd Filetype go setlocal makeprg=go\ run\ .
 autocmd Filetype sh setlocal makeprg=sh\ %
 
