@@ -1,7 +1,7 @@
 call plug#begin()
 " Plugins 
 Plug 'sheerun/vim-polyglot'
-
+Plug 'pixelneo/vim-python-docstring'
 " File browsing with a nice tree
 Plug 'preservim/nerdtree'
 
