@@ -81,12 +81,12 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "-----------------------------------------------------
 
     " colorscheme tokyonight
-    colorscheme tokyonight-night
+    "colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
     "colorscheme tokyonight-moon
 
-    "colorscheme gruvbox
+    colorscheme gruvbox
     set termguicolors
 endif
 
@@ -129,9 +129,16 @@ nmap <f2> :NERDTreeToggle<CR>
 
 " easyer motion on page up and down
 nnoremap <C-j> <C-d>zz
+vnoremap <C-j> <C-d>zz
+
 nnoremap <C-k> <C-u>zz
+vnoremap <C-k> <C-u>zz
+
 nnoremap <C-d> <C-d>zz
+vnoremap <C-d> <C-d>zz
+
 nnoremap <C-u> <C-u>zz
+vnoremap <C-u> <C-u>zz
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
 
