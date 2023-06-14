@@ -81,12 +81,12 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "-----------------------------------------------------
 
     " colorscheme tokyonight
-    "colorscheme tokyonight-night
+    colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
     "colorscheme tokyonight-moon
 
-    colorscheme gruvbox
+    "colorscheme gruvbox
     set termguicolors
 endif
 
