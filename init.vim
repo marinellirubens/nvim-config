@@ -142,6 +142,11 @@ nnoremap <C-u> <C-u>zz
 vnoremap <C-u> <C-u>zz
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
+augroup END
+
 
 " Language specific
 let g:go_def_mode='gopls'
