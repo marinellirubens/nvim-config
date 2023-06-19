@@ -173,6 +173,7 @@ nnoremap <C-w><C-h> <cmd>vertical resize +5<cr>
 nnoremap <C-w><C-l> <cmd>vertical resize -5<cr>
 nnoremap <C-w><C-j> <cmd>horizontal resize +5<cr>
 nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
+nnoremap <leader>r <cmd>source ~/.config/nvim/init.vim<cr>
 
 nnoremap <silent> <leader>gg :LazyGit<CR>
 nnoremap <leader>c :set colorcolumn=100<CR>
