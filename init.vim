@@ -126,7 +126,9 @@ set list
 
 " nerdtree configuration
 let NERDTreeQuitOnopen=1
-nmap <f2> :NERDTreeToggle<CR>
+nmap <f2> :NERDTreeRefreshRoot<CR>:NERDTreeToggle<CR>
+nmap <f3> :NERDTreeRefreshRoot<CR>
+"nmap <f2> :NERDTreeToggle<CR>
 
 " easyer motion on page up and down
 nnoremap <C-j> <C-d>zz
