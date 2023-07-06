@@ -33,7 +33,13 @@ require("mason").setup()
 require("lsp_config")
 require("keymap")
 require("debugging")
-
+require('telescope').setup{
+    pickers = {
+        find_files = {
+            hidden = true
+        }
+    }
+}
 -- toggleterm configuration
 require("toggleterm").setup()
 
