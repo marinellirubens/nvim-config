@@ -18,6 +18,7 @@ Plug 'ellisonleao/gruvbox.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'lukas-reineke/virt-column.nvim'
 Plug 'Mofiqul/dracula.nvim'
+Plug 'Rigellute/shades-of-purple.vim'
 
 " Autocompletion / lsp configuration
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
@@ -82,13 +83,14 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "-----------------------------------------------------
 
     " colorscheme tokyonight
-    "colorscheme tokyonight-night
+    colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
     "colorscheme tokyonight-moon
 
     "colorscheme gruvbox
-    colorscheme dracula
+    "colorscheme dracula
+    "colorscheme shades_of_purple
     set termguicolors
 endif
 
