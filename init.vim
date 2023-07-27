@@ -8,7 +8,7 @@ Plug 'preservim/nerdtree'
 " Comment on files in a easy manner
 Plug 'preservim/nerdcommenter'
 
-" STYLE
+" STYLE kashdfkshdkfhsk
 " Nicer bar at the bottom
 Plug 'vim-airline/vim-airline'
 Plug 'lukas-reineke/indent-blankline.nvim'
