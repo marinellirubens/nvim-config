@@ -82,7 +82,7 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "-----------------------------------------------------
     " sets colorscheme
     "-----------------------------------------------------
-
+    set background=dark
     "colorscheme tokyonight
     colorscheme PaperColorSlim
     "colorscheme tokyonight-night
