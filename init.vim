@@ -19,7 +19,8 @@ Plug 'folke/tokyonight.nvim'
 Plug 'lukas-reineke/virt-column.nvim'
 Plug 'Mofiqul/dracula.nvim'
 Plug 'Rigellute/shades-of-purple.vim'
-
+Plug 'AlexvZyl/nordic.nvim'
+Plug 'pappasam/papercolor-theme-slim'
 " Autocompletion / lsp configuration
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'williamboman/mason.nvim'
@@ -82,11 +83,12 @@ if $TERM_PROGRAM != "Apple_Terminal"
     " sets colorscheme
     "-----------------------------------------------------
 
-    " colorscheme tokyonight
-    colorscheme tokyonight-night
+    "colorscheme tokyonight
+    colorscheme PaperColorSlim
+    "colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
-    "colorscheme tokyonight-moon
+    "colorscheme nordic
 
     "colorscheme gruvbox
     "colorscheme dracula
