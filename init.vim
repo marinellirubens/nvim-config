@@ -21,6 +21,8 @@ Plug 'Mofiqul/dracula.nvim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'AlexvZyl/nordic.nvim'
 Plug 'pappasam/papercolor-theme-slim'
+Plug 'sainnhe/sonokai'
+
 " Autocompletion / lsp configuration
 "Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'yarn install --frozen-lockfile'}
 Plug 'williamboman/mason.nvim'
@@ -85,6 +87,13 @@ if $TERM_PROGRAM != "Apple_Terminal"
     set background=dark
     "colorscheme tokyonight
     colorscheme PaperColorSlim
+    "let g:sonokai_style = 'maia'
+    "let g:sonokai_style = 'andromeda'
+    "let g:sonokai_style = 'shusia'
+    "let g:sonokai_style = 'atlantis'
+    "let g:sonokai_better_performance = 1
+    "colorscheme sonokai
+
     "colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
