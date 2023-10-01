@@ -77,6 +77,10 @@ Plug 'xiyaowong/transparent.nvim'
 
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'kdheepak/lazygit.nvim'
+
+" plugin for a floating command line
+Plug 'MunifTanjim/nui.nvim'
+Plug 'VonHeikemen/fine-cmdline.nvim'
 call plug#end()
 
 
