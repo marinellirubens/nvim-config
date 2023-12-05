@@ -90,7 +90,7 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "-----------------------------------------------------
     set background=dark
     "colorscheme tokyonight
-    colorscheme PaperColorSlim
+    "colorscheme PaperColorSlim
     "let g:sonokai_style = 'maia'
     "let g:sonokai_style = 'andromeda'
     "let g:sonokai_style = 'shusia'
@@ -103,7 +103,7 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "colorscheme tokyonight-day
     "colorscheme nordic
 
-    "colorscheme gruvbox
+    colorscheme gruvbox
     "colorscheme dracula
     "colorscheme shades_of_purple
     set termguicolors
@@ -120,7 +120,7 @@ syntax enable
 set clipboard=unnamedplus
 set hidden
 set number
-set relativenumber
+set relativenumber!
 set mouse=a
 set tabstop=4
 set shiftwidth=4
@@ -187,6 +187,7 @@ nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 nnoremap <leader>gf <cmd>Telescope git_files<cr>
 nnoremap <leader>vs <cmd>vertical split<cr>
+nnoremap <leader>hs <cmd>split<cr>
 nnoremap <leader>tt <cmd>ToggleTerm<cr>
 nnoremap <S-Tab> <cmd>tabnext<cr>
 nnoremap <leader>mm <cmd>make<cr>
