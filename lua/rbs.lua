@@ -23,11 +23,8 @@ if vim.fn.has('win32') < 1 then
     vim.opt.listchars:append "space:⋅"
 end
 --vim.opt.listchars:append "eol:↴"
-require("indent_blankline").setup {
-    show_end_of_line = true,
-    space_char_blankline = " ",
-    show_current_context = true,
-}
+require("ibl").setup ()
+
 
 require("mason").setup()
 require("lsp_config")
