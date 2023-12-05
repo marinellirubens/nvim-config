@@ -28,3 +28,7 @@ end
 --implement this later
 --https://www.reddit.com/r/neovim/comments/mvhfw7/comment/gvd8rb9/?utm_source=share&utm_medium=web2x&context=3
 --vim.keymap.set("n", "<leader>da", ":DocstringTypes<cr>")
+--
+--keybing to avoid error on ctrl + c on sql files
+vim.g.ftplugin_sql_omni_key = nil
+vim.g.omni_sql_no_default_maps = 1
