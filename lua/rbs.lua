@@ -1,3 +1,4 @@
+require("keymap")
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
@@ -23,13 +24,14 @@ if vim.fn.has('win32') < 1 then
     vim.opt.listchars:append "space:⋅"
 end
 --vim.opt.listchars:append "eol:↴"
-require("ibl").setup ()
-
-
-require("mason").setup()
 require("lsp_config")
-require("keymap")
+require("obsidian_cfg")
 require("debugging")
+require("nvim_tree")
+require("nvim-dev-icons_cfg")
+--require("neorg_cfg")
+
+require("ibl").setup ()
 require('telescope').setup{
     pickers = {
         find_files = {

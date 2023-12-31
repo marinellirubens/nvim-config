@@ -3,7 +3,7 @@ call plug#begin()
 Plug 'sheerun/vim-polyglot'
 Plug 'pixelneo/vim-python-docstring'
 " File browsing with a nice tree
-Plug 'preservim/nerdtree'
+"Plug 'preservim/nerdtree'
 
 " Comment on files in a easy manner
 Plug 'preservim/nerdcommenter'
@@ -81,6 +81,15 @@ Plug 'kdheepak/lazygit.nvim'
 " plugin for a floating command line
 Plug 'MunifTanjim/nui.nvim'
 Plug 'VonHeikemen/fine-cmdline.nvim'
+
+" plugins for note taking
+"Plug 'godlygeek/tabular'
+"Plug 'preservim/vim-markdown'
+Plug 'epwalsh/obsidian.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'nvim-tree/nvim-tree.lua'
+"Plug 'ryanoasis/vim-devicons'
+"Plug 'nvim-neorg/neorg'
 call plug#end()
 
 
@@ -144,10 +153,15 @@ set list
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
 " nerdtree configuration
-let NERDTreeQuitOnopen=1
-nmap <f2> :NERDTreeRefreshRoot<CR>:NERDTreeToggle<CR>
-nmap <f3> :NERDTreeRefreshRoot<CR>
+"let NERDTreeQuitOnopen=1
+"nmap <f2> :NERDTreeRefreshRoot<CR>:NERDTreeToggle<CR>
+"nmap <f3> :NERDTreeRefreshRoot<CR>
 "nmap <f2> :NERDTreeToggle<CR>
+
+nmap <f2> :NvimTreeOpen<CR>:NvimTreeToggle<CR>
+nmap <f3> :NvimTreeRefresh<CR>
+nmap <f2> :NvimTreeToggle<CR>
+
 
 " easyer motion on page up and down
 nnoremap <C-j> <C-d>zz
@@ -174,6 +188,7 @@ let g:go_def_mode='gopls'
 let g:go_info_mode='gopls'
 let g:coc_disable_startup_warning = 1
 let g:netrw_browse_split=2
+let g:vim_markdown_folding_disabled = 1
 " vimspector
 "if has('win32') < 1 
     "let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
@@ -204,4 +219,3 @@ nnoremap <leader>nc :set colorcolumn-=100<CR>
 " Including other configuration files in lua
 lua require("rbs")
 highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
-
