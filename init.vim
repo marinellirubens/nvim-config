@@ -83,13 +83,23 @@ Plug 'MunifTanjim/nui.nvim'
 Plug 'VonHeikemen/fine-cmdline.nvim'
 
 " plugins for note taking
-"Plug 'godlygeek/tabular'
-"Plug 'preservim/vim-markdown'
 Plug 'epwalsh/obsidian.nvim'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'nvim-tree/nvim-tree.lua'
-"Plug 'ryanoasis/vim-devicons'
-"Plug 'nvim-neorg/neorg'
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+" if error on the post hook run the following command
+" :call mkdp#util#install()
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
+
+
+Plug 'kristijanhusak/vim-dadbod-completion'
+Plug 'Shougo/deoplete.nvim'
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'Shougo/ddc.vim'
+
 call plug#end()
 
 
@@ -219,3 +229,35 @@ nnoremap <leader>nc :set colorcolumn-=100<CR>
 " Including other configuration files in lua
 lua require("rbs")
 highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
+
+
+" dadbod (db) configuration
+"let g:dbs = {
+"\  'ilm_local': 'postgres://ILMUSER:postgres@localhost:5435/ILM'
+"\ }
+
+" For built in omnifunc
+autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni
+
+" hrsh7th/nvim-cmp
+autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })
+
+" Shougo/ddc.vim
+call ddc#custom#patch_filetype(['sql', 'mysql', 'plsql'], 'sources', 'dadbod-completion')
+call ddc#custom#patch_filetype(['sql', 'mysql', 'plsql'], 'sourceOptions', {
+\ 'dadbod-completion': {
+\   'mark': 'DB',
+\   'isVolatile': v:true,
+\ },
+\ })
+
+" Source is automatically added, you just need to include it in the chain complete list
+let g:completion_chain_complete_list = {
+    \   'sql': [
+    \    {'complete_items': ['vim-dadbod-completion']},
+    \   ],
+    \ }
+" Make sure `substring` is part of this list. Other items are optional for this completion source
+let g:completion_matching_strategy_list = ['exact', 'substring']
+" Useful if there's a lot of camel case items
+let g:completion_matching_ignore_case = 1
