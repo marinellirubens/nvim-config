@@ -23,6 +23,10 @@ vim.opt.listchars:append "tab:> "
 if vim.fn.has('win32') < 1 then
     vim.opt.listchars:append "space:⋅"
 end
+
+
+vim.g.db_ui_save_location=vim.env.HOME .. '/.vim/dadbod-ui'
+
 --vim.opt.listchars:append "eol:↴"
 require("lsp_config")
 require("obsidian_cfg")
