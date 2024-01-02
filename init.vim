@@ -80,7 +80,8 @@ Plug 'kdheepak/lazygit.nvim'
 
 " plugin for a floating command line
 Plug 'MunifTanjim/nui.nvim'
-Plug 'VonHeikemen/fine-cmdline.nvim'
+Plug 'rcarriga/nvim-notify'
+Plug 'folke/noice.nvim'
 
 " plugins for note taking
 Plug 'epwalsh/obsidian.nvim'
