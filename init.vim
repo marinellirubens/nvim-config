@@ -100,7 +100,7 @@ Plug 'Shougo/deoplete.nvim'
 Plug 'roxma/nvim-yarp'
 Plug 'roxma/vim-hug-neovim-rpc'
 Plug 'Shougo/ddc.vim'
-
+Plug 'loctvl842/monokai-pro.nvim'
 call plug#end()
 
 
@@ -108,25 +108,33 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "-----------------------------------------------------
     " sets colorscheme
     "-----------------------------------------------------
+    set termguicolors
     set background=dark
-    "colorscheme tokyonight
     "colorscheme PaperColorSlim
+
+    " sonokai configuration
     "let g:sonokai_style = 'maia'
+    "let g:sonokai_style = 'default'
     "let g:sonokai_style = 'andromeda'
     "let g:sonokai_style = 'shusia'
     "let g:sonokai_style = 'atlantis'
     "let g:sonokai_better_performance = 1
     "colorscheme sonokai
 
-    colorscheme tokyonight-night
+    " monokai configuration
+    colorscheme monokai-pro
+
+    " tokyonight configuration
+    "colorscheme tokyonight
+    "colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
-    "colorscheme nordic
 
+    " others
+    "colorscheme nordic
     "colorscheme gruvbox
     "colorscheme dracula
     "colorscheme shades_of_purple
-    set termguicolors
 endif
 
 "" command to run file automatically when using :make
@@ -140,7 +148,7 @@ syntax enable
 set clipboard=unnamedplus
 set hidden
 set number
-set relativenumber!
+"set relativenumber!
 set mouse=a
 set tabstop=4
 set shiftwidth=4

@@ -61,3 +61,6 @@ require('telescope').load_extension('lazygit')
 --require('debug')
 require("virt-column").setup()
 require("noice_cfg")
+require("monokai_pro")
+
+
