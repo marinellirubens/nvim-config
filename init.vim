@@ -118,12 +118,12 @@ if $TERM_PROGRAM != "Apple_Terminal"
     "let g:sonokai_better_performance = 1
     "colorscheme sonokai
 
-    "colorscheme tokyonight-night
+    colorscheme tokyonight-night
     "colorscheme tokyonight-storm
     "colorscheme tokyonight-day
     "colorscheme nordic
 
-    colorscheme gruvbox
+    "colorscheme gruvbox
     "colorscheme dracula
     "colorscheme shades_of_purple
     set termguicolors
