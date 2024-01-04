@@ -1,6 +1,10 @@
 -- setting map leader
 vim.g.mapleader = ' '
 
+--keybing to avoid error on ctrl + c on sql files
+vim.g.ftplugin_sql_omni_key = nil
+vim.g.omni_sql_no_default_maps = 1
+
 -- mapping for the comments
 vim.keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
 vim.keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle<CR>gv")
@@ -26,7 +30,9 @@ vim.keymap.set("n", "<f3>",":NvimTreeRefresh<CR>", { noremap = true, silent = tr
 vim.keymap.set("n", "<f2>",":NvimTreeToggle<CR>", { noremap = true, silent = true })
 
 -- live grep on files
-vim.keymap.set("n", "<leader>ps", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>", { noremap = true, silent = true })
+vim.keymap.set("n",
+    "<leader>ps", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>",
+    { noremap = true, silent = true })
 
 -- Telescope mappings
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
@@ -96,10 +102,3 @@ vim.keymap.set("i", "jf", "<ESC>")
 -- utility to use commands without ctrl
 vim.keymap.set("n", ";", ":")
 
---implement this later
---https://www.reddit.com/r/neovim/comments/mvhfw7/comment/gvd8rb9/?utm_source=share&utm_medium=web2x&context=3
---vim.keymap.set("n", "<leader>da", ":DocstringTypes<cr>")
-
---keybing to avoid error on ctrl + c on sql files
-vim.g.ftplugin_sql_omni_key = nil
-vim.g.omni_sql_no_default_maps = 1
