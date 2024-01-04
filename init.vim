@@ -156,44 +156,38 @@ set softtabstop=4
 set expandtab
 set backspace=indent,eol,start
 set scrolloff=7
-"filetype indent plugin on
-"filetype indent on
-"set smartindent
 set autoindent
-
 set autowrite
 set splitbelow
 set splitright
 set listchars=tab:>\ ,trail:~,extends:>,precedes:<
-
 set list
+"filetype indent plugin on
+"filetype indent on
+"set smartindent
 
 " node configuration for windows machine
 "let g:coc_node_path = 'C:\Program Files\nodejs\node.exe'
 
-" nerdtree configuration
-"let NERDTreeQuitOnopen=1
-"nmap <f2> :NERDTreeRefreshRoot<CR>:NERDTreeToggle<CR>
-"nmap <f3> :NERDTreeRefreshRoot<CR>
-"nmap <f2> :NERDTreeToggle<CR>
-
-nmap <f2> :NvimTreeOpen<CR>:NvimTreeToggle<CR>
-nmap <f3> :NvimTreeRefresh<CR>
-nmap <f2> :NvimTreeToggle<CR>
-
+" moved to keymap file
+"nmap <f2> :NvimTreeOpen<CR>:NvimTreeToggle<CR>
+"nmap <f3> :NvimTreeRefresh<CR>
+"nmap <f2> :NvimTreeToggle<CR>
 
 " easyer motion on page up and down
-nnoremap <C-j> <C-d>zz
-vnoremap <C-j> <C-d>zz
+" moved to keymap file
+"nnoremap <C-j> <C-d>zz
+"vnoremap <C-j> <C-d>zz
 
-nnoremap <C-k> <C-u>zz
-vnoremap <C-k> <C-u>zz
+"nnoremap <C-k> <C-u>zz
+"vnoremap <C-k> <C-u>zz
 
-nnoremap <C-d> <C-d>zz
-vnoremap <C-d> <C-d>zz
+"nnoremap <C-d> <C-d>zz
+"vnoremap <C-d> <C-d>zz
 
-nnoremap <C-u> <C-u>zz
-vnoremap <C-u> <C-u>zz
+"nnoremap <C-u> <C-u>zz
+"vnoremap <C-u> <C-u>zz
+
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
 augroup highlight_yank
@@ -201,44 +195,9 @@ augroup highlight_yank
     au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
 augroup END
 
-
-" Language specific
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:coc_disable_startup_warning = 1
-let g:netrw_browse_split=2
-let g:vim_markdown_folding_disabled = 1
-" vimspector
-"if has('win32') < 1 
-    "let g:vimspector_enable_mappings = 'VISUAL_STUDIO'
-"endif
-
-let mapleader = " "
-nnoremap <leader>ps :lua require'telescope.builtin'.grep_string({ search = vim.fn.input("Grep for >")})<CR>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>gf <cmd>Telescope git_files<cr>
-nnoremap <leader>vs <cmd>vertical split<cr>
-nnoremap <leader>hs <cmd>split<cr>
-nnoremap <leader>tt <cmd>ToggleTerm<cr>
-nnoremap <S-Tab> <cmd>tabnext<cr>
-nnoremap <leader>mm <cmd>make<cr>
-nnoremap <C-w><C-h> <cmd>vertical resize +5<cr>
-nnoremap <C-w><C-l> <cmd>vertical resize -5<cr>
-nnoremap <C-w><C-j> <cmd>horizontal resize +5<cr>
-nnoremap <C-w><C-k> <cmd>horizontal resize -5<cr>
-nnoremap <leader>r <cmd>source ~/.config/nvim/init.vim<cr>
-nnoremap <leader>tp <cmd>TransparentToggle<cr>
-
-nnoremap <silent> <leader>gg :LazyGit<CR>
-nnoremap <leader>c :set colorcolumn=100<CR>
-nnoremap <leader>nc :set colorcolumn-=100<CR>
 " Including other configuration files in lua
-lua require("rbs")
+lua require("main_cfg")
 highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
-
 
 " dadbod (db) configuration
 "let g:dbs = {
