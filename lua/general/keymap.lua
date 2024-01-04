@@ -1,15 +1,15 @@
 
 vim.g.mapleader = ' '
-if vim.fn.has("mac") > 0 then
-    vim.keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
-    vim.keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle<CR>gv")
-else
-    vim.keymap.set("n", "<C-_>", "<Plug>NERDCommenterToggle")
-    vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv")
-end
+
+vim.keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
+vim.keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle<CR>gv")
+vim.keymap.set("n", "<C-_>", "<Plug>NERDCommenterToggle")
+vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv")
+
 vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true })
 vim.keymap.set("n", "<C-j>","<C-d>zz")
 vim.keymap.set("v", "<C-j>","<C-d>zz")
+
 vim.keymap.set("n", "<C-k>","<C-u>zz")
 vim.keymap.set("v", "<C-k>","<C-u>zz")
 vim.keymap.set("n", "<C-d>","<C-d>zz")
@@ -58,6 +58,10 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 
 vim.keymap.set("i", "<C-H>", "<C-W>")
 vim.keymap.set("n", "<leader>nd", ":Telescope diagnostics<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("i", "fj", "<ESC>")
+vim.keymap.set("i", "jf", "<ESC>")
+vim.keymap.set("n", ";", ":")
 
 --implement this later
 --https://www.reddit.com/r/neovim/comments/mvhfw7/comment/gvd8rb9/?utm_source=share&utm_medium=web2x&context=3
