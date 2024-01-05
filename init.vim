@@ -198,7 +198,7 @@ augroup END
 " Including other configuration files in lua
 highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
 lua require("main_cfg")
-
+highlight ColorColumn guibg=Green
 " dadbod (db) configuration
 "let g:dbs = {
 "\  'ilm_local': 'postgres://ILMUSER:postgres@localhost:5435/ILM'
