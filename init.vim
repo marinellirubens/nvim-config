@@ -196,8 +196,8 @@ augroup highlight_yank
 augroup END
 
 " Including other configuration files in lua
-lua require("main_cfg")
 highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
+lua require("main_cfg")
 
 " dadbod (db) configuration
 "let g:dbs = {
