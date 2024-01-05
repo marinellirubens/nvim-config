@@ -1,6 +1,3 @@
--- import keymap file
-require("general.keymap")
-
 -- search configuration
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
@@ -38,6 +35,9 @@ vim.g.omni_sql_no_default_maps = 1
 
 -- dadbod ui saving location
 vim.g.db_ui_save_location=vim.env.HOME .. '/.vim/dadbod-ui'
+
+-- import keymap file
+require("general.keymap")
 
 -- configuration imports
 require("general.lsp_config")
