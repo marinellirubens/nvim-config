@@ -80,11 +80,6 @@ Plug 'xiyaowong/transparent.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'kdheepak/lazygit.nvim'
 
-" plugin for a floating command line
-Plug 'MunifTanjim/nui.nvim'
-Plug 'rcarriga/nvim-notify'
-Plug 'folke/noice.nvim'
-
 " plugins for note taking
 Plug 'epwalsh/obsidian.nvim'
 Plug 'nvim-tree/nvim-web-devicons'

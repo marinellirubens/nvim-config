@@ -48,6 +48,5 @@ require("plugins.basic_plugins_cfg")
 require("plugins.obsidian_cfg")
 require("plugins.nvim_tree")
 require("plugins.nvim-dev-icons_cfg")
-require("plugins.noice_cfg")
 require("plugins.monokai_pro")
 
