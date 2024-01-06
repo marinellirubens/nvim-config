@@ -29,4 +29,14 @@
         },
       },
     },
+    routes = {
+      {
+        filter = {
+          event = "msg_show",
+          kind = "",
+        },
+        opts = { skip = true },
+      },
+    },
   })
+

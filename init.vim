@@ -10,7 +10,9 @@ Plug 'preservim/nerdcommenter'
 
 " STYLE kashdfkshdkfhsk
 " Nicer bar at the bottom
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'folke/which-key.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 " colorscheme
