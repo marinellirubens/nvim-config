@@ -101,8 +101,8 @@ vim.keymap.set("i", "<C-H>", "<C-W>")
 vim.keymap.set("i", "<C-BS>", "<C-W>")
 
 -- strange mapping to get out of insert mode without moving from home row
-vim.keymap.set("i", "fj", "<ESC>")
-vim.keymap.set("i", "jf", "<ESC>")
+--vim.keymap.set("i", "fj", "<ESC>")
+--vim.keymap.set("i", "jf", "<ESC>")
 
 -- utility to use commands without ctrl
 vim.keymap.set("n", ";", ":")
