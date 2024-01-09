@@ -105,5 +105,5 @@ vim.keymap.set("i", "<C-BS>", "<C-W>")
 --vim.keymap.set("i", "jf", "<ESC>")
 
 -- utility to use commands without ctrl
-vim.keymap.set("n", ";", ":")
+--vim.keymap.set("n", ";", ":")
 

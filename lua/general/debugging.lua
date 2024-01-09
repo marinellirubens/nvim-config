@@ -1,7 +1,8 @@
 --Start/stop debugger (F17 is shift+F5)
 vim.keymap.set("n", "<F5>", ":lua require'dap'.continue()<CR>1<CR><CR>")
 vim.keymap.set("n", "<F6>", ":lua require'dap'.continue()<CR>")
-vim.keymap.set("n", "<F17>", ":DapTerminate<CR>")
+vim.keymap.set("n", "<S-F5>", ":DapTerminate<CR>")
+--vim.keymap.set("n", "<S-F5>", ":echo 'F17'")
 
 --debug steps walking
 vim.keymap.set("n", "<F9>", ":lua require'dap'.toggle_breakpoint()<CR>")
@@ -10,7 +11,8 @@ vim.keymap.set("n", "<F11>", ":lua require'dap'.step_into()<CR>")
 vim.keymap.set("n", "<F12>", ":lua require'dap'.step_out()<CR>")
 
 --setting breakpoint (F21 is shift+F5)
-vim.keymap.set("n", "<F21>", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+vim.keymap.set("n", "<S-F9>", ":lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>")
+--vim.keymap.set("n", "<S-F9>", ":echo 'F21'")
 vim.keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>")
 vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 vim.keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")
