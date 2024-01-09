@@ -73,10 +73,10 @@ end
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
   -- clangd = {},
-  gopls = {},
+  --gopls = {},
   pyright = {},
-  rust_analyzer = {},
-  tsserver = {},
+  --rust_analyzer = {},
+  --tsserver = {},
 
   lua_ls = {
     Lua = {
@@ -163,7 +163,7 @@ if vim.fn.has('win32') < 1 then
 
       -- Automatically install missing parsers when entering buffer
       -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-      auto_install = true,
+      auto_install = false,
 
       -- List of parsers to ignore installing (for "all")
       ignore_install = { "javascript" },
