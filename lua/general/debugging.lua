@@ -18,7 +18,7 @@ vim.keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")
 require("nvim-dap-virtual-text").setup()
 require('dap-go').setup()
 --require('dap-python').setup()
-require("dap-python").setup("python", {})
+require("dap-python").setup("/usr/bin/python3", {})
 require("dapui").setup()
 
 local dap, dapui = require("dap"), require("dapui")
@@ -32,6 +32,14 @@ dap.listeners.before.event_exited["dapui_config"] = function()
   dapui.close()
 end
 
+local set_namespace = vim.api.nvim__set_hl_ns or vim.api.nvim_set_hl_ns
+local namespace = vim.api.nvim_create_namespace("dap-hlng")
+
+--vim.api.nvim_set_hl(0, 'DapBreakpoint', { bg='#ffffff' })
+--vim.api.nvim_set_hl(0, 'DapLogPoint', { bg='#ffffff' })
+vim.api.nvim_set_hl(0, 'DapStopped', { bg = '#21AF18' })
+
+
 vim.api.nvim_set_hl(0, "blue",   { fg = "#3d59a1" })
 vim.api.nvim_set_hl(0, "green",  { fg = "#9ece6a" })
 vim.api.nvim_set_hl(0, "yellow", { fg = "#FFFF00" })
@@ -41,3 +49,4 @@ vim.api.nvim_set_hl(0, "red",    { fg = "#993939" })
 vim.fn.sign_define('DapBreakpoint',          { text='●', texthl='red',   linehl='DapBreakpoint', numhl='DapBreakpoint' })
 vim.fn.sign_define('DapBreakpointCondition', { text='●', texthl='red',   linehl='DapBreakpoint', numhl='DapBreakpoint' })
 vim.fn.sign_define('DapBreakpointRejected',  { text='●', texthl='orange', linehl='DapBreakpoint', numhl='DapBreakpoint' })
+vim.fn.sign_define('DapStopped',  { texthl='green', linehl='DapStopped', numhl='DapStopped' })
