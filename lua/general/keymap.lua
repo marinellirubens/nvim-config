@@ -57,7 +57,7 @@ vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>")
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>")
 
 -- tab movement
-vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<cr>")
+--vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<cr>")
 --vim.keymap.set("n", "<Tab>", "<cmd>tabnext<cr>")
 
 -- run the current file if is mapped 

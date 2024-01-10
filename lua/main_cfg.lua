@@ -2,6 +2,7 @@
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+
 -- file configuration
 vim.opt.swapfile = false
 vim.opt.backup = false
@@ -39,7 +40,8 @@ vim.g.db_ui_save_location=vim.env.HOME .. '/.vim/dadbod-ui'
 -- import keymap file
 require("general.keymap")
 
--- configuration imports
+---- configuration imports
+require("plugins.copilot_cfg")
 require("general.lsp_config")
 require("general.debugging")
 
