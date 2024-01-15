@@ -17,7 +17,7 @@ vim.keymap.set("n", "<leader>lp", ":lua require'dap'.set_breakpoint(nil, nil, vi
 vim.keymap.set("n", "<leader>dr", ":lua require'dap'.repl.open()<CR>")
 vim.keymap.set("n", "<leader>dt", ":lua require'dap-go'.debug_test()<CR>")
 
-require("nvim-dap-virtual-text").setup()
+--require("nvim-dap-virtual-text").setup()
 require('dap-go').setup()
 --require('dap-python').setup()
 require("dap-python").setup("/usr/bin/python3", {})
