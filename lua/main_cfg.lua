@@ -54,4 +54,4 @@ require("plugins.nvim_tree")
 require("plugins.nvim-dev-icons_cfg")
 require("plugins.lualine")
 require("plugins.monokai_pro")
-
+require("plugins.trouble")

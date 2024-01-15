@@ -8,6 +8,8 @@ Plug 'pixelneo/vim-python-docstring'
 " Comment on files in a easy manner
 Plug 'preservim/nerdcommenter'
 
+Plug 'folke/trouble.nvim'
+
 " STYLE kashdfkshdkfhsk
 " Nicer bar at the bottom
 "Plug 'vim-airline/vim-airline'
