@@ -2,6 +2,8 @@
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+-- conceallevel for obsidian
+vim.opt.conceallevel = 2
 
 -- file configuration
 vim.opt.swapfile = false
