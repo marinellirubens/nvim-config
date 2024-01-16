@@ -1,4 +1,8 @@
 -- plugins direct configuration
+
+-- could not make it work, maybe in the future
+--require("fidget").setup {}
+
 require("ibl").setup ()
 require('telescope').setup{
     pickers = {

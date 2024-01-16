@@ -8,8 +8,15 @@ Plug 'pixelneo/vim-python-docstring'
 " Comment on files in a easy manner
 Plug 'preservim/nerdcommenter'
 
+" errors checking
 Plug 'folke/trouble.nvim'
+
+" hides key information on .env files and config.py files
 Plug 'laytan/cloak.nvim'
+
+" notifications for lsp, could not make it work, maybe in the future
+"Plug 'j-hui/fidget.nvim'
+
 " STYLE kashdfkshdkfhsk
 " Nicer bar at the bottom
 "Plug 'vim-airline/vim-airline'

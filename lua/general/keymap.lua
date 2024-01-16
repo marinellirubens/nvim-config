@@ -111,3 +111,5 @@ vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete complete
 -- utility to use commands without ctrl
 --vim.keymap.set("n", ";", ":")
 
+--vim.keymap.set({ 'n', 'x' }, '<leader>y', '"+y', { desc = 'Copy from system clipboard' })
+--vim.keymap.set({ 'n', 'x' }, '<leader>pp', '"+p', { desc = 'Copy from system clipboard' })
