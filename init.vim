@@ -195,15 +195,15 @@ set list
 
 "nnoremap <C-n> :next<CR>
 "nnoremap <C-b> :Next<CR>
-augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
-augroup END
+"augroup highlight_yank
+    "autocmd!
+    "au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
+"augroup END
 
 " Including other configuration files in lua
-highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
+"highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green
 lua require("main_cfg")
-highlight ColorColumn guibg=Green
+"highlight ColorColumn guibg=Green
 " dadbod (db) configuration
 "let g:dbs = {
 "\  'ilm_local': 'postgres://ILMUSER:postgres@localhost:5435/ILM'

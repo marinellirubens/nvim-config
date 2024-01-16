@@ -2,6 +2,15 @@
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
+vim.cmd[[
+augroup highlight_yank
+    autocmd!
+    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
+augroup END
+]]
+vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green]]
+vim.cmd[[highlight ColorColumn guibg=Green]]
+
 -- conceallevel for obsidian
 vim.opt.conceallevel = 1
 

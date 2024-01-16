@@ -25,4 +25,3 @@ require("transparent").setup({
 })
 require('gitsigns').setup()
 require('telescope').load_extension('lazygit')
---require("virt-column").setup()
