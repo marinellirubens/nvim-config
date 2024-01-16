@@ -3,7 +3,7 @@ vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 -- conceallevel for obsidian
-vim.opt.conceallevel = 2
+vim.opt.conceallevel = 1
 
 -- file configuration
 vim.opt.swapfile = false
@@ -45,6 +45,7 @@ require("general.keymap")
 ---- configuration imports
 require("plugins.copilot_cfg")
 require("general.lsp_config")
+require("plugins.treesitter")
 require("general.debugging")
 
 -- plugins specifics imports

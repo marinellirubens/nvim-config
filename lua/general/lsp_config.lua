@@ -2,14 +2,13 @@ require("mason").setup()
 require("mason-lspconfig").setup({
     ensure_installed = { "lua_ls", "pyright", "tsserver" }
 })
-require'cmp'.setup {
+require('cmp').setup {
   sources = {
     { name = 'nvim_lsp' }
   }
 }
 
-local function setup_diags()
-  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
     vim.lsp.diagnostic.on_publish_diagnostics,
     {
         virtual_text = true,
@@ -17,10 +16,8 @@ local function setup_diags()
         update_in_insert = false,
         underline = true,
     }
-  )
-end
+)
 
-setup_diags()
 -- LSP settings.
 --  This function gets run when an LSP connects to a particular buffer.
 local on_attach = function(_, bufnr)
@@ -72,12 +69,8 @@ end
 --  Add any additional override configuration in the following tables. They will be passed to
 --  the `settings` field of the server config. You must look up that documentation yourself.
 local servers = {
-  -- clangd = {},
-  --gopls = {},
   pyright = {},
-  --rust_analyzer = {},
-  --tsserver = {},
-
+  tsserver = {},
   lua_ls = {
     Lua = {
       workspace = { checkThirdParty = false },
@@ -86,8 +79,6 @@ local servers = {
   },
 }
 
--- Setup neovim lua configuration
---require('neodev').setup()
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -95,8 +86,7 @@ capabilities.textDocument.completion.completionItem.snippetSupport = false
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 -- Ensure the servers above are installed
-local mason_lspconfig = require 'mason-lspconfig'
-
+local mason_lspconfig = require('mason-lspconfig')
 mason_lspconfig.setup {
   ensure_installed = vim.tbl_keys(servers),
 }
@@ -111,11 +101,12 @@ mason_lspconfig.setup_handlers {
   end,
 }
 
--- nvim-cmp setup
-local cmp = require 'cmp'
-local luasnip = require 'luasnip'
-
+ --nvim-cmp setup
+local luasnip = require('luasnip')
 luasnip.config.setup {}
+
+
+local cmp = require('cmp')
 cmp.setup {
   snippet = {
     expand = function(args)
@@ -123,8 +114,8 @@ cmp.setup {
     end,
   },
   mapping = cmp.mapping.preset.insert {
-    ['<C-n>'] = cmp.mapping.select_next_item(),
-    ['<C-p>'] = cmp.mapping.select_prev_item(),
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
     ['<C-d>'] = cmp.mapping.scroll_docs(-4),
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
@@ -132,20 +123,6 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-    ['<Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
-    ['<S-Tab>'] = cmp.mapping(function(fallback)
-      if cmp.visible() then
-        cmp.select_prev_item()
-      else
-        fallback()
-      end
-    end, { 'i', 's' }),
   },
   sources = {
     { name = 'nvim_lsp' },
@@ -153,49 +130,3 @@ cmp.setup {
   },
 }
 
-if vim.fn.has('win32') < 1 then
-    require'nvim-treesitter.configs'.setup {
-      -- A list of parser names, or "all" (the five listed parsers should always be installed)
-      ensure_installed = { "python", "lua", "vim", "vimdoc", "query" },
-
-      -- Install parsers synchronously (only applied to `ensure_installed`)
-      sync_install = false,
-
-      -- Automatically install missing parsers when entering buffer
-      -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
-      auto_install = false,
-
-      -- List of parsers to ignore installing (for "all")
-      ignore_install = { "javascript" },
-
-      ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
-      -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
-      indent = {
-          enable = false,
-          disable = {"python", }
-      },
-      highlight = {
-        enable = true,
-
-        -- NOTE: these are the names of the parsers and not the filetype. (for example if you want to
-        -- disable highlighting for the `tex` filetype, you need to include `latex` in this list as this is
-        -- the name of the parser)
-        -- list of language that will be disabled
-        disable = { "c", "rust" },
-        -- Or use a function for more flexibility, e.g. to disable slow treesitter highlight for large files
-        --disable = function(lang, buf)
-            --local max_filesize = 100 * 1024 -- 100 KB
-            --local ok, stats = pcall(vim.loop.fs_stat, vim.api.nvim_buf_get_name(buf))
-            --if ok and stats and stats.size > max_filesize then
-                --return true
-            --end
-        --end,
-
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = {"python"},
-      },
-    }
-end
