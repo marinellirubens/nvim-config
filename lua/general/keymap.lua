@@ -12,13 +12,13 @@ vim.g.ftplugin_sql_omni_key = nil
 vim.g.omni_sql_no_default_maps = 1
 
 -- mapping for the comments
-vim.keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle")
-vim.keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle<CR>gv")
-vim.keymap.set("n", "<C-_>", "<Plug>NERDCommenterToggle")
-vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv")
+vim.keymap.set("n", "<C-/>", "<Plug>NERDCommenterToggle", { desc = "NERDCommenterToggle" })
+vim.keymap.set("v", "<C-/>", "<Plug>NERDCommenterToggle<CR>gv", { desc = "NERDCommenterToggle" })
+vim.keymap.set("n", "<C-_>", "<Plug>NERDCommenterToggle", { desc = "NERDCommenterToggle" })
+vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv", { desc = "NERDCommenterToggle" })
 
 -- remove highlight on searchs
-vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true , desc = "Remove highlight on searchs"})
 
 -- page up/down with centralization
 vim.keymap.set("n", "<C-j>","<C-d>zz")
@@ -31,37 +31,37 @@ vim.keymap.set("n", "<C-u>","<C-u>zz")
 vim.keymap.set("v", "<C-u>","<C-u>zz")
 
 -- file tree
-vim.keymap.set("n", "<f2>",":NvimTreeOpen<CR>:NvimTreeToggle<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<f3>",":NvimTreeRefresh<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<f2>",":NvimTreeToggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<f2>",":NvimTreeOpen<CR>:NvimTreeToggle<CR>", { noremap = true, silent = true, desc = "Open file tree" })
+vim.keymap.set("n", "<f3>",":NvimTreeRefresh<CR>", { noremap = true, silent = true, desc = "Refresh file tree" })
+vim.keymap.set("n", "<f2>",":NvimTreeToggle<CR>", { noremap = true, silent = true, desc = "Toggle file tree" })
 
 -- live grep on files
 vim.keymap.set("n",
     "<leader>ps", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>",
-    { noremap = true, silent = true })
+    { noremap = true, silent = true , desc = "Live grep on files"})
 
 -- Telescope mappings
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>")
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
-vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<cr>")
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
-vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
-vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>")
-vim.keymap.set("n", "<leader>nd", ":Telescope diagnostics<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true , desc = "Telescope Live grep on files"})
+vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true , desc = "Telescope Find files"})
+vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { noremap = true, silent = true , desc = "Telescope find in current buffer"})
+vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
+vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
+vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { noremap = true, silent = true , desc = "Telescope git files"})
+vim.keymap.set("n", "<leader>nd", ":Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 
 -- split window
-vim.keymap.set("n", "<leader>vs", "<cmd>vertical split<cr>")
-vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>")
+vim.keymap.set("n", "<leader>vs", "<cmd>vertical split<cr>", { noremap = true, desc = "Split window vertical"})
+vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>", { noremap = true, desc = "Split window horizontal"})
 
 -- open/close embbed terminal
-vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>")
+vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { noremap = true, desc = "Open/close embbed terminal"})
 
 -- tab movement
 --vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<cr>")
 --vim.keymap.set("n", "<Tab>", "<cmd>tabnext<cr>")
 
 -- run the current file if is mapped 
-vim.keymap.set("n", "<leader>mm", "<cmd>make<cr>")
+vim.keymap.set("n", "<leader>mm", "<cmd>make<cr>", { noremap = true, desc = "Run the current file"})
 
 -- resize splitted window
 vim.keymap.set("n", "<C-w><C-h>", "<cmd>vertical resize +5<cr>")
@@ -74,35 +74,35 @@ vim.keymap.set("n", "<C-w><C-k>", "<cmd>horizontal resize -5<cr>")
 vim.keymap.set("n", "<leader>tp", "<cmd>TransparentToggle<cr>")
 
 -- lazygit
-vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true , desc = "Lazygit"})
 
 -- colorcolumn
-vim.keymap.set("n", "<leader>c", ":set colorcolumn=100<CR>", { noremap = true, silent = true })
-vim.keymap.set("n", "<leader>nc", ":set colorcolumn-=100<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>c", ":set colorcolumn=100<CR>", { noremap = true, silent = true , desc = "Colorcolumn"})
+vim.keymap.set("n", "<leader>nc", ":set colorcolumn-=100<CR>", { noremap = true, silent = true , desc = "Colorcolumn disable"})
 
 -- put simbol around selection
-vim.keymap.set("v", "<leader>d'", "di''<ESC>hp")
-vim.keymap.set("v", '<leader>d"', 'di""<ESC>hp')
-vim.keymap.set("v", "<leader>d(", "di()<ESC>hp")
-vim.keymap.set("v", "<leader>d[", "di[]<ESC>hp")
-vim.keymap.set("v", "<leader>d{", "di{}<ESC>hp")
-vim.keymap.set("v", "<leader>d`", "di``<ESC>hp")
+vim.keymap.set("v", "<leader>d'", "di''<ESC>hp", { desc = "put ' around selection"})
+vim.keymap.set("v", '<leader>d"', 'di""<ESC>hp', { desc = 'put " around selection'})
+vim.keymap.set("v", "<leader>d(", "di()<ESC>hp", { desc = "put () around selection"})
+vim.keymap.set("v", "<leader>d[", "di[]<ESC>hp", { desc = "put [] around selection"})
+vim.keymap.set("v", "<leader>d{", "di{}<ESC>hp", { desc = "put {} around selection"})
+vim.keymap.set("v", "<leader>d`", "di``<ESC>hp", { desc = "put `` around selection"})
 
 -- move selection up and down
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true })
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true })
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection down"})
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection up"})
 
 
 
-vim.keymap.set("n", "fe", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "fe", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true, desc = "Set file format to unix" })
 
 -- move selection right and left
-vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true })
-vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
+vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true , desc = "Move selection left"})
+vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true , desc = "Move selection right"})
 
--- delete complete work
-vim.keymap.set("i", "<C-H>", "<C-W>")
-vim.keymap.set("i", "<C-BS>", "<C-W>")
+-- delete complete word
+vim.keymap.set("i", "<C-H>", "<C-W>", { noremap = true, desc = "Delete complete word"})
+vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete complete word"})
 
 -- strange mapping to get out of insert mode without moving from home row
 --vim.keymap.set("i", "fj", "<ESC>")
