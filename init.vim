@@ -27,7 +27,6 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " colorscheme
 Plug 'ellisonleao/gruvbox.nvim'
 Plug 'folke/tokyonight.nvim'
-Plug 'lukas-reineke/virt-column.nvim'
 Plug 'Mofiqul/dracula.nvim'
 Plug 'Rigellute/shades-of-purple.vim'
 Plug 'AlexvZyl/nordic.nvim'
