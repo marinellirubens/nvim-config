@@ -1,5 +1,4 @@
 
-require('set')
 require('general.keymap')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -16,8 +15,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
-require("general.copilot_cfg")
 
-vim.cmd[[set termguicolors]]
-vim.cmd[[set background=dark]]
-vim.cmd[[colorscheme monokai-pro]]
+require('set')
+require("general.copilot_cfg")

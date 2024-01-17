@@ -1,10 +1,11 @@
 return {
+    {"github/copilot.vim", priority=1000},
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     "folke/neodev.nvim",
-    {"lukas-reineke/indent-blankline.nvim",
-      config = function()
-        require("ibl").setup ()
-      end
+    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {},
+        config = function ()
+            require("ibl").setup ()
+        end
     },
     {"folke/which-key.nvim", 
      config = function()
@@ -12,20 +13,20 @@ return {
      end
     },
     {'akinsho/toggleterm.nvim', version = "*", config = true},
-    { "xiyaowong/transparent.nvim",
-       config = function ()
-            require("transparent").setup({
-              groups = { -- table: default groups
-                'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
-                'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
-                'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
-                'SignColumn', 'CursorLineNr', 'EndOfBuffer',
-              },
-              extra_groups = {}, -- table: additional groups that should be cleared
-              exclude_groups = {}, -- table: groups you don't want to clear
-            })
-        end
-    },
+    --{ "xiyaowong/transparent.nvim",
+       --config = function ()
+            --require("transparent").setup({
+              --groups = { -- table: default groups
+                --'Normal', 'NormalNC', 'Comment', 'Constant', 'Special', 'Identifier',
+                --'Statement', 'PreProc', 'Type', 'Underlined', 'Todo', 'String', 'Function',
+                --'Conditional', 'Repeat', 'Operator', 'Structure', 'LineNr', 'NonText',
+                --'SignColumn', 'CursorLineNr', 'EndOfBuffer',"NormalFloat",
+              --},
+              --extra_groups = {}, -- table: additional groups that should be cleared
+              --exclude_groups = {}, -- table: groups you don't want to clear
+            --})
+        --end
+    --},
     {'lewis6991/gitsigns.nvim', 
         config = function()
             require('gitsigns').setup()

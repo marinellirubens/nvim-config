@@ -1,6 +1,5 @@
 return {
     'loctvl842/monokai-pro.nvim',
-    priority=1000,
     config = function()
         require("monokai-pro").setup({
           transparent_background = false,
@@ -16,7 +15,7 @@ return {
             annotation = { italic = true },
             tag_attribute = { italic = true }, -- attribute of tag in reactjs
           },
-          filter = "pro", -- classic | octagon | pro | machine | ristretto | spectrum
+          filter = "classic", -- classic | octagon | pro | machine | ristretto | spectrum
           -- Enable this will disable filter option
           day_night = {
             enable = false, -- turn off by default
@@ -46,5 +45,8 @@ return {
             },
           },
         })
+        vim.cmd[[colorscheme monokai-pro]]
+        vim.cmd[[set termguicolors]]
+        vim.cmd[[set background=dark]]
     end
 }
