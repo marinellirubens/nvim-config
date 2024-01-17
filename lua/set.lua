@@ -56,7 +56,6 @@ print(vim.g.db_ui_save_location)
 
 vim.cmd[[autocmd Filetype python setlocal makeprg=/bin/python3\ %]]
 vim.cmd[[autocmd Filetype python setlocal expandtab]]
-vim.cmd[[autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>]]
 vim.cmd[[autocmd Filetype go setlocal makeprg=go\ run\ .]]
 vim.cmd[[autocmd Filetype sh setlocal makeprg=sh\ %]]
 vim.cmd[[autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni]]

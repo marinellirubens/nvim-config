@@ -38,11 +38,25 @@ return {
     --'Rigellute/shades-of-purple.vim',
     --'AlexvZyl/nordic.nvim',
     --'pappasam/papercolor-theme-slim',
-    'pixelneo/vim-python-docstring',
+    {
+        'pixelneo/vim-python-docstring',
+        init = function()
+            vim.g.vim_python_docstring_format = 'google'
+            vim.cmd[[autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>]]
+        end
+    },
     'tpope/vim-fugitive',
     --Language specific
     'fatih/vim-go',
 
+    {
+        'nvim-telescope/telescope-dap.nvim',
+        dependencies = {'mfussenegger/nvim-dap'},
+        config = function()
+            require('telescope').load_extension('dap')
+        end
+    },
+    'iamcco/markdown-preview.nvim',
     --debug
     'mfussenegger/nvim-dap',
     {
@@ -61,9 +75,4 @@ return {
     {   'theHamsta/nvim-dap-virtual-text',
         dependencies = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'}
     },
-    'nvim-telescope/telescope-dap.nvim',
-    'iamcco/markdown-preview.nvim',
-    'Shougo/deoplete.nvim',
-    'roxma/nvim-yarp',
-    'roxma/vim-hug-neovim-rpc',
 }
