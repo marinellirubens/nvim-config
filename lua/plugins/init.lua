@@ -40,7 +40,6 @@ return {
             require("telescope").load_extension("lazygit")
         end
     },
-    --'sheerun/vim-polyglot',
     'pixelneo/vim-python-docstring',
     'preservim/nerdcommenter',
 
@@ -55,9 +54,6 @@ return {
 
     'pixelneo/vim-python-docstring',
 
-    --hides key information on .env files and config.py files
-    'laytan/cloak.nvim',
-    --Autocompletion / lsp configuration
     {   'williamboman/mason.nvim',
         config = function()
             require("mason").setup()
@@ -69,7 +65,7 @@ return {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-cmdline',
-    {  'hrsh7th/nvim-cmp',
+    {  'hrsh7th/nvim-cmp', dependencies = {'L3MON4D3/LuaSnip', 'saadparwaiz1/cmp_luasnip'},
         config = function()
             vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
                 vim.lsp.diagnostic.on_publish_diagnostics,
@@ -110,14 +106,8 @@ return {
             }
         end
     },
-    'L3MON4D3/LuaSnip',
-    'saadparwaiz1/cmp_luasnip',
-    'golang/vscode-go',
-    'ThePrimeagen/vim-be-good',
-
-    'nvim-treesitter/nvim-treesitter',
+    
     'tpope/vim-fugitive',
-
     --Language specific
     'fatih/vim-go',
 
