@@ -1,12 +1,6 @@
 -- setting map leader
 vim.g.mapleader = ' '
 
---vim.keymap.set("n", "<leader>r", "<cmd>echomsg lsjdflsjdf<cr>source ~/.config/nvim/init.vim<cr>")
-
-vim.keymap.set("n", "<leader>r", function()
-    print("Reloaded vim main file")
-    vim.api.nvim_command("source ~/.config/nvim/init.vim")
-end)
 --keybing to avoid error on ctrl + c on sql files
 vim.g.ftplugin_sql_omni_key = nil
 vim.g.omni_sql_no_default_maps = 1
