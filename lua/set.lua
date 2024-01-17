@@ -52,6 +52,7 @@ vim.g.omni_sql_no_default_maps = 1
 
 -- dadbod ui saving location
 vim.g.db_ui_save_location=vim.env.HOME .. '/.vim/dadbod-ui'
+print(vim.g.db_ui_save_location)
 
 vim.cmd[[autocmd Filetype python setlocal makeprg=/bin/python3\ %]]
 vim.cmd[[autocmd Filetype python setlocal expandtab]]

@@ -1,10 +1,33 @@
 return {
-    'williamboman/mason-lspconfig.nvim',
-    dependencies = {'williamboman/mason.nvim'},
+    'neovim/nvim-lspconfig',
+    dependencies = {
+        'williamboman/mason.nvim',
+        'williamboman/mason-lspconfig.nvim',
+        'neovim/nvim-lspconfig',
+        'hrsh7th/cmp-nvim-lsp',
+        'hrsh7th/cmp-buffer',
+        'hrsh7th/cmp-path',
+        'hrsh7th/cmp-cmdline',
+        'hrsh7th/nvim-cmp',
+        'l3mon4d3/luasnip',
+        'saadparwaiz1/cmp_luasnip',
+        'j-hui/fidget.nvim'
+    },
     config = function()
+        require("fidget").setup({})
+        require("mason").setup({})
         require("mason-lspconfig").setup({
             ensure_installed = { "lua_ls", "pyright", "tsserver" }
         })
+        vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(
+            vim.lsp.diagnostic.on_publish_diagnostics,
+            {
+                virtual_text = true,
+                signs = true,
+                update_in_insert = false,
+                underline = true,
+            }
+        )
 
         -- LSP settings.
         --  This function gets run when an LSP connects to a particular buffer.
@@ -91,7 +114,6 @@ return {
          --nvim-cmp setup
         local luasnip = require('luasnip')
         luasnip.config.setup {}
-
 
         local cmp = require('cmp')
         cmp.setup {
