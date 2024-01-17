@@ -19,7 +19,7 @@ return {
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "pyright", "tsserver" }
+            ensure_installed = { "lua_ls", "pylsp", "tsserver" }
         })
         vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(
             vim.lsp.diagnostic.on_publish_diagnostics,
@@ -82,7 +82,35 @@ return {
         --  Add any additional override configuration in the following tables. They will be passed to
         --  the `settings` field of the server config. You must look up that documentation yourself.
         local servers = {
-          pyright = {},
+          pylsp = {
+              pylsp = {
+                plugins = {
+                    -- formatter options
+                    black = { enabled = false },
+                    autopep8 = { enabled = false },
+                    yapf = { enabled = false },
+
+                    -- linter options
+                    pylint = { enabled = true, executable = "pylint" },
+                    pyflakes = { enabled = true },
+                    pycodestyle = { 
+                        ignore = {'E251', 'W191'},
+                        enabled = true,
+                        maxLineLength = 100
+                    },
+                    -- type checker
+                    pylsp_mypy = {
+                        enabled = true,
+                        report_progress = true,
+                        live_mode = true
+                    },
+                    -- auto-completion options
+                    jedi_completion = { fuzzy = false },
+
+                    pyls_isort = { enabled = false },
+                },
+              },
+          },
           tsserver = {},
           lua_ls = {
             Lua = {
