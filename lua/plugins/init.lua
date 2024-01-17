@@ -1,7 +1,6 @@
 return {
     { "github/copilot.vim", priority=1000},
     { "folke/neoconf.nvim", cmd = "Neoconf" },
-    "folke/neodev.nvim",
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {},
         config = function ()
             require("ibl").setup ()

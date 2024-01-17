@@ -11,9 +11,11 @@ return {
         'hrsh7th/nvim-cmp',
         'l3mon4d3/luasnip',
         'saadparwaiz1/cmp_luasnip',
-        'j-hui/fidget.nvim'
+        'j-hui/fidget.nvim',
+        "folke/neodev.nvim",
     },
     config = function()
+        require("neodev").setup({})
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({
