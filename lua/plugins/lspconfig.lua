@@ -94,7 +94,7 @@ return {
                     pylint = { enabled = true, executable = "pylint" },
                     pyflakes = { enabled = true },
                     pycodestyle = { 
-                        ignore = {'E251', 'W191'},
+                    ignore = {'E251', 'W191', 'W391', 'E722'},
                         enabled = true,
                         maxLineLength = 100
                     },
