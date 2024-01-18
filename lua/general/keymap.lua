@@ -34,14 +34,18 @@ vim.keymap.set("n",
     "<leader>ps", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>",
     { noremap = true, silent = true , desc = "Live grep on files"})
 
+
+vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { noremap = true, silent = true , desc = "Lazygit"})
+
 -- Telescope mappings
-vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true , desc = "Telescope Live grep on files"})
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true , desc = "Telescope Find files"})
+vim.keymap.set("n", "<leader>gf", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true , desc = "Telescope Live grep on files"})
+vim.keymap.set("n", "<leader>fd", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true , desc = "Telescope Find files"})
+vim.keymap.set("n", "<leader>fj", "<cmd>Telescope git_files<cr>", { noremap = true, silent = true , desc = "Telescope git files"})
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { noremap = true, silent = true , desc = "Telescope find in current buffer"})
-vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
+vim.keymap.set("n", "<leader>fa", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
+vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
-vim.keymap.set("n", "<leader>gf", "<cmd>Telescope git_files<cr>", { noremap = true, silent = true , desc = "Telescope git files"})
-vim.keymap.set("n", "<leader>nd", ":Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
+vim.keymap.set("n", "<leader>nd", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 
 -- split window
 vim.keymap.set("n", "<leader>vs", "<cmd>vertical split<cr>", { noremap = true, desc = "Split window vertical"})
@@ -68,7 +72,6 @@ vim.keymap.set("n", "<C-w><C-k>", "<cmd>horizontal resize -5<cr>")
 vim.keymap.set("n", "<leader>tp", "<cmd>TransparentToggle<cr>")
 
 -- lazygit
-vim.keymap.set("n", "<leader>gg", ":LazyGit<CR>", { noremap = true, silent = true , desc = "Lazygit"})
 
 -- colorcolumn
 vim.keymap.set("n", "<leader>c", ":set colorcolumn=100<CR>", { noremap = true, silent = true , desc = "Colorcolumn"})
