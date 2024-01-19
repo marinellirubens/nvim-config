@@ -22,6 +22,7 @@ return {
             require("telescope").load_extension("lazygit")
         end
     },
+    'mg979/vim-visual-multi',
     'pixelneo/vim-python-docstring',
     'preservim/nerdcommenter',
 
