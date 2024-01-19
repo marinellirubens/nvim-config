@@ -2,6 +2,10 @@
 require('general.keymap')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.keymap.set("n", "<leader>lz", function ()
+  print(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
+end, {desc = "Print lazy.nvim path"})
+
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
