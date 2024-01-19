@@ -16,5 +16,5 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup("plugins")
 
-require('set')
+require('general.set')
 require("general.copilot_cfg")
