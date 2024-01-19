@@ -23,6 +23,7 @@ return {
     },
     'mg979/vim-visual-multi',
     'pixelneo/vim-python-docstring',
+    'preservim/vim-markdown',
     'preservim/nerdcommenter',
 
     --'ellisonleao/gruvbox.nvim',
