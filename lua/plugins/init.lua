@@ -1,5 +1,4 @@
 return {
-    { "github/copilot.vim", priority=1000},
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {},
         config = function ()
