@@ -49,7 +49,12 @@ return {
             require('telescope').load_extension('dap')
         end
     },
-    'iamcco/markdown-preview.nvim',
+     {
+        "iamcco/markdown-preview.nvim",
+        config = function()
+          vim.fn["mkdp#util#install"]()
+        end,
+    },
     --debug
     'mfussenegger/nvim-dap',
     {
