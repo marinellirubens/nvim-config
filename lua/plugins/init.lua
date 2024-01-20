@@ -1,16 +1,19 @@
 return {
     { "folke/neoconf.nvim", cmd = "Neoconf" },
-    { "lukas-reineke/indent-blankline.nvim", main = "ibl", opts = {},
-        config = function ()
-            require("ibl").setup ()
-        end
-    },
-    { 'akinsho/toggleterm.nvim', version = "*", config = true},
     {
-        'lewis6991/gitsigns.nvim',
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        opts = {},
         config = function()
-            require('gitsigns').setup()
-        end
+            require("ibl").setup()
+        end,
+    },
+    { "akinsho/toggleterm.nvim", version = "*", config = true },
+    {
+        "lewis6991/gitsigns.nvim",
+        config = function()
+            require("gitsigns").setup()
+        end,
     },
     {
         "kdheepak/lazygit.nvim",
@@ -19,51 +22,51 @@ return {
         },
         config = function()
             require("telescope").load_extension("lazygit")
-        end
+        end,
     },
-    'mg979/vim-visual-multi',
-    'pixelneo/vim-python-docstring',
-    'preservim/vim-markdown',
-    'preservim/nerdcommenter',
+    "mg979/vim-visual-multi",
+    "pixelneo/vim-python-docstring",
+    "preservim/vim-markdown",
+    "preservim/nerdcommenter",
 
-    'ellisonleao/gruvbox.nvim',
-    'folke/tokyonight.nvim',
-    'Mofiqul/dracula.nvim',
-    'Rigellute/shades-of-purple.vim',
-    'AlexvZyl/nordic.nvim',
-    'pappasam/papercolor-theme-slim',
+    "ellisonleao/gruvbox.nvim",
+    "folke/tokyonight.nvim",
+    "Mofiqul/dracula.nvim",
+    "Rigellute/shades-of-purple.vim",
+    "AlexvZyl/nordic.nvim",
+    "pappasam/papercolor-theme-slim",
     {
-        'pixelneo/vim-python-docstring',
+        "pixelneo/vim-python-docstring",
         init = function()
-            vim.g.vim_python_docstring_format = 'google'
-            vim.cmd[[autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>]]
-        end
+            vim.g.vim_python_docstring_format = "google"
+            vim.cmd([[autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>]])
+        end,
     },
-    'tpope/vim-fugitive',
+    "tpope/vim-fugitive",
     --Language specific
-    'fatih/vim-go',
-
+    "fatih/vim-go",
     {
-        'nvim-telescope/telescope-dap.nvim',
-        dependencies = {'mfussenegger/nvim-dap'},
+        "nvim-telescope/telescope-dap.nvim",
+        dependencies = { "mfussenegger/nvim-dap" },
         config = function()
-            require('telescope').load_extension('dap')
-        end
+            require("telescope").load_extension("dap")
+        end,
     },
     --debug
-    'mfussenegger/nvim-dap',
+    "mfussenegger/nvim-dap",
     {
-        'leoluz/nvim-dap-go',
-        dependencies = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'},
+        "leoluz/nvim-dap-go",
+        dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
         config = function()
-            require('dap-go').setup()
-        end
+            require("dap-go").setup()
+        end,
     },
-    {  'mfussenegger/nvim-dap-python',
-        dependencies = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'},
+    {
+        "mfussenegger/nvim-dap-python",
+        dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
         config = function()
             require("dap-python").setup("/usr/bin/python3", {})
-        end
+        end,
     },
-    {'theHamsta/nvim-dap-virtual-text', dependencies = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'}},
+    { "theHamsta/nvim-dap-virtual-text", dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" } },
 }
