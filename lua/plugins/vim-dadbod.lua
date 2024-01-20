@@ -1,18 +1,18 @@
 return {
-    'kristijanhusak/vim-dadbod-ui',
+    "kristijanhusak/vim-dadbod-ui",
     dependencies = {
-        { 'tpope/vim-dadbod', lazy = true },
-        { 'kristijanhusak/vim-dadbod-completion', ft = { 'sql', 'mysql', 'plsql' }, lazy = true },
+        { "tpope/vim-dadbod", lazy = true },
+        { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
 
-        'Shougo/deoplete.nvim',
-        'roxma/nvim-yarp',
-        'roxma/vim-hug-neovim-rpc',
+        "Shougo/deoplete.nvim",
+        "roxma/nvim-yarp",
+        "roxma/vim-hug-neovim-rpc",
     },
     cmd = {
-        'DBUI',
-        'DBUIToggle',
-        'DBUIAddConnection',
-        'DBUIFindBuffer',
+        "DBUI",
+        "DBUIToggle",
+        "DBUIAddConnection",
+        "DBUIFindBuffer",
     },
     init = function()
         -- Your DBUI configuration

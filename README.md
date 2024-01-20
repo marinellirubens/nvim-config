@@ -1,11 +1,13 @@
 # Dependencies
 First you need to install some dependencies
 
-Note: nodejs and yarn will be used on coc
 ```bash
 > sudo dnf copr enable atim/lazygit -y
 > sudo dnf install lazygit git-delta -y
 > sudo dnf install -y python3-pip ripgrep
+> sudo dnf install -y rust cargo
+> cargo install stylua
+> ln -s ~/.cargo/bin/stylua ~/.local/bin/stylua
 ```
 
 for better experience with lazygit you need to setup the git config, to use delta as pager, include the following lines on ~/.gitconfig
@@ -49,15 +51,6 @@ after install neovim you need to install vim-plug to install the plugins automag
 after install the vim-plug replace the current init.vim on ~/.config/nvim/init.vim
 ```bash
 > git clone https://github.com/marinellirubens/nvim-config.git ~/.config/nvim
-```
-
-after that you can install all the plugins using the following command
-```bash
-nvim +PlugInstall +qall
-<!--nvim +'CocInstall coc-python coc-go' +qall-->
-<!--nvim +'CocInstall coc-python coc-go' +qall-->
-<!--nvim +'VimspectorInstall debugpy'-->
-<!--nvim +'VimspectorInstall vscode-go'-->
 ```
 
 Nerd fonts to correct the icons on the dap

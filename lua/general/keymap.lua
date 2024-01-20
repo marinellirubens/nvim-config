@@ -34,7 +34,7 @@ vim.keymap.set("n",
     "<leader>ps", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>",
     { noremap = true, silent = true , desc = "Live grep on files"})
 
-
+--mapping for lazygit
 vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { noremap = true, silent = true , desc = "Lazygit"})
 
 -- Telescope mappings
@@ -54,11 +54,11 @@ vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>", { noremap = true, desc = "Sp
 -- open/close embbed terminal
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { noremap = true, desc = "Open/close embbed terminal"})
 
--- tab movement
+-- tab movement, removed because I don't use tabs
 --vim.keymap.set("n", "<S-Tab>", "<cmd>tabprevious<cr>")
 --vim.keymap.set("n", "<Tab>", "<cmd>tabnext<cr>")
 
--- run the current file if is mapped 
+--execute the current file if is mapped (configuration on file lua/general/set.lua)
 vim.keymap.set("n", "<leader>mm", "<cmd>make<cr>", { noremap = true, desc = "Run the current file"})
 
 -- resize splitted window
@@ -70,8 +70,6 @@ vim.keymap.set("n", "<C-w><C-k>", "<cmd>horizontal resize -5<cr>")
 -- reload nvim configuration
 -- apply/remove transparency
 vim.keymap.set("n", "<leader>tp", "<cmd>TransparentToggle<cr>")
-
--- lazygit
 
 -- colorcolumn
 vim.keymap.set("n", "<leader>c", ":set colorcolumn=100<CR>", { noremap = true, silent = true , desc = "Colorcolumn"})
@@ -89,8 +87,7 @@ vim.keymap.set("v", "<leader>d`", "di``<ESC>hp", { desc = "put `` around selecti
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection down"})
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection up"})
 
-
-
+-- format file to unix
 vim.keymap.set("n", "fe", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true, desc = "Set file format to unix" })
 
 -- move selection right and left
@@ -101,12 +98,10 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true , desc = "Move s
 vim.keymap.set("i", "<C-H>", "<C-W>", { noremap = true, desc = "Delete complete word"})
 vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete complete word"})
 
--- strange mapping to get out of insert mode without moving from home row
---vim.keymap.set("i", "fj", "<ESC>")
---vim.keymap.set("i", "jf", "<ESC>")
-
 -- utility to use commands without ctrl
 --vim.keymap.set("n", ";", ":")
 
+-- keymap to use different clipboard
 --vim.keymap.set({ 'n', 'x' }, '<leader>y', '"+y', { desc = 'Copy from system clipboard' })
 --vim.keymap.set({ 'n', 'x' }, '<leader>pp', '"+p', { desc = 'Copy from system clipboard' })
+

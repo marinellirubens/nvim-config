@@ -26,12 +26,12 @@ return {
     'preservim/vim-markdown',
     'preservim/nerdcommenter',
 
-    --'ellisonleao/gruvbox.nvim',
-    --'folke/tokyonight.nvim',
-    --'Mofiqul/dracula.nvim',
-    --'Rigellute/shades-of-purple.vim',
-    --'AlexvZyl/nordic.nvim',
-    --'pappasam/papercolor-theme-slim',
+    'ellisonleao/gruvbox.nvim',
+    'folke/tokyonight.nvim',
+    'Mofiqul/dracula.nvim',
+    'Rigellute/shades-of-purple.vim',
+    'AlexvZyl/nordic.nvim',
+    'pappasam/papercolor-theme-slim',
     {
         'pixelneo/vim-python-docstring',
         init = function()
@@ -65,7 +65,5 @@ return {
             require("dap-python").setup("/usr/bin/python3", {})
         end
     },
-    {   'theHamsta/nvim-dap-virtual-text',
-        dependencies = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'}
-    },
+    {'theHamsta/nvim-dap-virtual-text', dependencies = {'mfussenegger/nvim-dap', 'rcarriga/nvim-dap-ui'}},
 }
