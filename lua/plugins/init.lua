@@ -1,7 +1,9 @@
-return {
+return 
+{
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     {
         "lukas-reineke/indent-blankline.nvim",
+        lazy = false,
         main = "ibl",
         opts = {},
         config = function()
@@ -29,12 +31,6 @@ return {
     "preservim/vim-markdown",
     "preservim/nerdcommenter",
 
-    "ellisonleao/gruvbox.nvim",
-    "folke/tokyonight.nvim",
-    "Mofiqul/dracula.nvim",
-    "Rigellute/shades-of-purple.vim",
-    "AlexvZyl/nordic.nvim",
-    "pappasam/papercolor-theme-slim",
     {
         "pixelneo/vim-python-docstring",
         init = function()
