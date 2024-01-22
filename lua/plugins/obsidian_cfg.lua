@@ -182,9 +182,14 @@ return {
                 checkboxes = {
                     -- NOTE: the 'char' value has to be a single character, and the highlight groups are defined below.
                     [" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+                    [""] = { char = "󰄱", hl_group = "ObsidianTodo" },
                     ["x"] = { char = "", hl_group = "ObsidianDone" },
-                    [">"] = { char = "", hl_group = "ObsidianRightArrow" },
+                    --["x"] = { char = "", hl_group = "ObsidianDone" },
+                    [">"] = { char = "", hl_group = "green" },
                     ["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+                    --["!"] = { char = "", hl_group = "ObsidianCyan" },
+                    ["!"] = { char = "", hl_group = "ObsidianYellow" },
+
                     -- Replace the above with this if you don't have a patched font:
                     -- [" "] = { char = "☐", hl_group = "ObsidianTodo" },
                     -- ["x"] = { char = "✔", hl_group = "ObsidianDone" },
@@ -207,6 +212,8 @@ return {
                     ObsidianExtLinkIcon = { fg = "#c792ea" },
                     ObsidianTag = { italic = true, fg = "#89ddff" },
                     ObsidianHighlightText = { bg = "#75662e" },
+                    ObsidianCyan = { fg = "#33e4ff" },
+                    ObsidianYellow = { fg = "#ffff33" },
                 },
             },
 
