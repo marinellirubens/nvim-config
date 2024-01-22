@@ -20,7 +20,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 --import plugins using lazy.nvim
-require("lazy").setup("plugins")
+require("lazy").setup({
+  {import = "plugins"},
+  {import = "plugins.themes"},
+})
+--require("lazy").setup("plugins.themes")
 
 --import general settings
 require("general.set")
+require("general.theme")

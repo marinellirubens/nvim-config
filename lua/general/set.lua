@@ -70,19 +70,19 @@ vim.cmd[[autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni]]
 vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })]]
 
 -- coolor column configuration
-vim.cmd[[highlight ColorColumn guibg=black]]
+--vim.cmd[[highlight ColorColumn guibg=black]]
 
--- highlight selection configuration
-vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green]]
+---- highlight selection configuration
+--vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green]]
 
--- highlight on yank
-vim.cmd[[
-augroup highlight_yank
-    autocmd!
-    au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
-augroup END
-]]
-vim.cmd[[syntax enable]]
+---- highlight on yank
+--vim.cmd[[
+--augroup highlight_yank
+    --autocmd!
+    --au TextYankPost * silent! lua vim.highlight.on_yank({higroup="IncSearch", timeout=100})
+--augroup END
+--]]
+--vim.cmd[[syntax enable]]
 
 --vim.g.completion_chain_complete_list = {'sql': [{'complete_items': ['vim-dadbod-completion']}] }
 --Make sure `substring` is part of this list. Other items are optional for this completion source
