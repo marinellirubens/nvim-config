@@ -9,6 +9,7 @@ return {
                     '.git/',
                     '__pycache__/',
                     'node_modules/',
+                    '.venv/',
                 },
             },
             pickers = {
