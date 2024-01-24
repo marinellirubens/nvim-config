@@ -36,7 +36,7 @@ vim.opt.autowrite = true
 vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.backup = false
-vim.opt.undodir = vim.env.HOME .. "/.vim/undodir"
+vim.opt.undodir = vim.env.HOME .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.updatetime = 50
 
@@ -58,7 +58,7 @@ vim.g.ftplugin_sql_omni_key = nil
 vim.g.omni_sql_no_default_maps = 1
 
 -- dadbod ui saving location
-vim.g.db_ui_save_location=vim.env.HOME .. '/.vim/dadbod-ui'
+vim.g.db_ui_save_location=vim.env.HOME .. '/.nvim/dadbod-ui'
 print(vim.g.db_ui_save_location)
 
 -- automcmd for specific file types
