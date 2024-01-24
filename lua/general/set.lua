@@ -37,6 +37,7 @@ vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.undodir = vim.env.HOME .. "/.nvim/undodir"
+
 vim.opt.undofile = true
 vim.opt.updatetime = 50
 
@@ -89,4 +90,4 @@ vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sour
 vim.g.completion_matching_strategy_list = {'exact', 'substring'}
 --" Useful if there's a lot of camel case items
 vim.g.completion_matching_ignore_case = 1
-
+vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
