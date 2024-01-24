@@ -1,5 +1,6 @@
 return 
 {
+    'tpope/vim-obsession',
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     {
         "lukas-reineke/indent-blankline.nvim",
