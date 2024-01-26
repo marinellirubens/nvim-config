@@ -91,3 +91,6 @@ vim.g.completion_matching_strategy_list = {'exact', 'substring'}
 --" Useful if there's a lot of camel case items
 vim.g.completion_matching_ignore_case = 1
 vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
+
+require("git-worktree").setup()
+require("telescope").load_extension("git_worktree")

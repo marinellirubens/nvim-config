@@ -1,6 +1,7 @@
 return 
 {
     --'tpope/vim-obsession',
+    'ThePrimeagen/git-worktree.nvim',
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     {
         "lukas-reineke/indent-blankline.nvim",

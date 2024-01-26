@@ -105,4 +105,5 @@ vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete complete
 -- keymap to use different clipboard
 --vim.keymap.set({ 'n', 'x' }, '<leader>y', '"+y', { desc = 'Copy from system clipboard' })
 --vim.keymap.set({ 'n', 'x' }, '<leader>pp', '"+p', { desc = 'Copy from system clipboard' })
-
+vim.keymap.set("n", "<leader>gw", "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<CR>", { noremap = true, silent = true, desc = "open git_worktrees selector" })
+vim.keymap.set("n", "<leader>gW", "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>", { noremap = true, silent = true, desc = "create git_worktree" })
