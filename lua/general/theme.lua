@@ -16,6 +16,7 @@ vim.cmd[[syntax enable]]
 vim.cmd.termguicolors = true
 vim.cmd.background = "dark"
 
+vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
 
 --using monoakai pro the coloscheme is being set in the plugin
 

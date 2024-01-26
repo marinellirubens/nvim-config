@@ -73,8 +73,8 @@ vim.keymap.set("n", "<C-w><C-k>", "<cmd>horizontal resize -5<cr>")
 vim.keymap.set("n", "<leader>tp", "<cmd>TransparentToggle<cr>")
 
 -- colorcolumn
-vim.keymap.set("n", "<leader>c", ":set colorcolumn=100<CR>", { noremap = true, silent = true , desc = "Colorcolumn"})
-vim.keymap.set("n", "<leader>nc", ":set colorcolumn-=100<CR>", { noremap = true, silent = true , desc = "Colorcolumn disable"})
+vim.keymap.set("n", "<leader>c", ":set colorcolumn=120<CR>", { noremap = true, silent = true , desc = "Colorcolumn"})
+vim.keymap.set("n", "<leader>nc", ":set colorcolumn-=120<CR>", { noremap = true, silent = true , desc = "Colorcolumn disable"})
 
 -- put simbol around selection
 vim.keymap.set("v", "<leader>d'", "di''<ESC>hp", { desc = "put ' around selection"})

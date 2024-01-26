@@ -96,7 +96,7 @@ return {
                     pycodestyle = { 
                     ignore = {'E251', 'W191', 'W391', 'E722'},
                         enabled = true,
-                        maxLineLength = 100
+                        maxLineLength = 120
                     },
                     -- type checker
                     pylsp_mypy = {
