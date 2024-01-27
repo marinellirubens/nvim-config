@@ -3,6 +3,13 @@ return {
     priority = 1000,
     config = function()
         vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
+
+        local accept_key = ''
+        if vim.fn.has("mac") == 1 then
+            accept_key = "<TAB>"
+        else
+            accept_key = "<M-.>"
+        end
         require("copilot").setup({
             panel = {
                 enabled = true,
@@ -24,7 +31,7 @@ return {
                 auto_trigger = true,
                 debounce = 75,
                 keymap = {
-                    accept = "<M-.>",
+                    accept = accept_key,
                     accept_word = false,
                     accept_line = false,
                     next = "<C-j>",
