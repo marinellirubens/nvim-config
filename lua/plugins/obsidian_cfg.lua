@@ -8,10 +8,10 @@ return {
             -- the vault root is the parent directory of the `.obsidian` folder.
             -- You can also provide configuration overrides for each workspace through the `overrides` field.
             workspaces = {
-                {
-                    name = "personal",
-                    path = "~/obsidian_vault/vault",
-                },
+                --{
+                    --name = "personal",
+                    --path = "~/obsidian_vault/vault",
+                --},
             },
 
             -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
@@ -125,13 +125,13 @@ return {
             end,
 
             -- Optional, for templates (see below).
-            templates = {
-                subdir = "templates",
-                date_format = "%Y-%m-%d",
-                time_format = "%H:%M",
-                -- A map for custom variables, the key should be the variable and the value a function
-                substitutions = {},
-            },
+            --templates = {
+                --subdir = "templates",
+                --date_format = "%Y-%m-%d",
+                --time_format = "%H:%M",
+                ---- A map for custom variables, the key should be the variable and the value a function
+                --substitutions = {},
+            --},
 
             -- Optional, customize the backlinks interface.
             backlinks = {
