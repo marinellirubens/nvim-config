@@ -2,6 +2,12 @@ local theme = require('last-color').recall()
 if theme ~= nil then
     vim.cmd(('colorscheme %s'):format(theme))
 end
+vim.cmd[[
+augroup FixColorScheme
+  autocmd!
+  autocmd ColorScheme default call LastColor()
+augroup END
+]]
 
 --using monoakai pro the coloscheme is being set in the plugin
 
@@ -22,12 +28,6 @@ end
 --vim.cmd.colorscheme "nordfox"
 --vim.cmd.colorscheme "PaperColorSlim"
 
--- coolor column configuration
-vim.cmd[[highlight ColorColumn guibg=black]]
-
--- highlight selection configuration
-vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green]]
-
 -- highlight on yank
 vim.cmd[[
 augroup highlight_yank
@@ -37,13 +37,13 @@ augroup END
 ]]
 vim.cmd[[syntax enable]]
 
+-- coolor column configuration
+vim.cmd[[highlight ColorColumn guibg=black]]
+
+-- highlight selection configuration
+vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green]]
 --vim.cmd.termguicolors = true
 --vim.cmd.background = "dark"
 
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
-vim.cmd[[
-augroup FixColorScheme
-  autocmd!
-  autocmd ColorScheme default call LastColor()
-augroup END
-]]
+vim.api.nvim_set_hl(0, "IncSearch", { fg = "#b3ecff", bg="#f2fa16" })
