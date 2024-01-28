@@ -40,7 +40,7 @@ return {
                 },
             },
         })
-        vim.cmd[[colorscheme monokai-pro]]
+        --vim.cmd[[colorscheme monokai-pro]]
         --vim.cmd[[set termguicolors]]
         --vim.cmd[[set background=dark]]
     end

@@ -1,6 +1,7 @@
 return 
 {
     --'tpope/vim-obsession',
+    { 'raddari/last-color.nvim' },
     'ThePrimeagen/git-worktree.nvim',
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     {
