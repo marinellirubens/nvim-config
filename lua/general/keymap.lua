@@ -15,10 +15,10 @@ vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv", { desc = "NERDCo
 vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true , desc = "Remove highlight on searchs"})
 
 -- page up/down with centralization
-vim.keymap.set("n", "<C-j>","<C-d>zz")
-vim.keymap.set("v", "<C-j>","<C-d>zz")
-vim.keymap.set("n", "<C-k>","<C-u>zz")
-vim.keymap.set("v", "<C-k>","<C-u>zz")
+--vim.keymap.set("n", "<C-j>","<C-d>zz")
+--vim.keymap.set("v", "<C-j>","<C-d>zz")
+--vim.keymap.set("n", "<C-k>","<C-u>zz")
+--vim.keymap.set("v", "<C-k>","<C-u>zz")
 vim.keymap.set("n", "<C-d>","<C-d>zz")
 vim.keymap.set("v", "<C-d>","<C-d>zz")
 vim.keymap.set("n", "<C-u>","<C-u>zz")
