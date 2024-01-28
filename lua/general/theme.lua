@@ -37,6 +37,11 @@ augroup END
 ]]
 vim.cmd[[syntax enable]]
 
+-- set color for cursor and cursorline
+vim.opt.cursorline = true
+vim.cmd[[highlight Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold]]
+vim.cmd[[highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=black guifg=NONE]]
+
 -- coolor column configuration
 vim.cmd[[highlight ColorColumn guibg=black]]
 
