@@ -41,7 +41,7 @@ vim.cmd[[syntax enable]]
 vim.cmd[[highlight ColorColumn guibg=black]]
 
 -- highlight selection configuration
-vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=Green]]
+vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guifg=black]]
 --vim.cmd.termguicolors = true
 --vim.cmd.background = "dark"
 
