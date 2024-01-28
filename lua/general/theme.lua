@@ -1,5 +1,7 @@
 local theme = require('last-color').recall()
-vim.cmd(('colorscheme %s'):format(theme))
+if theme ~= nil then
+    vim.cmd(('colorscheme %s'):format(theme))
+end
 
 --using monoakai pro the coloscheme is being set in the plugin
 
