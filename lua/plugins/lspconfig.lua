@@ -1,5 +1,6 @@
 return {
     'neovim/nvim-lspconfig',
+    ft = vim.g.languages,
     dependencies = {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',

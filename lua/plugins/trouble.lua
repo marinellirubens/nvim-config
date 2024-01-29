@@ -1,6 +1,7 @@
 return {
     --errors checking
     "folke/trouble.nvim",
+    ft = vim.g.languages,
     config = function()
         require("trouble").setup({
             position = "bottom", -- position of the list can be: bottom, top, left, right

@@ -1,5 +1,6 @@
 return {
     'rcarriga/nvim-dap-ui',
+    ft = vim.g.languages,
     dependencies = {'mfussenegger/nvim-dap'},
     config = function()
         require("dapui").setup()

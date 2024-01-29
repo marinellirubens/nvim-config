@@ -1,5 +1,6 @@
 return {
     "epwalsh/obsidian.nvim",
+    ft = { "markdown" },
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         require("obsidian").setup({
