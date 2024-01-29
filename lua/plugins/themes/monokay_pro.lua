@@ -1,7 +1,8 @@
 return {
     'loctvl842/monokai-pro.nvim',
-    lazy = false,
-    init = function()
+    lazy = true,
+    ft = {"lua"},
+    config = function()
         require("monokai-pro").setup({
             transparent_background = false,
             terminal_colors = true,

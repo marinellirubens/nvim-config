@@ -1,6 +1,7 @@
-return {
+opts= {
     "catppuccin/nvim",
     name = "catppuccin",
+    ft = {"lua"},
     config = function()
         require("catppuccin").setup({
             flavour = "mocha", -- latte, frappe, macchiato, mocha
@@ -53,3 +54,6 @@ return {
         --vim.cmd.colorscheme "catppuccin"
     end,
 }
+
+opts = {}
+return opts

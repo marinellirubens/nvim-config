@@ -1,8 +1,8 @@
 return {
-    "ellisonleao/gruvbox.nvim",
-    "folke/tokyonight.nvim",
-    "Mofiqul/dracula.nvim",
-    "Rigellute/shades-of-purple.vim",
-    "AlexvZyl/nordic.nvim",
-    "pappasam/papercolor-theme-slim",
+    {"ellisonleao/gruvbox.nvim", ft = {"lua"}},
+    {"folke/tokyonight.nvim", ft = {"lua"}},
+    {"Mofiqul/dracula.nvim", ft = {"lua"}},
+    --{"Rigellute/shades-of-purple.vim", ft = {"lua"}},
+    {"AlexvZyl/nordic.nvim", ft = {"lua"}},
+    {"pappasam/papercolor-theme-slim", ft = {"lua"}},
 }
