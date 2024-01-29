@@ -40,11 +40,11 @@ vim.cmd[[syntax enable]]
 
 -- set color for cursor and cursorline
 vim.opt.cursorline = true
-vim.cmd[[highlight Cursor ctermfg=White ctermbg=Yellow cterm=bold guifg=white guibg=yellow gui=bold]]
-vim.cmd[[highlight CursorLine   cterm=NONE ctermbg=darkred ctermfg=NONE guibg=black guifg=NONE]]
+vim.api.nvim_set_hl(0, "Cursor", { fg = "black", bg = "yellow" })
+--vim.api.nvim_set_hl(0, "CursorLine", { bg = "black" })
 
 -- coolor column configuration
-vim.cmd[[highlight ColorColumn guibg=black]]
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = "black" })
 
 -- highlight selection configuration
 vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guifg=black]]
