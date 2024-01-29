@@ -1,5 +1,6 @@
 return {
     'laytan/cloak.nvim',
+    ft = {"sh", "python", "dosini"},
     config = function ()
         require('cloak').setup({
             enabled = true,
