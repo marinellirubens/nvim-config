@@ -2,6 +2,7 @@ local theme = require('last-color').recall()
 if theme ~= nil then
     vim.cmd(('colorscheme %s'):format(theme))
 end
+vim.g.last_color = theme
 vim.cmd[[
 augroup FixColorScheme
   autocmd!
