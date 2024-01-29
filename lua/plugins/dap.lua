@@ -65,24 +65,8 @@ return {
         end,
     },
     {
-        "leoluz/nvim-dap-go",
-        ft = "go",
-        dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
-        config = function()
-            require("dap-go").setup()
-        end,
-    },
-    {
         "theHamsta/nvim-dap-virtual-text",
         ft = vim.g.languages,
         dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" }
-    },
-    {
-        "mfussenegger/nvim-dap-python",
-        ft = "python",
-        dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
-        config = function()
-            require("dap-python").setup("/usr/bin/python3", {})
-        end,
     },
 }

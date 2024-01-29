@@ -11,4 +11,12 @@ return {
             vim.cmd([[autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>]])
         end,
     },
+    {
+        "mfussenegger/nvim-dap-python",
+        ft = "python",
+        dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
+        config = function()
+            require("dap-python").setup("/usr/bin/python3", {})
+        end,
+    },
 }
