@@ -25,10 +25,16 @@ return
         "preservim/vim-markdown",
         ft = "markdown",
     },
-    "preservim/nerdcommenter",
+    {
+        "preservim/nerdcommenter",
+        ft = vim.g.languages
+    },
     "tpope/vim-fugitive",
     --Language specific
-    "fatih/vim-go",
+    {
+        "fatih/vim-go",
+        ft = "go"
+    },
     {
         "nvim-telescope/telescope-dap.nvim",
         ft = "go",
