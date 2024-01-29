@@ -1,4 +1,5 @@
 return {
+    --{ "fatih/vim-go", ft = "go" },
     {
         "ray-x/go.nvim",
         dependencies = {  -- optional packages

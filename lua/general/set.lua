@@ -95,3 +95,14 @@ vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
 
 require("git-worktree").setup()
 require("telescope").load_extension("git_worktree")
+
+local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.go",
+  callback = function()
+   require('go.format').gofmt()
+  end,
+  group = format_sync_grp,
+})
+
+
