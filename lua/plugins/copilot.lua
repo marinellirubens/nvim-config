@@ -1,7 +1,7 @@
 return {
     "zbirenbaum/copilot.lua",
     priority = 1000,
-    ft = { "yaml", "markdown", "gitcommit", "gitrebase","python", "go", "javascript", "swagger", "xml", "lua"},
+    ft = { "yaml", "markdown", "gitcommit", "gitrebase","python", "go", "javascript", "swagger", "xml", "lua" },
     config = function()
         vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
 
@@ -54,6 +54,7 @@ return {
                 javascript = true,
                 swagger = true,
                 xml = true,
+                lua = true,
                 ["*"] = false,
             },
             copilot_node_command = "node", -- Node.js version must be > 18.x
