@@ -1,4 +1,4 @@
-opts= {
+local opts = {
     "catppuccin/nvim",
     name = "catppuccin",
     lazy=true,
@@ -55,5 +55,4 @@ opts= {
     end,
 }
 
-opts = {}
 return opts
