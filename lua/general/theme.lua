@@ -52,4 +52,4 @@ vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guif
 --vim.cmd.background = "dark"
 
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
-vim.api.nvim_set_hl(0, "IncSearch", { fg = "#b3ecff", bg="#f2fa16" })
+vim.api.nvim_set_hl(0, "IncSearch", { fg = "black", bg="#f2fa16" })
