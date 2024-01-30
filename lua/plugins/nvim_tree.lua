@@ -35,7 +35,7 @@ return {
                 debounce_delay = 15,
                 side = "left",
                 preserve_window_proportions = false,
-                number = false,
+                number = true,
                 relativenumber = false,
                 signcolumn = "yes",
                 width = 25,
@@ -211,7 +211,7 @@ return {
                     },
                 },
                 open_file = {
-                    quit_on_open = false,
+                    quit_on_open = true,
                     eject = true,
                     resize_window = true,
                     window_picker = {
