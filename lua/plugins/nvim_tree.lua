@@ -35,7 +35,7 @@ return {
                 debounce_delay = 15,
                 side = "left",
                 preserve_window_proportions = false,
-                number = true,
+                number = false,
                 relativenumber = false,
                 signcolumn = "yes",
                 width = 25,
