@@ -23,9 +23,9 @@ vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
 vim.opt.list = true
 vim.opt.listchars = 'tab:> ,trail:~,extends:>,precedes:<'
-if vim.fn.has('win32') < 1 then
-    vim.opt.listchars:append "space:⋅"
-end
+--if vim.fn.has('win32') < 1 then
+    --vim.opt.listchars:append "space:⋅"
+--end
 
 --configuration for split
 vim.opt.splitbelow = true
