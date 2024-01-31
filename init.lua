@@ -1,6 +1,6 @@
 --import general keymap configurations
 require("general.keymap")
-vim.g.languages = { "go", "python", "javascript", "typescript", "rust", "cpp", "c", "java", "lua"}
+vim.g.languages = { "go", "python", "javascript", "typescript", "rust", "cpp", "c", "java", "lua", "tmux"}
 --create basis for lazy loading
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 vim.keymap.set("n", "<leader>lz", function()
