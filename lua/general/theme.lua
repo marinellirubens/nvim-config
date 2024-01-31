@@ -44,7 +44,7 @@ vim.api.nvim_set_hl(0, "Cursor", { fg = "black", bg = "yellow" })
 --vim.api.nvim_set_hl(0, "CursorLine", { bg = "black" })
 
 -- coolor column configuration
-vim.api.nvim_set_hl(0, "ColorColumn", { bg = "black" })
+--vim.api.nvim_set_hl(0, "ColorColumn", { bg = "black" })
 
 -- highlight selection configuration
 vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guifg=black]]
