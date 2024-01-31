@@ -72,9 +72,30 @@ vim.keymap.set("n", "<C-w><C-k>", "<cmd>horizontal resize -5<cr>")
 -- apply/remove transparency
 vim.keymap.set("n", "<leader>tp", "<cmd>TransparentToggle<cr>")
 
+function ToggleColorColumn()
+    --print(dump(vim.opt.colorcolumn["_value"]))
+    print(vim.opt.colorcolumn["_value"])
+    if vim.opt.colorcolumn["_value"] == "120" then
+        vim.cmd[[set colorcolumn-=120]]
+    else
+        vim.cmd[[set colorcolumn=120]]
+    end
+end
+
+function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
 -- colorcolumn
-vim.keymap.set("n", "<leader>c", ":set colorcolumn=120<CR>", { noremap = true, silent = true , desc = "Colorcolumn"})
-vim.keymap.set("n", "<leader>nc", ":set colorcolumn-=120<CR>", { noremap = true, silent = true , desc = "Colorcolumn disable"})
+vim.keymap.set("n", "<leader>nc", ToggleColorColumn, { noremap = true, silent = true , desc = "Colorcolumn"})
 
 -- put simbol around selection
 vim.keymap.set("v", "<leader>d'", "di''<ESC>hp", { desc = "put ' around selection"})
@@ -118,4 +139,6 @@ vim.keymap.set('v', '<leader>gu', ": '<,'>Gitsigns undo_stage_hunk<cr>", { norem
 vim.keymap.set('v', '<leader>ga', ": '<,'>Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "reset hunk" })
 vim.keymap.set('n', '<leader>gc', ': Git commit<CR>', { noremap = true, silent = true, desc = "git commit" })
 vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "git diff this" })
+
+vim.keymap.set('n', '<leader>ct', ': CloakToggle<CR>', { noremap = true, silent = true, desc = "Cloak toggle" })
 
