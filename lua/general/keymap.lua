@@ -117,3 +117,5 @@ vim.keymap.set('v', '<leader>gs', ": '<,'>Gitsigns stage_hunk<cr>", { noremap = 
 vim.keymap.set('v', '<leader>gu', ": '<,'>Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "undo stage hunk" })
 vim.keymap.set('v', '<leader>ga', ": '<,'>Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "reset hunk" })
 vim.keymap.set('n', '<leader>gc', '<cmd> Git commit<CR>', { noremap = true, silent = true, desc = "git commit" })
+vim.keymap.set('n', '<leader>gb', '<cmd> Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "git diff this" })
+
