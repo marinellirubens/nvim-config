@@ -17,7 +17,7 @@ vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, s
 -- page up/down with centralization
 --vim.keymap.set("n", "<C-j>","<C-d>zz")
 --vim.keymap.set("v", "<C-j>","<C-d>zz")
---vim.keymap.set("n", "<C-k>","<C-u>zz")
+--vim.keymapskdjfhaskdjhf.set("n", "<C-k>","<C-u>zz")
 --vim.keymap.set("v", "<C-k>","<C-u>zz")
 vim.keymap.set("n", "<C-d>","<C-d>zz")
 vim.keymap.set("v", "<C-d>","<C-d>zz")
@@ -116,6 +116,6 @@ vim.keymap.set("n", "<leader>gW",
 vim.keymap.set('v', '<leader>gs', ": '<,'>Gitsigns stage_hunk<cr>", { noremap = true, silent = true, desc = "stage hunk" })
 vim.keymap.set('v', '<leader>gu', ": '<,'>Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "undo stage hunk" })
 vim.keymap.set('v', '<leader>ga', ": '<,'>Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "reset hunk" })
-vim.keymap.set('n', '<leader>gc', '<cmd> Git commit<CR>', { noremap = true, silent = true, desc = "git commit" })
-vim.keymap.set('n', '<leader>gb', '<cmd> Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "git diff this" })
+vim.keymap.set('n', '<leader>gc', ': Git commit<CR>', { noremap = true, silent = true, desc = "git commit" })
+vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "git diff this" })
 
