@@ -1,6 +1,6 @@
 return {
   'uloco/bluloco.nvim',
-  lazy=true,
+  ft = {"lua"},
   dependencies = { 'rktjmp/lush.nvim' },
   config = function()
     -- your optional config goes here, see below.
