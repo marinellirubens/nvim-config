@@ -20,7 +20,7 @@ return {
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "pylsp", "tsserver" }
+            ensure_installed = {}
         })
         vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(
             vim.lsp.diagnostic.on_publish_diagnostics,
@@ -83,36 +83,36 @@ return {
         --  Add any additional override configuration in the following tables. They will be passed to
         --  the `settings` field of the server config. You must look up that documentation yourself.
         local servers = {
-            pylsp = {
-                pylsp = {
-                    plugins = {
-                    -- formatter options
-                    black = { enabled = false },
-                    autopep8 = { enabled = false },
-                    yapf = { enabled = false },
+            --pylsp = {
+                --pylsp = {
+                    --plugins = {
+                    ---- formatter options
+                    --black = { enabled = false },
+                    --autopep8 = { enabled = false },
+                    --yapf = { enabled = false },
 
-                    -- linter options
-                    pylint = { enabled = true, executable = "pylint" },
-                    pyflakes = { enabled = true },
-                    pycodestyle = { 
-                    ignore = {'E251', 'W191', 'W391', 'E722'},
-                        enabled = true,
-                        maxLineLength = 120
-                    },
-                    -- type checker
-                    pylsp_mypy = {
-                        enabled = true,
-                        report_progress = true,
-                        live_mode = true
-                    },
-                    -- auto-completion options
-                    jedi_completion = { fuzzy = false },
+                    ---- linter options
+                    --pylint = { enabled = true, executable = "pylint" },
+                    --pyflakes = { enabled = true },
+                    --pycodestyle = { 
+                    --ignore = {'E251', 'W191', 'W391', 'E722'},
+                        --enabled = true,
+                        --maxLineLength = 120
+                    --},
+                    ---- type checker
+                    --pylsp_mypy = {
+                        --enabled = true,
+                        --report_progress = true,
+                        --live_mode = true
+                    --},
+                    ---- auto-completion options
+                    --jedi_completion = { fuzzy = false },
 
-                    pyls_isort = { enabled = false },
-                },
-              },
-            },
-            tsserver = {},
+                    --pyls_isort = { enabled = false },
+                --},
+              --},
+            --},
+            --tsserver = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },

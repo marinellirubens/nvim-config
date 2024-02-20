@@ -1,7 +1,7 @@
 return {
     "zbirenbaum/copilot.lua",
     priority = 1000,
-    ft = { "yaml", "markdown", "gitcommit", "gitrebase","python", "go", "javascript", "swagger", "xml", "lua", "html" },
+    ft = { "yaml"},
     config = function()
         vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
 
