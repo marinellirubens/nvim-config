@@ -1,6 +1,7 @@
 return 
 {
     --'tpope/vim-obsession',
+    'neo4j-contrib/cypher-vim-syntax',
     { 'raddari/last-color.nvim' },
     'ThePrimeagen/git-worktree.nvim',
     { "folke/neoconf.nvim", cmd = "Neoconf" },
