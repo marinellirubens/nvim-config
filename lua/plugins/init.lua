@@ -28,7 +28,7 @@ return
     },
     {
         "preservim/nerdcommenter",
-        ft = vim.g.languages
+        ft = vim.g.languages_extented
     },
     "tpope/vim-fugitive",
 }
