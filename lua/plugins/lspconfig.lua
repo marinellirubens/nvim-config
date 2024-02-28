@@ -92,10 +92,10 @@ return {
                     yapf = { enabled = false },
 
                     -- linter options
-                    pylint = { enabled = true, executable = "pylint" },
+                    pylint = { enabled = false, executable = "pylint" },
                     pyflakes = { enabled = true },
-                    pycodestyle = { 
-                    ignore = {'E251', 'W191', 'W391', 'E722'},
+                    pycodestyle = {
+                        ignore = {'E251', 'W191', 'W391', 'E722'},
                         enabled = true,
                         maxLineLength = 120
                     },
