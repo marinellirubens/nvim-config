@@ -1,5 +1,7 @@
---import general keymap configurations
+--import general configurations
 require("general.keymap")
+require("general.set")
+
 vim.g.languages = { "go", "python", "javascript", "typescript", "rust", "cpp", "c", "java", "lua", "tmux", "sshconfig", "cypher" }
 
 local extended = {'markdown', 'vim', 'json', 'yaml', 'toml', 'zsh', 'dosini', 'conf'}
@@ -22,13 +24,11 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
 --import plugins using lazy.nvim
-require("lazy").setup({
-  {import = "plugins"},
-  {import = "plugins.themes"},
-})
+local lazy_setup = require('lua/general/lazy_setup')
+require("lazy").setup(lazy_setup)
 --require("lazy").setup("plugins.themes")
 
 --import general settings
-require("general.set")
 require("general.theme")
