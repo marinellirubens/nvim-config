@@ -3,7 +3,13 @@ return
     --'tpope/vim-obsession',
     'neo4j-contrib/cypher-vim-syntax',
     { 'raddari/last-color.nvim' },
-    'ThePrimeagen/git-worktree.nvim',
+    {
+        'ThePrimeagen/git-worktree.nvim',
+        config = function()
+            require("git-worktree").setup()
+            require("telescope").load_extension("git_worktree")
+        end,
+    },
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     { "akinsho/toggleterm.nvim", version = "*", config = true },
     {

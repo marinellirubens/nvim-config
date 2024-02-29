@@ -66,5 +66,5 @@ local opts = {
         vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
     end,
 }
-
+opts = {}
 return opts

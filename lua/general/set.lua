@@ -29,6 +29,7 @@ vim.opt.listchars = 'tab:> ,trail:~,extends:>,precedes:<'
 vim.opt.syntax = 'enable'
 vim.cmd[[set nocompatible]]
 vim.cmd[[filetype plugin on]]
+vim.cmd[[set path+=**]]
 
 --configuration for split
 vim.opt.splitbelow = true
@@ -62,17 +63,12 @@ vim.g.vim_markdown_folding_disabled = 1
 vim.g.ftplugin_sql_omni_key = nil
 vim.g.omni_sql_no_default_maps = 1
 
--- dadbod ui saving location
-vim.g.db_ui_save_location=vim.env.HOME .. '/.nvim/dadbod-ui'
-print(vim.g.db_ui_save_location)
 
 -- automcmd for specific file types
 vim.cmd[[autocmd Filetype python setlocal makeprg=/bin/python3\ %]]
 vim.cmd[[autocmd Filetype python setlocal expandtab]]
 vim.cmd[[autocmd Filetype go setlocal makeprg=go\ run\ .]]
 vim.cmd[[autocmd Filetype sh setlocal makeprg=sh\ %]]
-vim.cmd[[autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni]]
-vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })]]
 
 -- coolor column configuration
 --vim.cmd[[highlight ColorColumn guibg=black]]
@@ -95,9 +91,6 @@ vim.g.completion_matching_strategy_list = {'exact', 'substring'}
 --" Useful if there's a lot of camel case items
 vim.g.completion_matching_ignore_case = 1
 vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
-
-require("git-worktree").setup()
-require("telescope").load_extension("git_worktree")
 
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {

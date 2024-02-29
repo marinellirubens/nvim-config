@@ -21,7 +21,8 @@ gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-up" "['<Co
 gsettings set "org.gnome.desktop.wm.keybindings" "move-to-workspace-last" "['<Super><Shift>End', '<Super>o']"
 gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-last" "['<Super>End', '<Super>o']"
 
-gsettings set "org.gnome.desktop.wm.keybindings" "toggle-fullscreen" "['<Alt>F11']"
+gsettings set "org.gnome.desktop.wm.keybindings" "toggle-fullscreen" "['<Super>F11']"
+gsettings set "org.gnome.desktop.wm.keybindings" "toggle-maximized" "['<Super>F10']"
 
 gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-1" "['<Super>1']" 
 gsettings set "org.gnome.desktop.wm.keybindings" "switch-to-workspace-2" "['<Super>2']" 
@@ -43,3 +44,5 @@ gsettings set "org.gnome.shell.keybindings" "switch-to-application-6" "[]"
 gsettings set "org.gnome.shell.keybindings" "switch-to-application-7" "[]"
 gsettings set "org.gnome.shell.keybindings" "switch-to-application-8" "[]"
 gsettings set "org.gnome.shell.keybindings" "switch-to-application-9" "[]"
+
+
