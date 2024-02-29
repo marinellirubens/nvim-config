@@ -26,6 +26,9 @@ vim.opt.listchars = 'tab:> ,trail:~,extends:>,precedes:<'
 --if vim.fn.has('win32') < 1 then
     --vim.opt.listchars:append "space:⋅"
 --end
+vim.opt.syntax = 'enable'
+vim.cmd[[set nocompatible]]
+vim.cmd[[filetype plugin on]]
 
 --configuration for split
 vim.opt.splitbelow = true
