@@ -1,6 +1,6 @@
-return {
+local opts = {
     'neovim/nvim-lspconfig',
-    ft = vim.g.languages,
+    ft = vim.g.languages_reduced,
     dependencies = {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
@@ -171,3 +171,6 @@ return {
         }
     end
 }
+
+return opts
+

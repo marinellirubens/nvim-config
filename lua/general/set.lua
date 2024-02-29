@@ -48,7 +48,7 @@ vim.opt.updatetime = 50
 
 -- configuration for terminal colors
 vim.opt.termguicolors = true
-vim.opt.signcolumn = "yes"
+--vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 -- Language specific
