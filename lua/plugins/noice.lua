@@ -1,4 +1,4 @@
-return {
+local opts = {
     "folke/noice.nvim",
     event = "VeryLazy",
     opts = {
@@ -52,3 +52,6 @@ return {
         "rcarriga/nvim-notify",
     },
 }
+-- workaround to remove noice from the list for now
+opts = {}
+return opts
