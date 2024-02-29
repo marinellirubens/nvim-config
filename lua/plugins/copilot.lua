@@ -1,4 +1,4 @@
-return {
+local opts = {
     "zbirenbaum/copilot.lua",
     priority = 1000,
     ft = { "yaml"},
@@ -66,3 +66,5 @@ return {
         vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
     end,
 }
+
+return opts
