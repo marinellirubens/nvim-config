@@ -1,4 +1,4 @@
-return {
+local opts = {
     "folke/which-key.nvim",
     config = function()
         local wk = require("which-key")
@@ -38,3 +38,5 @@ return {
         wk.setup()
     end,
 }
+opts = {}
+return opts
