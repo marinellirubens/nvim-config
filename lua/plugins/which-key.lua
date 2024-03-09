@@ -28,15 +28,14 @@ local opts = {
         wk.register(mappings, { prefix = "<leader>" })
 
         local mappings2 = {
-            --gd = { vim.lsp.buf.definition, "[G]oto [D]efinition" },
+            gd = { vim.lsp.buf.definition, "[G]oto [D]efinition" },
             gr = { require("telescope.builtin").lsp_references, "[G]oto [R]eferences" },
             gI = { vim.lsp.buf.implementation, "[G]oto [I]mplementation" },
             K = { vim.lsp.buf.hover, "Hover Documentation" },
-            --gD = { vim.lsp.buf.declaration, "[G]oto [D]eclaration" },
+            gD = { vim.lsp.buf.declaration, "[G]oto [D]eclaration" },
         }
         wk.register(mappings2)
         wk.setup()
     end,
 }
-opts = {}
 return opts
