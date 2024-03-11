@@ -27,7 +27,7 @@ vim.opt.rtp:prepend(lazypath)
 
 
 --import plugins using lazy.nvim
-local lazy_setup = require('lua/general/lazy_setup')
+local lazy_setup = require('general.lazy_setup')
 require("lazy").setup(lazy_setup)
 --require("lazy").setup("plugins.themes")
 
