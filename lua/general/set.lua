@@ -70,6 +70,9 @@ vim.cmd[[autocmd Filetype python setlocal expandtab]]
 vim.cmd[[autocmd Filetype go setlocal makeprg=go\ run\ .]]
 vim.cmd[[autocmd Filetype sh setlocal makeprg=sh\ %]]
 
+vim.cmd[[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]]
+
+
 -- coolor column configuration
 --vim.cmd[[highlight ColorColumn guibg=black]]
 
@@ -93,12 +96,12 @@ vim.g.completion_matching_ignore_case = 1
 vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
 
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
-vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = "*.go",
-  callback = function()
-   require('go.format').gofmt()
-  end,
-  group = format_sync_grp,
-})
+--vim.api.nvim_create_autocmd("BufWritePre", {
+  --pattern = "*.go",
+  --callback = function()
+   --require('go.format').gofmt()
+  --end,
+  --group = format_sync_grp,
+--})
 
 
