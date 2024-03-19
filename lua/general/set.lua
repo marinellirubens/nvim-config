@@ -71,8 +71,14 @@ vim.cmd[[autocmd Filetype go setlocal makeprg=go\ run\ .]]
 vim.cmd[[autocmd Filetype sh setlocal makeprg=sh\ %]]
 
 vim.cmd[[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]]
-
-
+-- Remove whitespace on save
+vim.api.nvim_create_autocmd(
+  'BufWritePre',
+  {
+    pattern = '',
+    command = ":%s/\\s\\+$//e"
+  }
+)
 -- coolor column configuration
 --vim.cmd[[highlight ColorColumn guibg=black]]
 

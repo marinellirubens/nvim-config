@@ -1,4 +1,4 @@
-return 
+return
 {
     --'tpope/vim-obsession',
     'neo4j-contrib/cypher-vim-syntax',
@@ -16,6 +16,14 @@ return
         "lewis6991/gitsigns.nvim",
         config = function()
             require("gitsigns").setup()
+        end,
+    },
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons',
+        config = function()
+            require("bufferline").setup{}
         end,
     },
     {
