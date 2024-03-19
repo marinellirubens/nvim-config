@@ -15,10 +15,6 @@ vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv", { desc = "NERDCo
 vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true , desc = "Remove highlight on searchs"})
 
 -- page up/down with centralization
---vim.keymap.set("n", "<C-j>","<C-d>zz")
---vim.keymap.set("v", "<C-j>","<C-d>zz")
---vim.keymapskdjfhaskdjhf.set("n", "<C-k>","<C-u>zz")
---vim.keymap.set("v", "<C-k>","<C-u>zz")
 vim.keymap.set("n", "<C-d>","<C-d>zz")
 vim.keymap.set("v", "<C-d>","<C-d>zz")
 vim.keymap.set("n", "<C-u>","<C-u>zz")
@@ -31,26 +27,27 @@ vim.keymap.set("n", "<f2>",":NvimTreeToggle<CR>", { noremap = true, silent = tru
 
 -- live grep on files
 vim.keymap.set("n",
-    "<leader>ps", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>",
-    { noremap = true, silent = true , desc = "Live grep on files"})
+    "<leader>gi", ":lua require'telescope.builtin'.grep_string({ search = vim.fn.input(\"Grep for >\")})<CR>",
+    { noremap = true, silent = true , desc = "grep on files (input)"})
 
 --mapping for lazygit
 vim.keymap.set("n", "<leader>lg", ":LazyGit<CR>", { noremap = true, silent = true , desc = "Lazygit"})
 
 -- Telescope mappings
-vim.keymap.set("n", "<leader>gf", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true , desc = "Telescope Live grep on files"})
+vim.keymap.set("n", "<leader>gl", "<cmd>Telescope live_grep<cr>", { noremap = true, silent = true , desc = "Telescope Live grep on files"})
 vim.keymap.set("n", "<leader>fd", "<cmd>Telescope find_files<cr>", { noremap = true, silent = true , desc = "Telescope Find files"})
 vim.keymap.set("n", "<leader>fj", "<cmd>Telescope git_files<cr>", { noremap = true, silent = true , desc = "Telescope git files"})
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<cr>", { noremap = true, silent = true , desc = "Telescope find in current buffer"})
-vim.keymap.set("n", "<leader>fa", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
-vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
+vim.keymap.set("n", "<leader>fo", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
+vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true , desc = "Telescope keymaps"})
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
-vim.keymap.set("n", "<leader>nd", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 
-vim.keymap.set("n", "<leader>ll", "<cmd>Telescope colorscheme<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
+vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
+
+vim.keymap.set("n", "<leader>cl", "<cmd>Telescope colorscheme<CR>", { noremap = true, silent = true , desc = "Telescope colorscheme"})
 -- split window
-vim.keymap.set("n", "<leader>vs", "<cmd>vertical split<cr>", { noremap = true, desc = "Split window vertical"})
-vim.keymap.set("n", "<leader>hs", "<cmd>split<cr>", { noremap = true, desc = "Split window horizontal"})
+vim.keymap.set("n", "<leader>sv", "<cmd>vertical split<cr>", { noremap = true, desc = "Split window vertical"})
+vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", { noremap = true, desc = "Split window horizontal"})
 
 -- open/close embbed terminal
 vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<cr>", { noremap = true, desc = "Open/close embbed terminal"})
@@ -82,28 +79,16 @@ function ToggleColorColumn()
     end
 end
 
-function dump(o)
-   if type(o) == 'table' then
-      local s = '{ '
-      for k,v in pairs(o) do
-         if type(k) ~= 'number' then k = '"'..k..'"' end
-         s = s .. '['..k..'] = ' .. dump(v) .. ','
-      end
-      return s .. '} '
-   else
-      return tostring(o)
-   end
-end
 -- colorcolumn
 vim.keymap.set("n", "<leader>nc", ToggleColorColumn, { noremap = true, silent = true , desc = "Colorcolumn"})
 
 -- put simbol around selection
-vim.keymap.set("v", "<leader>d'", "di''<ESC>hp", { desc = "put ' around selection"})
-vim.keymap.set("v", '<leader>d"', 'di""<ESC>hp', { desc = 'put " around selection'})
-vim.keymap.set("v", "<leader>d(", "di()<ESC>hp", { desc = "put () around selection"})
-vim.keymap.set("v", "<leader>d[", "di[]<ESC>hp", { desc = "put [] around selection"})
-vim.keymap.set("v", "<leader>d{", "di{}<ESC>hp", { desc = "put {} around selection"})
-vim.keymap.set("v", "<leader>d`", "di``<ESC>hp", { desc = "put `` around selection"})
+vim.keymap.set("v", "'", "di''<ESC>hp", { desc = "put ' around selection"})
+vim.keymap.set("v", '"', 'di""<ESC>hp', { desc = 'put " around selection'})
+vim.keymap.set("v", "(", "di()<ESC>hp", { desc = "put () around selection"})
+vim.keymap.set("v", "[", "di[]<ESC>hp", { desc = "put [] around selection"})
+vim.keymap.set("v", "{", "di{}<ESC>hp", { desc = "put {} around selection"})
+vim.keymap.set("v", "`", "di``<ESC>hp", { desc = "put `` around selection"})
 
 -- move selection up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection down"})
@@ -128,17 +113,17 @@ vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete complete
 --vim.keydfsdfap.set({ 'n', 'x' }, '<leader>pp', '"+p', { desc = 'Copy from system clipboard' })
 vim.keymap.set("n", "<leader>gw",
                "<cmd>lua require('telescope').extensions.git_worktree.git_worktrees()<cr>",
-               { noremap = true, silent = true, desc = "open git_worktrees selector" })
+               { noremap = true, silent = true, desc = "Git - open git_worktrees selector" })
 vim.keymap.set("n", "<leader>gW",
                "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>",
-               { noremap = true, silent = true, desc = "create git_worktree" })
+               { noremap = true, silent = true, desc = "Git - create git_worktree" })
 
 
-vim.keymap.set('v', '<leader>gs', ": '<,'>Gitsigns stage_hunk<cr>", { noremap = true, silent = true, desc = "stage hunk" })
-vim.keymap.set('v', '<leader>gu', ": '<,'>Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "undo stage hunk" })
-vim.keymap.set('v', '<leader>ga', ": '<,'>Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "reset hunk" })
-vim.keymap.set('n', '<leader>gc', ': Git commit<CR>', { noremap = true, silent = true, desc = "git commit" })
-vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "git diff this" })
+vim.keymap.set('v', '<leader>gs', ": '<,'>Gitsigns stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - stage hunk" })
+vim.keymap.set('v', '<leader>gu', ": '<,'>Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - undo stage hunk" })
+vim.keymap.set('v', '<leader>ga', ": '<,'>Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "Git - reset hunk" })
+vim.keymap.set('n', '<leader>gc', ': Git commit<CR>', { noremap = true, silent = true, desc = "Git - commit" })
+vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
 
 vim.keymap.set('n', '<leader>ct', ': CloakToggle<CR>', { noremap = true, silent = true, desc = "Cloak toggle" })
 
