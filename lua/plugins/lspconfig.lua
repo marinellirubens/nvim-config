@@ -112,6 +112,7 @@ local opts = {
               --},
             --},
             --tsserver = {},
+            pyright = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
