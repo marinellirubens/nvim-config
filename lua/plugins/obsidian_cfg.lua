@@ -1,4 +1,4 @@
-return {
+local opts = {
     "epwalsh/obsidian.nvim",
     ft = { "markdown" },
     dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -255,3 +255,6 @@ return {
         })
     end,
 }
+
+opts = {}
+return opts
