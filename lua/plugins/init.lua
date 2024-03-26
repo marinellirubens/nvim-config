@@ -2,6 +2,18 @@ return
 {
     --'tpope/vim-obsession',
     'neo4j-contrib/cypher-vim-syntax',
+    {
+        "vinnymeller/swagger-preview.nvim",
+        run = "npm install -g swagger-ui-watcher",
+        config = function ()
+            require("swagger-preview").setup({
+                -- The port to run the preview server on
+                port = 8000,
+                -- The host to run the preview server on
+                host = "localhost",
+            })
+        end
+    },
     { 'raddari/last-color.nvim' },
     {
         'ThePrimeagen/git-worktree.nvim',
