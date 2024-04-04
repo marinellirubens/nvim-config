@@ -8,12 +8,12 @@ return {
             -- Each path should be the path to the vault root. If you use the Obsidian app,
             -- the vault root is the parent directory of the `.obsidian` folder.
             -- You can also provide configuration overrides for each workspace through the `overrides` field.
-            --workspaces = {
-                --{
-                    --name = "personal",
-                    --path = "~/",
-                --},
-            --},
+            workspaces = {
+                {
+                    name = "personal",
+                    path = "~/obsidian_vault",
+                },
+            },
 
             -- Alternatively - and for backwards compatibility - you can set 'dir' to a single path instead of
             -- 'workspaces'. For example:
