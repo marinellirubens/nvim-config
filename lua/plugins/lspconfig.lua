@@ -135,8 +135,8 @@ local opts = {
         mason_lspconfig.setup_handlers {
             function(server_name)
                 require('lspconfig')[server_name].setup {
-                    scapabilities = capabilities,
-                    son_attach = on_attach,
+                    capabilities = capabilities,
+                    on_attach = on_attach,
                     settings = servers[server_name],
                 }
             end,
@@ -168,6 +168,24 @@ local opts = {
                 { name = 'nvim_lsp' },
                 { name = 'luasnip' },
             },
+        }
+
+        --setup lsp for openapi
+        local custom_lsp_attach = function(_, bufnr)
+            print('LSP attached')
+            vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+        end
+
+        require'lspconfig'.yamlls.setup {
+            settings = {
+                yaml = {
+                    schemaStore = {
+                        url = "https://www.schemastore.org/api/json/catalog.json",
+                        enable = true,
+                    }
+                }
+            },
+            on_attach = custom_lsp_attach
         }
     end
 }
