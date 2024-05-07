@@ -25,12 +25,6 @@ return
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     { "akinsho/toggleterm.nvim", version = "*", config = true },
     {
-        "lewis6991/gitsigns.nvim",
-        config = function()
-            require("gitsigns").setup()
-        end,
-    },
-    {
         'akinsho/bufferline.nvim',
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
