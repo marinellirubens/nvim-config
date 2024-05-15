@@ -19,6 +19,7 @@ vim.keymap.set("n", "<C-d>","<C-d>zz")
 vim.keymap.set("v", "<C-d>","<C-d>zz")
 vim.keymap.set("n", "<C-u>","<C-u>zz")
 vim.keymap.set("v", "<C-u>","<C-u>zz")
+
 vim.keymap.set("n", "<C-h>","<C-w>h")
 vim.keymap.set("n", "<C-j>","<C-w>j")
 vim.keymap.set("n", "<C-k>","<C-w>k")
@@ -122,12 +123,18 @@ vim.keymap.set("n", "<leader>gW",
                "<cmd>lua require('telescope').extensions.git_worktree.create_git_worktree()<CR>",
                { noremap = true, silent = true, desc = "Git - create git_worktree" })
 
+-- git configuration
+vim.keymap.set('v', '<leader>gs', ":'<,'>Gitsigns stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - stage hunk" })
+vim.keymap.set('n', '<leader>gs', ":Gitsigns stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - stage hunk" })
+vim.keymap.set('v', '<leader>gu', ":'<,'>Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - undo stage hunk" })
+vim.keymap.set('n', '<leader>gu', ":Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - undo stage hunk" })
 
-vim.keymap.set('v', '<leader>gs', ": '<,'>Gitsigns stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - stage hunk" })
-vim.keymap.set('v', '<leader>gu', ": '<,'>Gitsigns undo_stage_hunk<cr>", { noremap = true, silent = true, desc = "Git - undo stage hunk" })
-vim.keymap.set('v', '<leader>ga', ": '<,'>Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "Git - reset hunk" })
-vim.keymap.set('n', '<leader>gc', ': Git commit<CR>', { noremap = true, silent = true, desc = "Git - commit" })
-vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+vim.keymap.set('n', '<leader>gr', ":Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "Git - reset hunk" })
+vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { noremap = true, silent = true, desc = "Git - commit" })
+vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+vim.keymap.set('n', '<leader>gg', ':Git<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+--vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+
 
 vim.keymap.set('n', '<leader>ct', ': CloakToggle<CR>', { noremap = true, silent = true, desc = "Cloak toggle" })
 

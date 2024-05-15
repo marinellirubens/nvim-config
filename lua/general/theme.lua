@@ -53,3 +53,13 @@ vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guif
 
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
 vim.api.nvim_set_hl(0, "IncSearch", { fg = "black", bg="#f2fa16" })
+
+-- theme for gitsigns
+vim.api.nvim_set_hl(0, "GitSignsStagedAdd", { fg = "#ffffff", bg = "#565555"})
+vim.api.nvim_set_hl(0, "GitSignsStagedAddNr", { fg = "#ffffff", bg = "#565555"})
+
+vim.api.nvim_set_hl(0, "GitSignsStagedChange", { fg = "#ffffff", bg = "#556555"})
+vim.api.nvim_set_hl(0, "GitSignsStagedChangeNr", { fg = "#ffffff", bg = "#556555"})
+
+vim.api.nvim_set_hl(0, "GitSignsStagedDelete", { fg = "#ffffff", bg = "#453130"})
+vim.api.nvim_set_hl(0, "GitSignsStagedDeleteNr", { fg = "#ffffff", bg = "#453130"})
