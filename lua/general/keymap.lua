@@ -12,7 +12,7 @@ vim.keymap.set("n", "<C-_>", "<Plug>NERDCommenterToggle", { desc = "NERDCommente
 vim.keymap.set("v", "<C-_>", "<Plug>NERDCommenterToggle<CR>gv", { desc = "NERDCommenterToggle" })
 
 -- remove highlight on searchs
-vim.keymap.set("n", "<leader>q",":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true , desc = "Remove highlight on searchs"})
+vim.keymap.set("n", "<leader>q", ":nohlsearch<Bar>:echo<CR>", { noremap = true, silent = true , desc = "Remove highlight on searchs"})
 
 -- page up/down with centralization
 vim.keymap.set("n", "<C-d>","<C-d>zz")
