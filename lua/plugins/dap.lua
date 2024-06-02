@@ -1,3 +1,4 @@
+-- DEBUG ADAPTER PROTOCOL
 return {
     {
         'rcarriga/nvim-dap-ui',
