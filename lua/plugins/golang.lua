@@ -1,4 +1,4 @@
-return {
+local opts = {
     --{ "fatih/vim-go", ft = "go" },
     {
         "ray-x/go.nvim",
@@ -23,3 +23,5 @@ return {
         end,
     },
 }
+opts = {}
+return opts
