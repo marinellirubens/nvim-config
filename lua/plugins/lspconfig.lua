@@ -1,3 +1,4 @@
+--LSP (auto complete)
 return {
     'neovim/nvim-lspconfig',
     ft = vim.g.languages,

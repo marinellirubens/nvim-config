@@ -1,3 +1,4 @@
+-- DEPRECATED
 local opts = {
     "zbirenbaum/copilot.lua",
     priority = 1000,

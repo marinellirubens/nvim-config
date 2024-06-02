@@ -1,3 +1,4 @@
+-- DEPRECATED
 local opts = {
     --{ "fatih/vim-go", ft = "go" },
     {

@@ -1,12 +1,4 @@
-return
-{
-    --plugin to render markdown on browser (requires lib grip installed via python [pip install grip] )
-    { 'PratikBhusal/vim-grip' },
-    {
-        --markdown syntax highlight
-        "preservim/vim-markdown",
-        ft = "markdown",
-    },
+return {
     -- cypher syntax highlight
     { 'neo4j-contrib/cypher-vim-syntax' },
     -- plugin to remember the color scheme
