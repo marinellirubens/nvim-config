@@ -1,29 +1,21 @@
 return
 {
-    --'tpope/vim-obsession',
-    'neo4j-contrib/cypher-vim-syntax',
+    --plugin to render markdown on browser (requires lib grip installed via python [pip install grip] )
+    { 'PratikBhusal/vim-grip' },
     {
-        "vinnymeller/swagger-preview.nvim",
-        run = "npm install -g swagger-ui-watcher",
-        config = function ()
-            require("swagger-preview").setup({
-                -- The port to run the preview server on
-                port = 8000,
-                -- The host to run the preview server on
-                host = "localhost",
-            })
-        end
+        --markdown syntax highlight
+        "preservim/vim-markdown",
+        ft = "markdown",
     },
+    -- cypher syntax highlight
+    { 'neo4j-contrib/cypher-vim-syntax' },
+    -- plugin to remember the color scheme
     { 'raddari/last-color.nvim' },
-    {
-        'ThePrimeagen/git-worktree.nvim',
-        config = function()
-            require("git-worktree").setup()
-            require("telescope").load_extension("git_worktree")
-        end,
-    },
+    -- dont remember why I included
     { "folke/neoconf.nvim", cmd = "Neoconf" },
+    -- terminal inside nvim
     { "akinsho/toggleterm.nvim", version = "*", config = true },
+    -- buffers as tabs
     {
         'akinsho/bufferline.nvim',
         version = "*",
@@ -32,23 +24,11 @@ return
             require("bufferline").setup{}
         end,
     },
+    -- plugin to have multiple cursors
+    { "mg979/vim-visual-multi" },
     {
-        "kdheepak/lazygit.nvim",
-        dependencies = {
-            "nvim-lua/plenary.nvim",
-        },
-        config = function()
-            require("telescope").load_extension("lazygit")
-        end,
-    },
-    "mg979/vim-visual-multi",
-    {
-        "preservim/vim-markdown",
-        ft = "markdown",
-    },
-    {
+        -- commentary on code utility
         "preservim/nerdcommenter",
         ft = vim.g.languages_extented
     },
-    "tpope/vim-fugitive",
 }
