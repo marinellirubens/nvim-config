@@ -108,7 +108,7 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true , desc = "Move s
 
 -- delete complete word
 vim.keymap.set("i", "<C-H>", "<C-W>", { noremap = true, desc = "Delete complete word"})
-vim.keymap.set("i", "<C-BS>", "<C-W>", { noremap = true, desc = "Delete complete word"})
+vim.keymap.set("i", "<M-BS>", "<C-W>", { noremap = true, desc = "Delete complete word"})
 
 -- utility to use commands without ctrl
 --vim.keymap.set("n", ";", ":")
