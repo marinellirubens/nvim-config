@@ -20,6 +20,11 @@ return {
         vim.cmd[[autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni]]
         vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })]]
 
+        --vim.g.dbs = {
+            --{ name = 'BRTMSPROD', url = 'oracle://30900011:LOmes9452@localhost:9004/LGBRTMSP' },
+            --{ name = 'staging', url = 'postgres://postgres:mypassword@localhost:5432/my-staging-db' },
+            --{ name = 'wp', url = 'mysql://root@localhost/wp_awesome' },
+        --}
         -- dadbod ui saving location
         vim.g.db_ui_save_location=vim.env.HOME .. '/.nvim/dadbod-ui'
     end,
