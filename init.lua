@@ -2,7 +2,7 @@
 require("general.keymap")
 require("general.set")
 
-vim.g.languages = { "go", "python", "javascript", "typescript", "rust", "cpp", "c", "java", "lua", "tmux", "sshconfig", "cypher", "sh" }
+vim.g.languages = { "go", "python", "javascript", "typescript", "rust", "cpp", "c", "java", "lua", "tmux", "sshconfig", "cypher", "sh", "sql" }
 
 local extended = {'markdown', 'vim', 'json', 'yaml', 'toml', 'zsh', 'dosini', 'conf', 'sequence'}
 vim.g.languages_extended = vim.tbl_extend('force', vim.g.languages, extended)
