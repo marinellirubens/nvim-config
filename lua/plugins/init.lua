@@ -11,7 +11,7 @@ return {
     -- buffers as tabs
     {
         'akinsho/bufferline.nvim',
-        ft = vim.g.languages,
+        ft = vim.g.languages_sub,
         version = "*",
         dependencies = 'nvim-tree/nvim-web-devicons',
         config = function()

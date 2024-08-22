@@ -1,6 +1,7 @@
 return {
     'nvim-lualine/lualine.nvim',
     dependencies = {'nvim-tree/nvim-web-devicons', 'sainnhe/sonokai'},
+    ft = vim.g.languages_sub,
     config = function()
         require('lualine').setup {
             options = {

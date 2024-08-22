@@ -1,11 +1,14 @@
 --import general configurations
+vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql"}
+
+vim.g.languages_sub = {
+    "go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql",
+    "markdown", "vim", "json", "yaml", "toml", "zsh", "dosini", "conf", "sequence"
+}
+
 require("general.keymap")
 require("general.set")
 
-vim.g.languages = { "go", "python", "javascript", "typescript", "rust", "cpp", "c", "java", "lua", "tmux", "sshconfig", "cypher", "sh", "sql" }
-
-local extended = {'markdown', 'vim', 'json', 'yaml', 'toml', 'zsh', 'dosini', 'conf', 'sequence'}
-vim.g.languages_extended = vim.tbl_extend('force', vim.g.languages, extended)
 --create basis for lazy loading
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 vim.keymap.set("n", "<leader>lz", function()

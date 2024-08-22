@@ -1,3 +1,17 @@
+function table_contains(tbl, x)
+    local found = false
+    for _, v in pairs(tbl) do
+        if v == x then
+            found = true
+        end
+    end
+    return found
+end
+
+if not table_contains(vim.g.languages_sub, vim.bo.filetype) then
+    vim.opt.laststatus = 0
+end
+
 -- search configuration
 vim.opt.hlsearch = true
 vim.opt.incsearch = true
@@ -10,7 +24,7 @@ vim.opt.clipboard = 'unnamedplus'
 
 -- configuration for cursor and visualisation
 vim.opt.mouse = 'a'
-vim.opt.number = true
+vim.opt.number = false
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 7
 
