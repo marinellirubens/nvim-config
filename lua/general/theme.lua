@@ -54,6 +54,13 @@ vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guif
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
 vim.api.nvim_set_hl(0, "IncSearch", { fg = "black", bg="#f2fa16" })
 
+
+--add          = { hl = 'GitSignsAdd'   , text = '┃', numhl = 'GitSignsAddNr'   , linehl = 'GitSignsAddLn' },
+--change       = { hl = 'GitSignsChange', text = '┃', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+--delete       = { hl = 'GitSignsDelete', text = '_', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+--topdelete    = { hl = 'GitSignsDelete', text = '‾', numhl = 'GitSignsDeleteNr', linehl = 'GitSignsDeleteLn' },
+--changedelete = { hl = 'GitSignsChange', text = '┃', numhl = 'GitSignsChangeNr', linehl = 'GitSignsChangeLn' },
+
 -- theme for gitsigns
 vim.api.nvim_set_hl(0, "GitSignsStagedAdd", { fg = "#ffffff", bg = "#565555"})
 vim.api.nvim_set_hl(0, "GitSignsStagedAddNr", { fg = "#ffffff", bg = "#565555"})
