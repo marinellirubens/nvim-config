@@ -50,6 +50,9 @@ vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = tr
 vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 
 vim.keymap.set("n", "<leader>ll", "<cmd>Telescope colorscheme<CR>", { noremap = true, silent = true , desc = "Telescope colorscheme"})
+
+vim.keymap.set("n", "<leader>xt", "<cmd>TodoTrouble<CR>", { noremap = true, silent = true , desc = "Todo Trouble" })
+vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { noremap = true, silent = true , desc = "Todo Telescope" })
 -- split window
 vim.keymap.set("n", "<leader>sv", "<cmd>vertical split<cr>", { noremap = true, desc = "Split window vertical"})
 vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", { noremap = true, desc = "Split window horizontal"})
