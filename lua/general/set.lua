@@ -26,7 +26,7 @@ vim.opt.clipboard = 'unnamedplus'
 vim.opt.mouse = 'a'
 vim.opt.number = false
 vim.opt.relativenumber = true
-vim.opt.scrolloff = 7
+vim.opt.scrolloff = 4
 
 -- configuration for indent
 vim.opt.autoindent = true
