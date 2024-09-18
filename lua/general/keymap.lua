@@ -143,3 +143,8 @@ vim.keymap.set('n', '<leader>gg', ':Git<CR>', { noremap = true, silent = true, d
 
 vim.keymap.set('n', '<leader>ct', ': CloakToggle<CR>', { noremap = true, silent = true, desc = "Cloak toggle" })
 
+
+-- keymaps for MarkdownPreview
+vim.keymap.set('n', '<leader>mp', ': MarkdownPreview<CR>', { noremap = true, silent = true, desc = "MarkdownPreview" })
+vim.keymap.set('n', '<leader>ms', ': MarkdownPreviewStop<CR>', { noremap = true, silent = true, desc = "MarkdownPreviewStop" })
+vim.keymap.set('n', '<leader>mt', ': MarkdownPreviewToggle<CR>', { noremap = true, silent = true, desc = "MarkdownPreviewToggle" })
