@@ -24,7 +24,7 @@ vim.opt.clipboard = 'unnamedplus'
 
 -- configuration for cursor and visualisation
 vim.opt.mouse = 'a'
-vim.opt.number = false
+vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.scrolloff = 4
 

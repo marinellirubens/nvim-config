@@ -148,3 +148,8 @@ vim.keymap.set('n', '<leader>ct', ': CloakToggle<CR>', { noremap = true, silent 
 vim.keymap.set('n', '<leader>mp', ': MarkdownPreview<CR>', { noremap = true, silent = true, desc = "MarkdownPreview" })
 vim.keymap.set('n', '<leader>ms', ': MarkdownPreviewStop<CR>', { noremap = true, silent = true, desc = "MarkdownPreviewStop" })
 vim.keymap.set('n', '<leader>mt', ': MarkdownPreviewToggle<CR>', { noremap = true, silent = true, desc = "MarkdownPreviewToggle" })
+
+-- keymaps for toggle numbering
+vim.keymap.set('n', '<leader>dn', '<cmd>set number!<CR><cmd>set relativenumber!<CR>', { noremap = true, silent = true, desc = "Disable number and relative number" })
+vim.keymap.set('n', '<leader>en', '<cmd>set number<CR><cmd>set relativenumber<CR>', { noremap = true, silent = true, desc = "Enable number and relative number" })
+
