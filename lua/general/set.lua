@@ -124,4 +124,14 @@ local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
   --group = format_sync_grp,
 --})
 
+local function system(command)
+  local file = assert(io.popen(command, 'r'))
+  local output = file:read('*all'):gsub("%s+", "")
+  file:close()
+  return output
+end
 
+if vim.fn.executable("python3") > 0 then
+  vim.env.PYENV_VERSION = vim.fn.system('pyenv version'):match('(%S+)%s+%(.-%)')
+  vim.g.python3_host_prog = system("which python")
+end

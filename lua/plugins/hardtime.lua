@@ -7,4 +7,4 @@ local opts = {
     }
 }
 
-return opts
+return {}
