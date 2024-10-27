@@ -1,7 +1,7 @@
 local opts = {
     "catppuccin/nvim",
     name = "catppuccin",
-    ft = {"lua"},
+    --ft = {"lua"},
     config = function()
         require("catppuccin").setup({
             flavour = "mocha", -- latte, frappe, macchiato, mocha
