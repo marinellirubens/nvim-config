@@ -112,7 +112,7 @@ return {
                 },
               },
             },
-            tsserver = {},
+            --tsserver = {},
             lua_ls = {
                 Lua = {
                     workspace = { checkThirdParty = false },
