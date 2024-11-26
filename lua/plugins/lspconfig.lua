@@ -21,7 +21,7 @@ return {
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "pylsp", "tsserver", "yamlls" }
+            ensure_installed = { "lua_ls", "pylsp", "yamlls" }
         })
         vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(
             vim.lsp.diagnostic.on_publish_diagnostics,
