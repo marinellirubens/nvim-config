@@ -1,5 +1,6 @@
 local opts = {
     "folke/which-key.nvim",
+    ft = {'lua'},
     config = function()
         local wk = require("which-key")
         --local map = vim.keymap.set
