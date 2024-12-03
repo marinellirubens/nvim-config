@@ -91,12 +91,12 @@ end
 vim.keymap.set("n", "<leader>nc", ToggleColorColumn, { noremap = true, silent = true , desc = "Colorcolumn"})
 
 -- put simbol around selection
-vim.keymap.set("v", "'", "di''<ESC>hp", { desc = "put ' around selection"})
-vim.keymap.set("v", '"', 'di""<ESC>hp', { desc = 'put " around selection'})
-vim.keymap.set("v", "(", "di()<ESC>hp", { desc = "put () around selection"})
-vim.keymap.set("v", "[", "di[]<ESC>hp", { desc = "put [] around selection"})
-vim.keymap.set("v", "{", "di{}<ESC>hp", { desc = "put {} around selection"})
-vim.keymap.set("v", "`", "di``<ESC>hp", { desc = "put `` around selection"})
+vim.keymap.set("v", "'", "c''<ESC>P", { desc = "put ' around selection"})
+vim.keymap.set("v", '"', 'c""<ESC>P', { desc = 'put " around selection'})
+vim.keymap.set("v", "(", "c()<ESC>P", { desc = "put () around selection"})
+vim.keymap.set("v", "[", "c[]<ESC>P", { desc = "put [] around selection"})
+vim.keymap.set("v", "{", "c{}<ESC>P", { desc = "put {} around selection"})
+vim.keymap.set("v", "`", "c``<ESC>P", { desc = "put `` around selection"})
 
 -- move selection up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection down"})
