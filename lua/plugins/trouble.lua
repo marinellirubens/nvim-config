@@ -3,6 +3,7 @@ return {
   "folke/trouble.nvim",
   ft = vim.g.languages,
   cmd = "Trouble",
+  opts = {},
   keys = {
     {
       "<leader>xd",
