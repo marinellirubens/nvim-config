@@ -5,6 +5,22 @@ return {
     config = function ()
         require("telescope").setup {
             defaults = {
+                path_display = {'shorten'},
+                layout_strategy = "cursor",
+                --layout_config = {
+                  --horizontal = {
+                    --size = {
+                      --width = "90%",
+                      --height = "60%",
+                    --},
+                  --},
+                  --vertical = {
+                    --size = {
+                      --width = "90%",
+                      --height = "90%",
+                    --},
+                  --},
+                --},
                 file_ignore_patterns = {
                     '.git/',
                     '__pycache__/',
