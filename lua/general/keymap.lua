@@ -47,7 +47,8 @@ vim.keymap.set("n", "<leader>fo", "<cmd>Telescope buffers<cr>", { noremap = true
 vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true , desc = "Telescope keymaps"})
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 
-vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
+--vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
+vim.keymap.set("n", "<leader>fe", ":lua require('telescope.builtin').diagnostics({layout_strategy='vertical'})<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 
 vim.keymap.set("n", "<leader>ll", "<cmd>Telescope colorscheme<CR>", { noremap = true, silent = true , desc = "Telescope colorscheme"})
 
@@ -91,12 +92,12 @@ end
 vim.keymap.set("n", "<leader>nc", ToggleColorColumn, { noremap = true, silent = true , desc = "Colorcolumn"})
 
 -- put simbol around selection
-vim.keymap.set("v", "'", "di''<ESC>hp", { desc = "put ' around selection"})
-vim.keymap.set("v", '"', 'di""<ESC>hp', { desc = 'put " around selection'})
-vim.keymap.set("v", "(", "di()<ESC>hp", { desc = "put () around selection"})
-vim.keymap.set("v", "[", "di[]<ESC>hp", { desc = "put [] around selection"})
-vim.keymap.set("v", "{", "di{}<ESC>hp", { desc = "put {} around selection"})
-vim.keymap.set("v", "`", "di``<ESC>hp", { desc = "put `` around selection"})
+vim.keymap.set("v", "'", "c''<ESC>P", { desc = "put ' around selection"})
+vim.keymap.set("v", '"', 'c""<ESC>P', { desc = 'put " around selection'})
+vim.keymap.set("v", "(", "c()<ESC>P", { desc = "put () around selection"})
+vim.keymap.set("v", "[", "c[]<ESC>P", { desc = "put [] around selection"})
+vim.keymap.set("v", "{", "c{}<ESC>P", { desc = "put {} around selection"})
+vim.keymap.set("v", "`", "c``<ESC>P", { desc = "put `` around selection"})
 
 -- move selection up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection down"})
