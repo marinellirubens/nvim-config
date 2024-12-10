@@ -49,7 +49,7 @@ vim.api.nvim_set_hl(0, "Cursor", { fg = "black", bg = "yellow" })
 -- highlight selection configuration
 vim.cmd[[highlight Visual cterm=bold ctermbg=Red ctermfg=cyan guibg=#39fb16 guifg=black]]
 --vim.cmd.termguicolors = true
---vim.cmd.background = "dark"
+vim.cmd.background = "dark"
 
 vim.api.nvim_set_hl(0, "CopilotSuggestion", { fg = "#b3ecff", bg = "#555555" })
 vim.api.nvim_set_hl(0, "IncSearch", { fg = "black", bg="#f2fa16" })
