@@ -115,14 +115,6 @@ vim.g.completion_matching_strategy_list = {'exact', 'substring'}
 vim.g.completion_matching_ignore_case = 1
 vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
 
-local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
---vim.api.nvim_create_autocmd("BufWritePre", {
-  --pattern = "*.go",
-  --callback = function()
-   --require('go.format').gofmt()
-  --end,
-  --group = format_sync_grp,
---})
 
 local function system(command)
   local file = assert(io.popen(command, 'r'))

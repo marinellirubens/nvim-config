@@ -9,7 +9,11 @@ local opts = {
             "nvim-treesitter/nvim-treesitter",
         },
         config = function()
-            require("go").setup()
+            require("go").setup{
+              go='go', -- go command, can be go[default] or e.g. go1.18beta1
+              goimports ='gopls', -- goimports command, can be gopls[default] or either goimports or golines if need to split long lines
+              gofmt = 'gofmt', -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
+            }
         end,
         event = {"CmdlineEnter"},
         ft = {"go", 'gomod'},
@@ -24,5 +28,5 @@ local opts = {
         end,
     },
 }
-opts = {}
+--opts = {}
 return opts
