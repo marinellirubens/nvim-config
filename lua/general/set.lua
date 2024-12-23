@@ -83,6 +83,8 @@ vim.cmd[[autocmd Filetype python setlocal makeprg=/bin/python3\ %]]
 vim.cmd[[autocmd Filetype python setlocal expandtab]]
 vim.cmd[[autocmd Filetype go setlocal makeprg=go\ run\ .]]
 vim.cmd[[autocmd Filetype sh setlocal makeprg=sh\ %]]
+vim.cmd[[autocmd Filetype rust setlocal makeprg=cargo\ run]]
+vim.cmd[[autocmd Filetype c setlocal makeprg=clang\ %\ -o\ output\ &&\ ./output]]
 
 vim.cmd[[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]]
 -- Remove whitespace on save

@@ -8,6 +8,11 @@ return {
     { "folke/neoconf.nvim", cmd = "Neoconf" },
     -- terminal inside nvim
     { "akinsho/toggleterm.nvim", version = "*", config = true },
+    {
+      'mrcjkb/rustaceanvim',
+      version = '^5', -- Recommended
+      lazy = false, -- This plugin is already lazy
+    },
     -- buffers as tabs
     {
         'akinsho/bufferline.nvim',
