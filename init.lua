@@ -1,9 +1,9 @@
 --import general configurations
-vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql"}
+vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql", "rust", "c"}
 
 vim.g.languages_sub = {
     "go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql",
-    "markdown", "vim", "json", "yaml", "toml", "zsh", "dosini", "conf", "sequence"
+    "markdown", "vim", "json", "yaml", "toml", "zsh", "dosini", "conf", "sequence", "rust", "c"
 }
 
 require("general.keymap")
@@ -35,3 +35,12 @@ require("lazy").setup(lazy_setup)
 
 --import general settings
 require("general.theme")
+
+local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.go",
+    callback = function()
+       require('go.format').goimport()
+    end,
+    group = format_sync_grp,
+})
