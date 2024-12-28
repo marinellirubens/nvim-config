@@ -1,7 +1,7 @@
 return {
     "EdenEast/nightfox.nvim",
     lazy = true,
-    ft = {"lua"},
+    --ft = {"lua"},
     config = function ()
         require('nightfox').setup({
           options = {
