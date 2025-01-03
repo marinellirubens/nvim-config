@@ -9,17 +9,17 @@ return {
                 layout_strategy = "horizontal",
                 layout_config = {
                     vertical = {
-                      width = 0.95,
+                      width = 0.9,
                       height = 0.9
                     },
                     cursor = {
                       height = 0.9,
-                      width = 0.97
+                      width = 0.9
                     },
                     horizontal = {
-                      width = 0.95,
+                      width = 0.9,
                       prompt_position = 'top',
-                      preview_width = 130,
+                      preview_width = 0.8,
                       height = 0.9
                     },
                 },
