@@ -1,17 +1,5 @@
 return {
     {
-        "pixelneo/vim-python-docstring",
-        ft="python"
-    },
-    {
-        "pixelneo/vim-python-docstring",
-        ft = "python",
-        init = function()
-            vim.g.vim_python_docstring_format = "google"
-            vim.cmd([[autocmd Filetype python nnoremap <leader>da <cmd>DocstringTypes<cr>]])
-        end,
-    },
-    {
         -- dont forget to install the dependencies (pip install pynvim neovim debugpy)
         "mfussenegger/nvim-dap-python",
         ft = "python",

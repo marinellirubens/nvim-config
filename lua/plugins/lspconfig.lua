@@ -44,13 +44,19 @@ return {
             pylsp = {
                 pylsp = {
                     plugins = {
+                    ruff = { enabled = true },
                     -- formatter options
                     black = { enabled = false },
                     autopep8 = { enabled = false },
+                    basedpyright = { enabled = false },
                     yapf = { enabled = false },
 
                     -- linter options
-                    pylint = { enabled = false, executable = "pylint" },
+                    pylint = {
+                        enabled = true,
+                        args = { '--disable=C0305' }
+                    },
+                    mccabe = { enabled = true },
                     pyflakes = { enabled = true },
                     pycodestyle = {
                         ignore = {'E251', 'W191', 'W391', 'E722'},
@@ -64,7 +70,7 @@ return {
                         live_mode = true
                     },
                     -- auto-completion options
-                    jedi_completion = { fuzzy = false },
+                    jedi_completion = { fuzzy = true },
 
                     pyls_isort = { enabled = false },
                 },
