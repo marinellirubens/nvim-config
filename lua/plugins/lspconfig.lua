@@ -108,6 +108,14 @@ return {
 
         local cmp = require('cmp')
         cmp.setup {
+            completion = {
+                autocomplete = false,  -- Enable auto-completion
+                keyword_length = 3,   -- Minimum characters before suggestions show
+                --completeopt = "menu,menuone,noinsert",
+            },
+            --performance = {
+                --debounce = 300,  -- Delay in milliseconds before showing suggestions
+            --},
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
