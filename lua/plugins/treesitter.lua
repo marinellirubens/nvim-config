@@ -1,5 +1,4 @@
-local opts
-opts = {
+local opts = {
     "nvim-treesitter/nvim-treesitter",
     tag = "v0.9.1",
     config = function()
@@ -32,4 +31,4 @@ opts = {
     end,
 }
 
-return {}
+return opts
