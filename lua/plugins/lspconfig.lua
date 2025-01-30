@@ -44,7 +44,7 @@ return {
             pylsp = {
                 pylsp = {
                     plugins = {
-                    ruff = { enabled = true },
+                    ruff = { enabled = false },
                     -- formatter options
                     black = { enabled = false },
                     autopep8 = { enabled = false },
@@ -56,8 +56,8 @@ return {
                         enabled = true,
                         args = { '--disable=C0305' }
                     },
-                    mccabe = { enabled = true },
-                    pyflakes = { enabled = true },
+                    --mccabe = { enabled = false },
+                    pyflakes = { enabled = false },
                     pycodestyle = {
                         ignore = {'E251', 'W191', 'W391', 'E722'},
                         enabled = true,
@@ -108,6 +108,14 @@ return {
 
         local cmp = require('cmp')
         cmp.setup {
+            completion = {
+                autocomplete = false,  -- Enable auto-completion
+                keyword_length = 1,   -- Minimum characters before suggestions show
+                --completeopt = "menu,menuone,noinsert",
+            },
+            --performance = {
+                --debounce = 300,  -- Delay in milliseconds before showing suggestions
+            --},
             snippet = {
                 expand = function(args)
                     luasnip.lsp_expand(args.body)
