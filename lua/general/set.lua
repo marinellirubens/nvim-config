@@ -87,6 +87,23 @@ vim.cmd[[autocmd Filetype rust setlocal makeprg=cargo\ run]]
 vim.cmd[[autocmd Filetype c setlocal makeprg=clang\ %\ -o\ output\ &&\ ./output]]
 
 vim.cmd[[command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor]]
+
+-- Function to run isort on the current buffer
+local function run_isort()
+  local buf = vim.api.nvim_get_current_buf()
+  local bufname = vim.api.nvim_buf_get_name(buf)
+  if bufname:match("%.py$") then
+    vim.cmd('silent! !isort ' .. bufname)
+    vim.cmd('edit!')
+  end
+end
+
+-- Autocommand to run isort on BufWritePre
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.py",
+  callback = run_isort,
+})
+
 -- Remove whitespace on save
 vim.api.nvim_create_autocmd(
   'BufWritePre',
