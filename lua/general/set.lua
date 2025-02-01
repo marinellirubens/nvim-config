@@ -93,7 +93,7 @@ local function run_isort()
   local buf = vim.api.nvim_get_current_buf()
   local bufname = vim.api.nvim_buf_get_name(buf)
   if bufname:match("%.py$") then
-    vim.cmd('silent! !isort ' .. bufname)
+    vim.cmd('silent! !isort --sl ' .. bufname)
     vim.cmd('edit!')
   end
 end
