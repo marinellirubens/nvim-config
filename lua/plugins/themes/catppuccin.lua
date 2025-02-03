@@ -1,5 +1,6 @@
 local opts = {
     "catppuccin/nvim",
+    ft = {"lua"},
     name = "catppuccin",
     --ft = {"lua"},
     config = function()

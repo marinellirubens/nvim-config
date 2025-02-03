@@ -59,7 +59,7 @@ return {
     },
     {
         "nvim-telescope/telescope-dap.nvim",
-        ft = "go",
+        ft = vim.g.languages,
         dependencies = { "mfussenegger/nvim-dap" },
         config = function()
             require("telescope").load_extension("dap")

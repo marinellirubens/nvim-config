@@ -5,7 +5,12 @@ opts =  {
     main = "ibl",
     opts = {},
     config = function()
-        require("ibl").setup()
+        if vim.g.vscode then
+            -- VSCode extension
+            print("indent-blankline not started")
+        else
+            require("ibl").setup()
+        end
     end,
 }
 return opts

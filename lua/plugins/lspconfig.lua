@@ -47,31 +47,34 @@ return {
                     ruff = { enabled = false },
                     -- formatter options
                     black = { enabled = false },
-                    autopep8 = { enabled = false },
-                    basedpyright = { enabled = false },
-                    yapf = { enabled = false },
-
-                    -- linter options
-                    pylint = {
-                        enabled = true,
-                        args = { '--disable=C0305' }
-                    },
-                    --mccabe = { enabled = false },
-                    pyflakes = { enabled = false },
-                    pycodestyle = {
+                    autopep8 = { enabled = true },
+                    flake8 = {
                         ignore = {'E251', 'W191', 'W391', 'E722'},
                         enabled = true,
                         maxLineLength = 120
                     },
+                    basedpyright = { enabled = true },
+                    yapf = { enabled = false },
+                    -- linter options
+                    pylint = {
+                        enabled = false,
+                        args = { '--disable=C0305' }
+                    },
+                    mccabe = { enabled = false },
+                    pyflakes = { enabled = false },
+                    pycodestyle = {
+                        ignore = {'E251', 'W191', 'W391', 'E722'},
+                        enabled = false, --because is already included in flake8
+                        maxLineLength = 120
+                    },
                     -- type checker
                     pylsp_mypy = {
-                        enabled = true,
+                        enabled = false,
                         report_progress = true,
                         live_mode = true
                     },
                     -- auto-completion options
                     jedi_completion = { fuzzy = true },
-
                     pyls_isort = { enabled = false },
                 },
               },

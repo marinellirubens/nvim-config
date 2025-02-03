@@ -18,7 +18,7 @@ for better experience with lazygit you need to setup the git config, to use delt
     diffFilter = delta --color-only --side-by-side --line-numbers --paging
 [conflict]
     style = diff3
-```                 
+```
 
 also you need to install this python3 package for python autocompletion
 ```bash
@@ -56,4 +56,6 @@ after install the vim-plug replace the current init.vim on ~/.config/nvim/init.v
 Nerd fonts to correct the icons on the dap
 ```bach
 https://www.nerdfonts.com/font-downloads
+
+golang dev install: https://go.dev/doc/install
 ```

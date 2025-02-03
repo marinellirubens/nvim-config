@@ -1,8 +1,8 @@
 -- DEPRECATED
 local opts = {
-    --{ "fatih/vim-go", ft = "go" },
     {
         "ray-x/go.nvim",
+        ft = {"go", 'gomod'},
         dependencies = {  -- optional packages
             "ray-x/guihua.lua",
             "neovim/nvim-lspconfig",
@@ -15,13 +15,12 @@ local opts = {
               gofmt = 'gofmt', -- gofmt through gopls: alternative is gofumpt, goimports, golines, gofmt, etc
             }
         end,
-        event = {"CmdlineEnter"},
-        ft = {"go", 'gomod'},
-        build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
+        --event = {"CmdlineEnter"},
+        --build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
     },
     {
         "leoluz/nvim-dap-go",
-        ft = "go",
+        ft = {"go", 'gomod'},
         dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
         config = function()
             require("dap-go").setup()

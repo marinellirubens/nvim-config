@@ -1,14 +1,16 @@
-local theme = require('last-color').recall()
-if theme ~= nil then
+local haslfs, theme = pcall(require, "last-color")
+if haslfs then
+    theme = theme.recall()
     vim.cmd(('colorscheme %s'):format(theme))
+    vim.g.last_color = theme
+
+    vim.cmd[[
+    augroup FixColorScheme
+      autocmd!
+      autocmd ColorScheme default call LastColor()
+    augroup END
+    ]]
 end
-vim.g.last_color = theme
-vim.cmd[[
-augroup FixColorScheme
-  autocmd!
-  autocmd ColorScheme default call LastColor()
-augroup END
-]]
 
 --using monoakai pro the coloscheme is being set in the plugin
 
