@@ -1,5 +1,6 @@
 return {
     "rebelot/kanagawa.nvim",
+    ft = {"lua"},
     opts = {
         compile = false,             -- enable compiling the colorscheme
         undercurl = true,            -- enable undercurls

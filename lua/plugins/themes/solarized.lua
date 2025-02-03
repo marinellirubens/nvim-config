@@ -1,6 +1,6 @@
 return {
   'maxmx03/solarized.nvim',
-ft = {'lua'},
+  ft = {'lua'},
   lazy = false,
   priority = 1000,
   ---@type solarized.config
