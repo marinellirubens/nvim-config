@@ -1,5 +1,5 @@
 --import general configurations
-vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql", "rust", "c"}
+vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "rust", "c"}
 
 vim.g.languages_sub = {
     "go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql",
