@@ -46,6 +46,7 @@ vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<cr>"
 vim.keymap.set("n", "<leader>fo", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
 vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true , desc = "Telescope keymaps"})
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
+vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 
 --vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 vim.keymap.set("n", "<leader>fe", ":lua require('telescope.builtin').diagnostics({layout_strategy='vertical'})<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
