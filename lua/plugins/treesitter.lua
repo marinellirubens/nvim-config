@@ -1,6 +1,7 @@
 local opts = {
     "nvim-treesitter/nvim-treesitter",
     tag = "v0.9.1",
+    ft = vim.g.languages,
     config = function()
         require("nvim-treesitter.configs").setup({
             -- A list of parser names, or "all" (the five listed parsers should always be installed)
@@ -30,5 +31,5 @@ local opts = {
         })
     end,
 }
-
+--opts = {}
 return opts
