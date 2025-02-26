@@ -1,9 +1,13 @@
 local opts = {
     "lewis6991/gitsigns.nvim",
     config = function()
-        --vim.api.nvim_set_hl(0, "GitSignsStagedAddNr", { bg = "#ffffff", fg = "#555555", sp= "#555555", reverse=true})
         vim.api.nvim_set_hl(0, 'GitSignsAdd', { link = 'GitSignsAdd' })
         require("gitsigns").setup{
+            attach_to_untracked = false,
+            watch_gitdir = {
+                interval = 1000,
+                follow_files = false  -- Disable following moved files
+            },
             signcolumn = true,  -- Toggle with `:Gitsigns toggle_signs`
             numhl      = true, -- Toggle with `:Gitsigns toggle_numhl`
             --_signs_staged_enable = true, -- experimental
@@ -34,7 +38,7 @@ local opts = {
                 ignore_whitespace_change_at_eol = false,
             },
 
-            debug_mode = true,
+            debug_mode = false,
             on_attach = function(bufnr)
                 local gitsigns = require('gitsigns')
 
