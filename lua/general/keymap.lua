@@ -49,7 +49,9 @@ vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope resume<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
-vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
+vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { noremap = true, silent = true , desc = "Telescope git status"})
+vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (all)"})
+vim.keymap.set("n", "<leader>fgb", "<cmd>Telescope git_bcommits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (branch)"})
 
 --vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 vim.keymap.set("n", "<leader>fe", ":lua require('telescope.builtin').diagnostics({layout_strategy='vertical'})<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
