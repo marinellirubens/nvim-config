@@ -41,7 +41,7 @@ return {
                 width = 25,
                 float = {
                     enable = false,
-                    quit_on_focus_loss = true,
+                    quit_on_focus_loss = false,
                     open_win_config = {
                         relative = "editor",
                         border = "rounded",
@@ -211,7 +211,7 @@ return {
                     },
                 },
                 open_file = {
-                    quit_on_open = true,
+                    quit_on_open = false,
                     eject = true,
                     resize_window = true,
                     window_picker = {

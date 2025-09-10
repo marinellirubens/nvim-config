@@ -60,7 +60,7 @@ vim.opt.undodir = vim.env.HOME .. "/.nvim/undodir"
 vim.opt.undofile = true
 vim.opt.updatetime = 50
 
--- configuration for terminal colors
+-- configuration for terminal color
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
@@ -73,12 +73,12 @@ vim.g.netrw_browse_split=2
 -- plugins specific
 vim.g.vim_markdown_folding_disabled = 1
 
---keybing to avoid error on ctrl + c on sql files
+--keybing to avoid error on ctrl + c on sql file
 vim.g.ftplugin_sql_omni_key = nil
 vim.g.omni_sql_no_default_maps = 1
 
 
--- automcmd for specific file types
+-- automcmd for specific file type
 vim.cmd[[autocmd Filetype python setlocal makeprg=/bin/python3\ %]]
 vim.cmd[[autocmd Filetype python setlocal expandtab]]
 vim.cmd[[autocmd Filetype go setlocal makeprg=go\ run\ .]]
@@ -130,7 +130,7 @@ vim.api.nvim_create_autocmd(
 --vim.g.completion_chain_complete_list = {'sql': [{'complete_items': ['vim-dadbod-completion']}] }
 --Make sure `substring` is part of this list. Other items are optional for this completion source
 vim.g.completion_matching_strategy_list = {'exact', 'substring'}
---" Useful if there's a lot of camel case items
+--" Useful if there's a lot of camel case item
 vim.g.completion_matching_ignore_case = 1
 vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
 

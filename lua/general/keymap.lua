@@ -108,7 +108,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , d
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection up"})
 
 -- format file to unix
-vim.keymap.set("n", "fe", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true, desc = "Set file format to unix" })
+vim.keymap.set("n", "<leader>fu", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true, desc = "Set file format to unix" })
 
 -- move selection right and left
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true , desc = "Move selection left"})

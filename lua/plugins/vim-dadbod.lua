@@ -1,4 +1,4 @@
-return {
+local opts =  {
     "kristijanhusak/vim-dadbod-ui",
     dependencies = {
         { "tpope/vim-dadbod", lazy = true },
@@ -29,3 +29,5 @@ return {
         vim.g.db_ui_save_location=vim.env.HOME .. '/.nvim/dadbod-ui'
     end,
 }
+opts = {}
+return opts
