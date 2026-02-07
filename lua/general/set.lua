@@ -54,7 +54,7 @@ vim.opt.splitright = true
 vim.opt.autowrite = true
 vim.opt.hidden = true
 vim.opt.swapfile = false
-vim.opt.backup = false
+vim.opt.backupcopy = 'yes'
 vim.opt.undodir = vim.env.HOME .. "/.nvim/undodir"
 
 vim.opt.undofile = true

@@ -57,7 +57,7 @@ return {
                     yapf = { enabled = false },
                     -- linter options
                     pylint = {
-                        enabled = false,
+                        enabled = true,
                         args = { '--disable=C0305' }
                     },
                     mccabe = { enabled = false },
