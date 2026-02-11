@@ -57,8 +57,9 @@ return {
                     yapf = { enabled = false },
                     -- linter options
                     pylint = {
-                        enabled = false,
-                        args = { '--disable=C0305' }
+                        enabled = true,
+                        args = { '--disable=C0305' },
+                        executable = "pylint",
                     },
                     mccabe = { enabled = false },
                     pyflakes = { enabled = false },
