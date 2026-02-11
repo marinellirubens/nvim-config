@@ -58,7 +58,7 @@ return {
                     -- linter options
                     pylint = {
                         enabled = true,
-                        args = { '--disable=C0305' },
+                        args = { '--disable=C0305', '--max-line-length=240' },
                         executable = "pylint",
                     },
                     mccabe = { enabled = false },
