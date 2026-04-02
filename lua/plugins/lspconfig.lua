@@ -21,7 +21,7 @@ return {
         require("fidget").setup({})
         require("mason").setup({})
         require("mason-lspconfig").setup({
-            ensure_installed = { "lua_ls", "pylsp", "yamlls" }
+            ensure_installed = { "lua_ls", "pylsp", "yamlls", "ruff", "ts_ls" }
         })
         vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(
             vim.lsp.diagnostic.on_publish_diagnostics,
@@ -44,13 +44,11 @@ return {
             pylsp = {
                 pylsp = {
                     plugins = {
-                    ruff = { enabled = false },
-                    -- formatter options
                     black = { enabled = false },
                     autopep8 = { enabled = true },
                     flake8 = {
                         ignore = {'E251', 'W191', 'W391', 'E722'},
-                        enabled = true,
+                        enabled = false,
                         maxLineLength = 120
                     },
                     basedpyright = { enabled = true },
@@ -58,9 +56,15 @@ return {
                     -- linter options
                     pylint = {
                         enabled = true,
-                        args = { '--disable=C0305', '--max-line-length=240' },
+                        args = { '--disable=C0305', '--max-line-length=240',
+                                 '--disable=W0702' },
                         executable = "pylint",
                     },
+                    --ruff = {
+                        --enabled = false,
+                        --args = {},
+                        --executable = "ruff",
+                    --},
                     mccabe = { enabled = false },
                     pyflakes = { enabled = false },
                     pycodestyle = {
@@ -80,7 +84,8 @@ return {
                 },
               },
             },
-            --tsserver = {},
+            ts_ls = {},
+            ruff = {},
             --
             lua_ls = {
                 Lua = {
@@ -159,5 +164,16 @@ return {
             },
             on_attach = custom_lsp_attach
         }
+
+        require('lspconfig').ruff.setup({
+          init_options = {
+            settings = {
+              logLevel = 'debug',
+              lineLength = 100,
+              fixAll = false,
+              organizeImports = false,
+            }
+          }
+        })
     end
 }
