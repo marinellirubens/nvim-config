@@ -108,7 +108,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 vim.api.nvim_create_autocmd(
   'BufWritePre',
   {
-    pattern = '',
+    pattern = { "*.js", "*.ts", "*.lua", "*.py", "*.md", "*.json" },
     command = ":%s/\\s\\+$//e"
   }
 )
