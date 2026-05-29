@@ -1,6 +1,6 @@
 local opts = {
     "nvim-treesitter/nvim-treesitter",
-    tag = "v0.9.1",
+    --tag = "v0.9.1",
     ft = vim.g.languages,
     config = function()
         require("nvim-treesitter.configs").setup({
@@ -31,5 +31,5 @@ local opts = {
         })
     end,
 }
---opts = {}
+--opts = { }
 return opts
