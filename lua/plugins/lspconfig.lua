@@ -23,15 +23,12 @@ return {
         require("mason-lspconfig").setup({
             ensure_installed = { "lua_ls", "pylsp", "yamlls", "ruff", "ts_ls" }
         })
-        vim.lsp.handlers["textdocument/publishdiagnostics"] = vim.lsp.with(
-            vim.lsp.diagnostic.on_publish_diagnostics,
-            {
-                virtual_text = true,
-                signs = true,
-                update_in_insert = false,
-                underline = true,
-            }
-        )
+        vim.diagnostic.config({
+            virtual_text = true,
+            signs = true,
+            update_in_insert = false,
+            underline = true,
+        })
 
         local on_attach = require('plugins.config.lsp_utils').on_attach
         local capabilities = require('plugins.config.lsp_utils').capabilities
@@ -86,6 +83,14 @@ return {
             },
             ts_ls = {},
             ruff = {},
+            yamlls = {
+                yaml = {
+                    schemaStore = {
+                        url = "https://www.schemastore.org/api/json/catalog.json",
+                        enable = true,
+                    }
+                }
+            },
             --
             lua_ls = {
                 Lua = {
@@ -101,15 +106,27 @@ return {
             ensure_installed = vim.tbl_keys(servers),
         }
 
-        mason_lspconfig.setup_handlers {
-            function(server_name)
-                require('lspconfig')[server_name].setup {
-                    capabilities = capabilities,
-                    on_attach = on_attach,
-                    settings = servers[server_name],
+        for server_name, server_settings in pairs(servers) do
+            local opts = {
+                capabilities = capabilities,
+                on_attach = on_attach,
+                settings = server_settings,
+            }
+
+            if server_name == 'ruff' then
+                opts.init_options = {
+                    settings = {
+                        logLevel = 'debug',
+                        lineLength = 100,
+                        fixAll = false,
+                        organizeImports = false,
+                    }
                 }
-            end,
-        }
+            end
+
+            vim.lsp.config(server_name, opts)
+            vim.lsp.enable(server_name)
+        end
 
          --nvim-cmp setup
         local luasnip = require('luasnip')
@@ -147,33 +164,5 @@ return {
             },
         }
 
-        --setup lsp for openapi
-        local custom_lsp_attach = function(_, bufnr)
-            print('LSP attached')
-            vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-        end
-
-        require'lspconfig'.yamlls.setup {
-            settings = {
-                yaml = {
-                    schemaStore = {
-                        url = "https://www.schemastore.org/api/json/catalog.json",
-                        enable = true,
-                    }
-                }
-            },
-            on_attach = custom_lsp_attach
-        }
-
-        require('lspconfig').ruff.setup({
-          init_options = {
-            settings = {
-              logLevel = 'debug',
-              lineLength = 100,
-              fixAll = false,
-              organizeImports = false,
-            }
-          }
-        })
     end
 }
