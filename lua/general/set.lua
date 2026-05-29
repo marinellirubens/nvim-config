@@ -146,3 +146,9 @@ if vim.fn.executable("python3") > 0 then
   vim.env.PYENV_VERSION = vim.fn.system('pyenv version'):match('(%S+)%s+%(.-%)')
   vim.g.python3_host_prog = system("which python")
 end
+
+vim.api.nvim_create_autocmd("FileType", {
+    callback = function()
+        pcall(vim.treesitter.start)
+    end
+})
