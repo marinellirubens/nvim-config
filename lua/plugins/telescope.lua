@@ -1,8 +1,18 @@
 return {
     "nvim-telescope/telescope.nvim",
-    tag = "0.1.5",
+    --tag = "0.2.2",
     dependencies = { "nvim-lua/plenary.nvim" },
     config = function ()
+        local ok, ts_parsers = pcall(require, "nvim-treesitter.parsers")
+        if ok and ts_parsers.ft_to_lang == nil then
+            ts_parsers.ft_to_lang = function(ft)
+                if vim.treesitter and vim.treesitter.language and vim.treesitter.language.get_lang then
+                    return vim.treesitter.language.get_lang(ft) or ft
+                end
+                return ft
+            end
+        end
+
         require("telescope").setup {
             defaults = {
                 --path_display = {'shorten'},

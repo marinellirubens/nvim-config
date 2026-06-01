@@ -1,7 +1,6 @@
 --LSP (auto complete)
 return {
     'neovim/nvim-lspconfig',
-    ft = vim.g.languages,
     dependencies = {
         'williamboman/mason.nvim',
         'williamboman/mason-lspconfig.nvim',
@@ -48,7 +47,9 @@ return {
                         enabled = false,
                         maxLineLength = 120
                     },
-                    basedpyright = { enabled = true },
+                    jedi_definition = { enabled = true },
+                    jedi_references = { enabled = true },
+                    jedi_symbols = { enabled = true },
                     yapf = { enabled = false },
                     -- linter options
                     pylint = {
@@ -77,6 +78,7 @@ return {
                     },
                     -- auto-completion options
                     jedi_completion = { fuzzy = true },
+                    rope_completion = { enabled = true },
                     pyls_isort = { enabled = false },
                 },
               },
@@ -113,6 +115,10 @@ return {
                 settings = server_settings,
             }
 
+            if server_name == 'pylsp' then
+                opts.single_file_support = true
+            end
+
             if server_name == 'ruff' then
                 opts.init_options = {
                     settings = {
@@ -127,6 +133,16 @@ return {
             vim.lsp.config(server_name, opts)
             vim.lsp.enable(server_name)
         end
+
+        vim.api.nvim_create_autocmd('FileType', {
+            pattern = 'python',
+            callback = function(args)
+                local clients = vim.lsp.get_clients({ bufnr = args.buf, name = 'pylsp' })
+                if #clients == 0 then
+                    vim.lsp.enable('pylsp')
+                end
+            end,
+        })
 
          --nvim-cmp setup
         local luasnip = require('luasnip')
