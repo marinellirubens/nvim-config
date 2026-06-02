@@ -10,8 +10,8 @@ return {
         'hrsh7th/cmp-path',
         'hrsh7th/cmp-cmdline',
         'hrsh7th/nvim-cmp',
-        'l3mon4d3/luasnip',
-        'saadparwaiz1/cmp_luasnip',
+        --'l3mon4d3/luasnip',
+        --'saadparwaiz1/cmp_luasnip',
         'j-hui/fidget.nvim',
         "folke/neodev.nvim",
     },
@@ -44,7 +44,7 @@ return {
                     autopep8 = { enabled = true },
                     flake8 = {
                         ignore = {'E251', 'W191', 'W391', 'E722'},
-                        enabled = false,
+                        enabled = true,
                         maxLineLength = 120
                     },
                     jedi_definition = { enabled = true },
@@ -53,16 +53,16 @@ return {
                     yapf = { enabled = false },
                     -- linter options
                     pylint = {
-                        enabled = true,
+                        enabled = false,
                         args = { '--disable=C0305', '--max-line-length=240',
                                  '--disable=W0702' },
                         executable = "pylint",
                     },
-                    --ruff = {
-                        --enabled = false,
-                        --args = {},
-                        --executable = "ruff",
-                    --},
+                    ruff = {
+                        enabled = true,
+                        args = {},
+                        executable = "ruff",
+                    },
                     mccabe = { enabled = false },
                     pyflakes = { enabled = false },
                     pycodestyle = {
@@ -145,8 +145,8 @@ return {
         })
 
          --nvim-cmp setup
-        local luasnip = require('luasnip')
-        luasnip.config.setup {}
+        --local luasnip = require('luasnip')
+        --luasnip.config.setup {}
 
         local cmp = require('cmp')
         cmp.setup {
@@ -158,11 +158,11 @@ return {
             --performance = {
                 --debounce = 300,  -- Delay in milliseconds before showing suggestions
             --},
-            snippet = {
-                expand = function(args)
-                    luasnip.lsp_expand(args.body)
-                end,
-            },
+            --snippet = {
+                --expand = function(args)
+                    --luasnip.lsp_expand(args.body)
+                --end,
+            --},
             mapping = cmp.mapping.preset.insert {
                 ['<Tab>'] = cmp.mapping.select_next_item(),
                 ['<S-Tab>'] = cmp.mapping.select_prev_item(),
@@ -176,7 +176,7 @@ return {
             },
             sources = {
                 { name = 'nvim_lsp' },
-                { name = 'luasnip' },
+                --{ name = 'luasnip' },
             },
         }
 

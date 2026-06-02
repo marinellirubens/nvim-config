@@ -10,6 +10,8 @@ local opts = {
     },
     {
         "kdheepak/lazygit.nvim",
+        even = "VeryLazy",
+        ft = {'lua'},
         dependencies = {
             "nvim-lua/plenary.nvim",
         },
