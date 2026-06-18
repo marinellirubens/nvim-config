@@ -15,12 +15,15 @@ return {
 
         require("telescope").setup {
             defaults = {
-                --path_display = {'shorten'},
-                layout_strategy = "horizontal",
+                path_display = {'filename_first'},
+                layout_strategy = "vertical",
                 layout_config = {
                     vertical = {
                       width = 0.9,
-                      height = 0.9
+                      height = 0.95,
+                      prompt_position = 'top',
+                      mirror = true,
+                      preview_height = 0.6,
                     },
                     cursor = {
                       height = 0.9,
@@ -28,7 +31,6 @@ return {
                     },
                     horizontal = {
                       width = 0.9,
-                      prompt_position = 'top',
                       preview_width = 0.8,
                       height = 0.9
                     },
