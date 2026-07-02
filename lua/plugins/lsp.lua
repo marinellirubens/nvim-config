@@ -100,20 +100,13 @@ end
 
 local function setup_cmp()
     local cmp = require("cmp")
-    local luasnip = require("luasnip")
 
-    luasnip.config.setup({})
     vim.opt.completeopt = { "menu", "menuone", "noinsert" }
 
     cmp.setup({
         completion = {
             autocomplete = false,
             keyword_length = 1,
-        },
-        snippet = {
-            expand = function(args)
-                luasnip.lsp_expand(args.body)
-            end,
         },
         mapping = cmp.mapping.preset.insert({
             ["<Tab>"] = cmp.mapping.select_next_item(),
@@ -128,7 +121,6 @@ local function setup_cmp()
         }),
         sources = cmp.config.sources({
             { name = "nvim_lsp" },
-            { name = "luasnip" },
             { name = "path" },
         }, {
             { name = "buffer" },
@@ -200,7 +192,7 @@ return {
             vim.api.nvim_create_user_command("LspStatus", lsp_status, { desc = "Show LSP clients attached to this buffer" })
 
             for server, config in pairs(servers) do
-                config.capabilities = vim.tbl_deep_extend("force", {}, capabilities, config.capabilities or {})
+                config.capabilities = capabilities
                 vim.lsp.config(server, config)
             end
 
