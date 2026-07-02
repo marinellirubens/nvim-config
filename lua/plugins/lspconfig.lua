@@ -1,5 +1,5 @@
 --LSP (auto complete)
-return {
+local opts = {
     'neovim/nvim-lspconfig',
     ft = vim.g.languages,
     dependencies = {
@@ -160,3 +160,5 @@ return {
         }
     end
 }
+
+return {}

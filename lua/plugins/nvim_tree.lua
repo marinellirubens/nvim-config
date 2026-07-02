@@ -139,10 +139,6 @@ return {
                 update_root = false,
                 ignore_list = {},
             },
-            system_open = {
-                cmd = "",
-                args = {},
-            },
             git = {
                 enable = true,
                 show_on_dirs = true,
