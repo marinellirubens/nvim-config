@@ -26,7 +26,7 @@ vim.keymap.set("n", "ZA",":qall!<CR>", { noremap = true, silent = true , desc = 
 --vim.keymap.set("n", "<C-k>","<C-w>k")
 --vim.keymap.set("n", "<C-l>","<C-w>l")
 
--- file tree
+-- file tre
 --vim.keymap.set("n", "<f2>",":NvimTreeOpen<CR>:NvimTreeToggle<CR>", { noremap = true, silent = true, desc = "Open file tree" })
 vim.keymap.set("n", "<f3>",":NvimTreeRefresh<CR>", { noremap = true, silent = true, desc = "Refresh file tree" })
 vim.keymap.set("n", "<f2>",":NvimTreeToggle<CR>", { noremap = true, silent = true, desc = "Toggle file tree" })
@@ -145,6 +145,8 @@ vim.keymap.set('n', '<leader>gr', ":Gitsigns reset_hunk<CR>", { noremap = true, 
 vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { noremap = true, silent = true, desc = "Git - commit" })
 vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
 vim.keymap.set('n', '<leader>gg', ':Git<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+vim.keymap.set('n', '<leader>gP', ':Git push<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
 --vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
 
 
