@@ -6,7 +6,6 @@ libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-d
 # install pyenv
 curl -fsSL https://pyenv.run | bash
 
-
 # cargo and treesitter
 sudo apt install isort
 sudo apt install -y clang libclang-dev llvm-dev build-essential pkg-config
