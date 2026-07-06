@@ -72,7 +72,7 @@ return {
                     },
                     -- type checker
                     pylsp_mypy = {
-                        enabled = false,
+                        enabled = true,
                         report_progress = true,
                         live_mode = true
                     },
