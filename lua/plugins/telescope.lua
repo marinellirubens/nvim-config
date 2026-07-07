@@ -47,6 +47,9 @@ return {
                     hidden = true,
                     no_ignore = true
                 },
+                live_grep = {
+                    additional_args = { "--ignore-case" },
+                },
             },
         }
     end

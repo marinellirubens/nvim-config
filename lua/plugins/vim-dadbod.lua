@@ -1,5 +1,6 @@
 local opts =  {
     "kristijanhusak/vim-dadbod-ui",
+    ft = { "sql", "mysql", "plsql" },
     dependencies = {
         { "tpope/vim-dadbod", lazy = true },
         { "kristijanhusak/vim-dadbod-completion", ft = { "sql", "mysql", "plsql" }, lazy = true },
@@ -18,10 +19,10 @@ local opts =  {
         -- Your DBUI configuration
         vim.g.db_ui_use_nerd_fonts = 1
         vim.cmd[[autocmd FileType sql setlocal omnifunc=vim_dadbod_completion#omni]]
-        vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'vim-dadbod-completion' }} })]]
+        vim.cmd[[autocmd FileType sql,mysql,plsql lua require('cmp').setup.buffer({ sources = {{ name = 'nvim_lsp' }, { name = 'vim-dadbod-completion' }, { name = 'buffer' }} })]]
 
         vim.g.dbs = {
-            { name = 'LGBRTMST', url = 'oracle://30900011:LOmes9452@localhost:9006/LGBRTMST' },
+            { name = 'LGBRTMST', url = 'oracle://30900011:LOmes9452@136.166.34.123:3006/LGBRTMST' },
             --{ name = 'staging', url = 'postgres://postgres:mypassword@localhost:5432/my-staging-db' },
             --{ name = 'wp', url = 'mysql://root@localhost/wp_awesome' },
         }
@@ -29,5 +30,5 @@ local opts =  {
         vim.g.db_ui_save_location=vim.env.HOME .. '/.nvim/dadbod-ui'
     end,
 }
-opts = {}
+--opts = {}
 return opts
