@@ -48,6 +48,27 @@ local servers = {
             },
         },
     },
+    ols = {
+        settings = {
+            init_options = {
+                --checker_args = "-strict-style",
+                collections = {
+                    { name = "shared", path = vim.fn.expand('$HOME/odin/bin') }
+                },
+            },
+        },
+    },
+    gopls = {
+        settings = {
+            gopls = {
+              analyses = {
+                unusedparams = true,
+              },
+              staticcheck = true,
+              gofumpt = true,
+            },
+        },
+    },
 }
 
 local function lsp_keymaps(bufnr)

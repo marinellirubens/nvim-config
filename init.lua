@@ -1,9 +1,9 @@
 --import general configurations
-vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "rust", "c"}
+vim.g.languages = {"go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "rust", "c", "odin"}
 
 vim.g.languages_sub = {
     "go", "python", "javascript", "lua", "tmux", "sshconfig", "cypher", "sh", "sql",
-    "markdown", "vim", "json", "yaml", "toml", "zsh", "dosini", "conf", "sequence", "rust", "c"
+    "markdown", "vim", "json", "yaml", "toml", "zsh", "dosini", "conf", "sequence", "rust", "c", "odin"
 }
 
 require("general.keymap")
