@@ -47,7 +47,7 @@ vim.keymap.set("n", "<leader>fc", "<cmd>Telescope current_buffer_fuzzy_find<cr>"
 vim.keymap.set("n", "<leader>fo", "<cmd>Telescope buffers<cr>", { noremap = true, silent = true , desc = "Telescope buffers"})
 vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", { noremap = true, silent = true , desc = "Telescope keymaps"})
 vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
-vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
+vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<cr>", { noremap = true, silent = true , desc = "Telescope marks"})
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope resume<cr>", { noremap = true, silent = true , desc = "Telescope resume last search"})
 vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (all)"})
