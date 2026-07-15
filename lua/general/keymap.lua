@@ -50,6 +50,8 @@ vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { noremap = tr
 vim.keymap.set("n", "<leader>fm", "<cmd>Telescope marks<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 vim.keymap.set("n", "<leader>fr", "<cmd>Telescope resume<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
 vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { noremap = true, silent = true , desc = "Telescope help tags"})
+vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (all)"})
+vim.keymap.set("n", "<leader>fgb", "<cmd>Telescope git_bcommits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (branch)"})
 
 --vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 vim.keymap.set("n", "<leader>fe", ":lua require('telescope.builtin').diagnostics({layout_strategy='vertical'})<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
@@ -142,7 +144,10 @@ vim.keymap.set('n', '<leader>gN', ":Gitsigns prev_hunk<CR>", { noremap = true, s
 vim.keymap.set('n', '<leader>gr', ":Gitsigns reset_hunk<CR>", { noremap = true, silent = true, desc = "Git - reset hunk" })
 vim.keymap.set('n', '<leader>gc', ':Git commit<CR>', { noremap = true, silent = true, desc = "Git - commit" })
 vim.keymap.set('n', '<leader>gd', ':Gvdiffsplit<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
-vim.keymap.set('n', '<leader>gg', ':Git<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
+vim.keymap.set('n', '<leader>gD', ':Gvdiffsplit!<CR>', { noremap = true, silent = true, desc = "Git - diff this 'Gvdiffsplit!'" })
+vim.keymap.set('n', '<leader>gg', ':Git<CR>', { noremap = true, silent = true, desc = "Git show" })
+vim.keymap.set('n', '<leader>gp', ':Git pull<CR>', { noremap = true, silent = true, desc = "Git pull" })
+vim.keymap.set('n', '<leader>gP', ':Git push<CR>', { noremap = true, silent = true, desc = "Git push" })
 --vim.keymap.set('n', '<leader>gb', ': Gitsigns diffthis<CR>', { noremap = true, silent = true, desc = "Git - diff this" })
 
 
