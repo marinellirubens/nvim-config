@@ -113,6 +113,13 @@ vim.api.nvim_create_autocmd(
     command = ":%s/\\s\\+$//e"
   }
 )
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = "*.odin",
+  callback = function(args)
+    require("conform").format({ bufnr = args.buf })
+  end,
+})
 -- coolor column configuration
 --vim.cmd[[highlight ColorColumn guibg=black]]
 

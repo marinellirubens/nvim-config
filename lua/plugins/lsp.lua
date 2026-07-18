@@ -51,7 +51,7 @@ local servers = {
     ols = {
         settings = {
             init_options = {
-                --checker_args = "-strict-style",
+                --checker_args = {"-strict-style", "-vet"},
                 collections = {
                     { name = "shared", path = vim.fn.expand('$HOME/odin/bin') }
                 },
