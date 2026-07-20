@@ -52,16 +52,18 @@ vim.keymap.set("n", "<leader>fr", "<cmd>Telescope resume<cr>", { noremap = true,
 vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope git_status<cr>", { noremap = true, silent = true , desc = "Telescope git status"})
 vim.keymap.set("n", "<leader>fgc", "<cmd>Telescope git_commits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (all)"})
 vim.keymap.set("n", "<leader>fgb", "<cmd>Telescope git_bcommits<cr>", { noremap = true, silent = true , desc = "Telescope git commits (branch)"})
-
---vim.keymap.set("n", "<leader>fe", "<cmd>Telescope diagnostics<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
 vim.keymap.set("n", "<leader>fe", ":lua require('telescope.builtin').diagnostics({layout_strategy='vertical'})<CR>", { noremap = true, silent = true , desc = "Telescope diagnostics"})
+
+-- Buffers
+vim.keymap.set("n", "<leader>bo", ":buffers<CR>", { noremap = true, silent = true , desc = "Show buffer"})
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { noremap = true, silent = true , desc = "Current buffer close"})
 
 vim.keymap.set("n", "<leader>ll", "<cmd>Telescope colorscheme<CR>", { noremap = true, silent = true , desc = "Telescope colorscheme"})
 
 vim.keymap.set("n", "<leader>xt", "<cmd>TodoTrouble<CR>", { noremap = true, silent = true , desc = "Todo Trouble" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<CR>", { noremap = true, silent = true , desc = "Todo Telescope" })
 -- split window
-vim.keymap.set("n", "<leader>sv", "<cmd>vertical split<cr>", { noremap = true, desc = "Split window vertical"})
+vim.keymap.set("n", "<leader>sv", "<cmd>vsplit<cr>", { noremap = true, desc = "Split window vertical"})
 vim.keymap.set("n", "<leader>sh", "<cmd>split<cr>", { noremap = true, desc = "Split window horizontal"})
 
 -- open/close embbed terminal
@@ -95,7 +97,9 @@ function ToggleColorColumn()
 end
 
 -- colorcolumn
-vim.keymap.set("n", "<leader>nc", ToggleColorColumn, { noremap = true, silent = true , desc = "Colorcolumn"})
+vim.keymap.set("n", "<leader>ec", ToggleColorColumn, { noremap = true, silent = true , desc = "enable/disable Colorcolumn"})
+vim.keymap.set('n', '<leader>en', '<cmd>set number!<CR><cmd>set relativenumber!<CR>', { noremap = true, silent = true, desc = "enable/Disable number and relative number" })
+vim.keymap.set('n', '<leader>er', '<cmd>set relativenumber!<CR>', { noremap = true, silent = true, desc = "enable/Disable relative number" })
 
 -- put simbol around selection
 vim.keymap.set("v", "'", "c''<ESC>P", { desc = "put ' around selection"})
@@ -110,7 +114,7 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { noremap = true, silent = true , d
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { noremap = true, silent = true , desc = "Move selection up"})
 
 -- format file to unix
-vim.keymap.set("n", "fe", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true, desc = "Set file format to unix" })
+vim.keymap.set("n", "fu", "<cmd>set fileformat=unix<CR>", { noremap = true, silent = true, desc = "Set file format to unix" })
 
 -- move selection right and left
 vim.keymap.set("v", "<", "<gv", { noremap = true, silent = true , desc = "Move selection left"})
@@ -158,8 +162,4 @@ vim.keymap.set('n', '<leader>ct', ': CloakToggle<CR>', { noremap = true, silent 
 vim.keymap.set('n', '<leader>mp', ': MarkdownPreview<CR>', { noremap = true, silent = true, desc = "MarkdownPreview" })
 vim.keymap.set('n', '<leader>ms', ': MarkdownPreviewStop<CR>', { noremap = true, silent = true, desc = "MarkdownPreviewStop" })
 vim.keymap.set('n', '<leader>mt', ': MarkdownPreviewToggle<CR>', { noremap = true, silent = true, desc = "MarkdownPreviewToggle" })
-
--- keymaps for toggle numbering
-vim.keymap.set('n', '<leader>dn', '<cmd>set number!<CR><cmd>set relativenumber!<CR>', { noremap = true, silent = true, desc = "Disable number and relative number" })
-vim.keymap.set('n', '<leader>en', '<cmd>set number<CR><cmd>set relativenumber<CR>', { noremap = true, silent = true, desc = "Enable number and relative number" })
 
