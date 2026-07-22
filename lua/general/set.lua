@@ -20,7 +20,10 @@ vim.opt.incsearch = true
 vim.opt.conceallevel = 1
 
 -- clipboard configuration to use system clipboard
-vim.opt.clipboard = 'unnamedplus'
+--vim.opt.clipboard = 'unnamedplus'
+vim.env.WAYLAND_DISPLAY = vim.env.WAYLAND_DISPLAY or "wayland-1"
+vim.opt.clipboard:append("unnamedplus")
+--vim.cmd[[set clipboard+=unnamedplus]]
 
 -- configuration for cursor and visualisation
 vim.opt.mouse = 'a'
