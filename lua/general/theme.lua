@@ -43,6 +43,7 @@ vim.cmd[[syntax enable]]
 -- set color for cursor and cursorline
 vim.opt.cursorline = true
 vim.api.nvim_set_hl(0, "Cursor", { fg = "black", bg = "yellow" })
+vim.api.nvim_set_hl(0, "CursorLine", { bg = "#000062" })
 --vim.api.nvim_set_hl(0, "CursorLine", { bg = "black" })
 
 -- coolor column configuration
