@@ -92,7 +92,7 @@ local function lsp_keymaps(bufnr)
         print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     end, "List Workspace Folders")
 
-    vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { buffer = bufnr, desc = "Diagnostics: Open Float" })
+    vim.keymap.set("n", "<leader>de", vim.diagnostic.open_float, { buffer = bufnr, desc = "Diagnostics: Open Float" })
     vim.keymap.set("n", "<leader>ne", function()
         vim.diagnostic.jump({ count = 1, float = true })
     end, { buffer = bufnr, desc = "Diagnostics: Next" })
@@ -165,8 +165,8 @@ return {
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-path",
             "hrsh7th/nvim-cmp",
-            "l3mon4d3/luasnip",
-            "saadparwaiz1/cmp_luasnip",
+            --"l3mon4d3/luasnip",
+            --"saadparwaiz1/cmp_luasnip",
         },
         lazy = false,
         opts = {

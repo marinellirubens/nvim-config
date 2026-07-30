@@ -1,7 +1,7 @@
 local opts
 opts =  {
     "lukas-reineke/indent-blankline.nvim",
-    ft = {'python', 'xml', 'lua', 'sql'},
+    ft = {'python', 'xml', 'lua', 'sql', 'go'},
     main = "ibl",
     opts = {},
     config = function()
