@@ -146,14 +146,7 @@ vim.g.completion_matching_ignore_case = 1
 vim.g.session_directory = vim.env.HOME .. '/.vim_sessions/'
 
 
-local function system(command)
-  local file = assert(io.popen(command, 'r'))
-  local output = file:read('*all'):gsub("%s+", "")
-  file:close()
-  return output
-end
-
 if vim.fn.executable("python3") > 0 then
   vim.env.PYENV_VERSION = vim.fn.system('pyenv version'):match('(%S+)%s+%(.-%)')
-  vim.g.python3_host_prog = system("which python")
+  vim.g.python3_host_prog = vim.fn.exepath("python"):gsub("%s+", "")
 end

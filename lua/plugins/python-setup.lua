@@ -6,7 +6,8 @@ return {
         dependencies = { "mfussenegger/nvim-dap", "rcarriga/nvim-dap-ui" },
         config = function()
             vim.env.PYENV_VERSION = vim.fn.system('pyenv version'):match('(%S+)%s+%(.-%)')
-            vim.g.python3_host_prog = vim.fn.system("which python")
+            local python = vim.fn.exepath("python")
+            vim.g.python3_host_prog = python ~= "" and (python .. "\n") or ""
             require("dap-python").setup(vim.g.python3_host_prog, {})
         end,
     },
